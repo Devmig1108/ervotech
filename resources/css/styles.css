@@ -1336,7 +1336,7 @@ footer {
     text-decoration: none;
 }
 
-.contact-option p {
+[data-theme="light"] .contact-option p {
     color: var(--primary-dark);
 }
 
