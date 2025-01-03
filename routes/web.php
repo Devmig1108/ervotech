@@ -42,6 +42,9 @@ Route::get('/contact', function () {
 Route::get('/services', function () {
     return Inertia::render('Services');
 })->name('services');
+Route::get('/sitemap', function () {
+    return Inertia::render('Sitemap');
+})->name('sitemap');
 // Route::get('/faq', function () {
 //     return Inertia::render('FAQ');
 // })->name('faq');
