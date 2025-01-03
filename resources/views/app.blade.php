@@ -13,6 +13,7 @@
     <meta property="og:url" content="www.ervotechep.com">
     <meta name="ahrefs-site-verification" content="82d307b97231187fb555ca48872989fc276d498ac2f0227199f04a136b2e2cf7">
     <meta property="og:type" content="website">
+    <meta name="google-site-verification" content="V0mWDiLdd4HHo8qjOzE3Ux_ppGB-ki1PA4kwY2wdUek" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
