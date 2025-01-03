@@ -11,6 +11,7 @@
     <meta property="og:description" content="Modern web solutions for SEO, web design, and software development.">
     <!-- <meta property="og:image" content="images/Logo2.png"> -->
     <meta property="og:url" content="www.ervotechep.com">
+    <meta name="ahrefs-site-verification" content="82d307b97231187fb555ca48872989fc276d498ac2f0227199f04a136b2e2cf7">
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
