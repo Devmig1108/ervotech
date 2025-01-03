@@ -11,7 +11,7 @@
     --accent-teal: #4ccc97;
     /* --accent-blue: #3b82f6; */
     --accent-blue: #2e7fc3;
-    --accent-yellow: #c3ad2e;
+    --accent-orange: #f38167;
     --accent-pink: #d362a4;
     --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -30,9 +30,18 @@
     box-shadow: var(--box-shadow);
 }
 
+[data-theme="light"] .nav-links a {
+    color: var(--accent-purple);
+}
+
 [data-theme="light"] .hero {
     background: linear-gradient(135deg, #f9fafc 0%, #e6ecf3 100%);
     color: var(--text-dark);
+}
+
+[data-theme="light"] .hero h1 {
+    background: linear-gradient(135deg, #f9fafc 0%, #e6ecf3 100%);
+    color: var(--accent-blue);
 }
 
 [data-theme="light"] .service-card {
@@ -146,7 +155,7 @@
     font-weight: bold;
     border-radius: 5px;
     background-color: var(--accent-teal);
-    color: var(--primary-dark);
+    color: var(--primary-light);
     text-decoration: none;
 }
 
@@ -372,7 +381,7 @@ button:hover,
 
 .primary-btn {
     background-color: var(--accent-teal);
-    color: var(--primary-dark);
+    color: var(--primary-light);
 }
 
 .primary-btn:hover {
@@ -404,6 +413,10 @@ button:hover,
     color: var(--accent-blue);
 }
 
+.why-choose-us h2 {
+    color: var(--accent-blue);
+}
+
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -425,7 +438,94 @@ button:hover,
 
 .service-card h3 {
     margin-bottom: 1rem;
-    color: var(--accent-yellow);
+    color: var(--accent-orange);
+}
+
+.services-hero {
+    background: var(--accent-purple);
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-light);
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+}
+
+.services-overview .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    /* background: var(--primary-light); */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-choose-us {
+    background: var(--secondary-light);
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-dark);
+}
+
+.why-choose-us ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--text-light);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.services-cta {
+    background: var(--accent-orange);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.services-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -523,6 +623,10 @@ button:hover,
 .contact h2 {
     color: var(--accent-purple);
     margin-bottom: 1rem;
+}
+
+[data-theme="light"] .contact p {
+    color: var(--text-dark);
 }
 
 .contact p {
@@ -661,7 +765,7 @@ footer {
 .footer-newsletter button {
     padding: 0.5rem 1rem;
     background-color: var(--accent-purple);
-    color: var(--primary-dark);
+    color: var(--primary-light);
     border: none;
     border-radius: 5px;
     font-weight: 600;
@@ -713,6 +817,11 @@ footer {
 }
 
 .social-links a:hover {
+    color: var(--accent-purple);
+}
+
+.footer-links a,
+.footer-contact a {
     color: var(--accent-purple);
 }
 
@@ -905,16 +1014,79 @@ footer {
     background: var(--accent-teal);
     text-align: center;
     padding: 4rem 0;
+    color: var(--text-light);
 }
 
-.about-values ul {
-    list-style: none;
-    padding: 0;
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .about-values li {
     margin: 1rem 0;
     font-weight: bold;
+}
+
+.about-mission {
+    background-color: var(--primary-light);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.about-mission h2 {
+    color: var(--accent-teal);
+    margin-bottom: 1.5rem;
+}
+
+.about-mission p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.about-cta {
+    background: var(--primary-dark);
+    text-align: center;
+    padding: 4rem 0;
+    border-radius: 8px;
+}
+
+.about-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-blue);
+}
+
+.about-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-cta .primary-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-purple);
+    color: var(--text-light);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.about-cta .primary-btn:hover {
+    background: var(--accent-teal);
 }
 
 
@@ -936,7 +1108,7 @@ footer {
 /* Case Studies Page */
 
 .case-hero {
-    background: var(--accent-yellow);
+    background: var(--accent-orange);
     text-align: center;
     padding: 4rem 0;
 }
@@ -1059,7 +1231,7 @@ footer {
 /* Contact CTA Section */
 
 .contact-cta {
-    background: var(--accent-yellow);
+    background: var(--accent-orange);
     text-align: center;
     padding: 3rem 0;
 }
@@ -1081,6 +1253,168 @@ footer {
 .contact-cta a:hover {
     background: var(--text-dark);
     color: var(--text-light);
+}
+
+.contact-cta .primary-btn {
+    background: var(--accent-teal);
+    border: none;
+}
+
+.contact-cta .primary-btn:hover {
+    background: var(--accent-purple);
+    border: none;
+}
+
+
+/* --- General Contact Section Styles --- */
+
+.contact-hero,
+.contact-options,
+.contact-form-section,
+.contact-map,
+.contact-cta {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+
+/* --- Hero Section --- */
+
+.contact-hero {
+    background: var(--accent-blue);
+    color: var(--text-light);
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* --- Contact Options Section --- */
+
+.contact-options {
+    background-color: var(--primary-light);
+}
+
+.contact-options h2 {
+    margin-bottom: 2rem;
+    color: var(--accent-purple);
+}
+
+.contact-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-option {
+    background: var(--secondary-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-option i {
+    font-size: 2rem;
+    color: var(--accent-teal);
+    margin-bottom: 0.5rem;
+}
+
+.contact-option h3 {
+    margin-bottom: 0.5rem;
+}
+
+.contact-option a {
+    color: var(--accent-purple);
+    text-decoration: none;
+}
+
+
+/* --- Contact Form Section --- */
+
+.contact-form-section {
+    background-color: var(--secondary-dark);
+}
+
+.contact-form-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-orange);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-light);
+    background-color: var(--primary-light);
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    background-color: var(--accent-purple);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-teal);
+}
+
+
+/* --- Map Section --- */
+
+.contact-map {
+    background: var(--primary-light);
+}
+
+.contact-map h2 {
+    margin-bottom: 1rem;
+    color: var(--accent-blue);
+}
+
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* --- CTA Section --- */
+
+.contact-cta {
+    background: var(--accent-orange);
+    padding: 3rem 0;
+}
+
+.contact-cta h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-cta a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--text-dark);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

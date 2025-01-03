@@ -11,15 +11,20 @@ export default function Nav() {
         <header class="navbar">
             <div class="container">
                 <div class="logo">
-                    <img src="images/Logo2.png" alt="Logo" width="100" height="120" /> ervotech
+                    <Link href="/">
+                        <img src="images/Logo2.png" alt="Logo" width="100" height="120" />
+                    </Link> ervotech
                 <span>.</span>
+
                 </div>
                 <nav>
                     <ul class="nav-links">
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="about">About</Link></li>
-                        <li><Link href="case-studies">Case Studies</Link></li>
-                        <li><Link href="faq">FAQ</Link></li>
+                        <li><Link href="contact">Contact</Link></li>
+                        <li><Link href="services">Services</Link></li>
+                        {/* <li><Link href="case-studies">Case Studies</Link></li>
+                        <li><Link href="faq">FAQ</Link></li> */}
                         {/* <li><a href="index.html">Home</a></li> */}
                         {/* <!-- <li><a href="services.html">Services</a></li> --> */}
                         {/* <li><a href="about/index.html">About Us</a></li>

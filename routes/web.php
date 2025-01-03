@@ -36,9 +36,15 @@ Route::get('/about', function () {
 Route::get('/case-studies', function () {
     return Inertia::render('Case');
 })->name('casestudies');
-Route::get('/faq', function () {
-    return Inertia::render('FAQ');
-})->name('faq');
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+Route::get('/services', function () {
+    return Inertia::render('Services');
+})->name('services');
+// Route::get('/faq', function () {
+//     return Inertia::render('FAQ');
+// })->name('faq');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

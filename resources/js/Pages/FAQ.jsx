@@ -38,7 +38,7 @@ export default function FAQ({ auth }) {
                     <div class="contact-info-grid">
                         <div class="contact-info-item">
                             <i class="fas fa-envelope"></i>
-                            <p><strong>Email:</strong> <a href="mailto:contact@ervotech.com">contact@ervotech.com</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:contact@ervotechep.com">contact@ervotechep.com</a></p>
                         </div>
                         <div class="contact-info-item">
                             <i class="fas fa-phone"></i>

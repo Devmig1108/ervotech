@@ -15,8 +15,8 @@ export default function Footer() {
                     <ul>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="about">About</Link></li>
-                        <li><Link href="case-studies">Case Studies</Link></li>
-                        <li><Link href="faq">FAQ</Link></li>
+                        <li><Link href="contact">Contact</Link></li>
+                        <li><Link href="services">Services</Link></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -30,7 +30,7 @@ export default function Footer() {
                     <p>Stay updated with our latest insights and offers.</p>
                     <form id="newsletter-form">
                         <input type="email" placeholder="Your Email Address" required />
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" class="subscribe">Subscribe</button>
                     </form>
                     <p id="newsletter-message" class="hidden"></p>
                 </div>
@@ -38,11 +38,11 @@ export default function Footer() {
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Ervotech. All Rights Reserved.</p>
-                <div class="social-links">
+                {/* <div class="social-links">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+                </div> */}
             </div>
         </footer>
     );

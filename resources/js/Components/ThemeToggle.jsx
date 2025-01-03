@@ -18,7 +18,7 @@ export default function ThemeToggle() {
             className="theme-toggle-btn"
             aria-label="Toggle Dark/Light Theme"
         >
-            {theme === 'dark' ? '🌞' : '🌜'}
+            {theme === 'light' ? '🌞' : '🌜'}
         </button>
     );
 }
