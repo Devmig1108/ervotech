@@ -7,7 +7,7 @@
     <meta name="description" content="Ervotech offers expert web consulting, including SEO, web design, and software development tailored to your business needs.">
     <meta name="keywords" content="Web Consulting, SEO Services, Web Development, Website Migration, Software Development">
     <meta name="author" content="Ervotech">
-    <meta property="og:title" content="Transform Your Web Presence with Ervotech">
+    <meta property="og:title" content="Ervotech - Web Consulting and Development">
     <meta property="og:description" content="Modern web solutions for SEO, web design, and software development.">
     <!-- <meta property="og:image" content="images/Logo2.png"> -->
     <meta property="og:url" content="www.ervotechep.com">
