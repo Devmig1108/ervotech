@@ -1336,6 +1336,10 @@ footer {
     text-decoration: none;
 }
 
+.contact-option p {
+    color: var(--primary-dark);
+}
+
 
 /* --- Contact Form Section --- */
 
