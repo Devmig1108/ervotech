@@ -21,8 +21,8 @@ export default function Nav() {
                     <ul class="nav-links">
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="about">About</Link></li>
-                        <li><Link href="contact">Contact</Link></li>
                         <li><Link href="services">Services</Link></li>
+                        <li><Link href="contact">Contact</Link></li>
                         {/* <li><Link href="case-studies">Case Studies</Link></li>
                         <li><Link href="faq">FAQ</Link></li> */}
                         {/* <li><a href="index.html">Home</a></li> */}
