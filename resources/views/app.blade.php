@@ -16,7 +16,11 @@
     <meta name="google-site-verification" content="V0mWDiLdd4HHo8qjOzE3Ux_ppGB-ki1PA4kwY2wdUek" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
     <title inertia>Ervotech - Web Consulting and Development</title>
 
     <!-- Scripts -->

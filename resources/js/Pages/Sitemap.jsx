@@ -25,9 +25,7 @@ export default function Sitemap({ auth }) {
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/services">Services</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/faq">FAQ</a></li>
                     </ul>
 
                     <h2>Services</h2>
@@ -39,11 +37,11 @@ export default function Sitemap({ auth }) {
                         <li><a href="/services#content-strategy">Content Strategy</a></li>
                     </ul>
 
-                    <h2>Additional Resources</h2>
+                    {/* <h2>Additional Resources</h2>
                     <ul>
                         <li><a href="/privacy-policy">Privacy Policy</a></li>
                         <li><a href="/terms-of-service">Terms of Service</a></li>
-                    </ul>
+                    </ul> */}
                 </div>
             </section>
 

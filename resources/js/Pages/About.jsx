@@ -18,25 +18,26 @@ export default function Gallery({ auth }) {
                 </div>
             </section>
 
-            {/* <!-- Story Section --> */}
+            {/* Story Section with Cards */}
             <section className="about-story">
                 <div className="container">
-                    <h2>Our Story</h2>
-                    <p>
-                        Founded in <strong>El Paso, Texas</strong>, Ervotech began with a clear vision:
-            to empower <strong>small and medium-sized businesses</strong> by enhancing their online presence.
-            We believe that every business, no matter its size, deserves a robust digital platform
-            to connect with customers and thrive in today's competitive landscape.
-        </p>
-                    <p>
-                        At Ervotech, we’re passionate about showcasing the <strong>power of a strong web presence</strong>.
-            From crafting user-friendly websites to optimizing digital strategies, our goal is to ensure
-            every client stands out and grows in the digital world.
-        </p>
-                    <p>
-                        Our journey is driven by a commitment to <strong>innovation, collaboration, and measurable results</strong>.
-            Together, let’s build something extraordinary.
-        </p>
+                    <Fade>
+                        <h2>Our Story</h2>
+                        <div className="story-grid">
+                            <div className="story-card">
+                                <h3>📍 Our Roots</h3>
+                                <p>Founded in El Paso, Texas, Ervotech started with a vision to empower small and medium-sized businesses.</p>
+                            </div>
+                            <div className="story-card">
+                                <h3>💡 Our Focus</h3>
+                                <p>We specialize in crafting user-friendly websites and optimizing digital strategies for business growth.</p>
+                            </div>
+                            <div className="story-card">
+                                <h3>🚀 Our Commitment</h3>
+                                <p>Driven by innovation and measurable results, we strive to build extraordinary digital solutions.</p>
+                            </div>
+                        </div>
+                    </Fade>
                 </div>
             </section>
 
@@ -44,17 +45,19 @@ export default function Gallery({ auth }) {
             {/* <!-- Mission Section --> */}
             <section className="about-mission">
                 <div className="container">
-                    <h2>Our Mission</h2>
-                    <p>
-                        At <strong>Ervotech</strong>, our mission is to empower businesses through
-            innovative and user-centric digital solutions. We aim to bridge the gap
-            between vision and execution, helping businesses build strong, impactful,
-            and sustainable online presences.
+                    <Fade>
+                        <h2>Our Mission</h2>
+                        <p>
+                            At Ervotech , our mission is to empower businesses through
+                            innovative and user-centric digital solutions. We aim to bridge the gap
+                            between vision and execution, helping businesses build strong, impactful,
+                            and sustainable online presences.
         </p>
-                    <p>
-                        Every project we undertake is a step towards making the digital world
-                        more accessible, intuitive, and results-driven for businesses of all sizes.
+                        <p>
+                            Every project we undertake is a step towards making the digital world
+                            more accessible, intuitive, and results-driven for businesses of all sizes.
         </p>
+                    </Fade>
                 </div>
             </section>
 
@@ -70,15 +73,17 @@ export default function Gallery({ auth }) {
             {/* --- CTA Section --- */}
             <section className="about-cta">
                 <div className="container">
-                    <h2>Ready to Work With Us?</h2>
-                    <p>
-                        Whether you're looking to enhance your web presence, optimize your SEO, or develop custom software solutions,
-                        Ervotech is here to partner with you every step of the way. Our team is dedicated to turning your vision into reality.
+                    <Fade>
+                        <h2>Ready to Work With Us?</h2>
+                        <p>
+                            Whether you're looking to enhance your web presence, optimize your SEO, or develop custom software solutions,
+                            Ervotech is here to partner with you every step of the way. Our team is dedicated to turning your vision into reality.
         </p>
-                    <p>
-                        Let's collaborate to build something extraordinary together. Reach out to us today and let's start your journey toward digital success.
+                        <p>
+                            Let's collaborate to build something extraordinary together. Reach out to us today and let's start your journey toward digital success.
         </p>
-                    <a href="/contact" className="primary-btn">Get in Touch</a>
+                        <a href="/contact" className="primary-btn">Get in Touch</a>
+                    </Fade>
                 </div>
             </section>
 

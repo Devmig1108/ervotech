@@ -1,5 +1,6 @@
 import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
+import Fade from 'react-reveal/Fade';
 
 export default function Contact({ auth }) {
     return (
@@ -11,53 +12,58 @@ export default function Contact({ auth }) {
 
             {/* Hero Section */}
             <section className="contact-hero">
-                <div className="container">
-                    <h1>Let’s Connect</h1>
-                    <p>Have a question, idea, or just want to say hello? Reach out and let's start the conversation.</p>
-                </div>
+                <Fade>
+                    <div className="container">
+                        <h1>Let’s Connect</h1>
+                        <p>Have a question, idea, or just want to say hello? Reach out and let's start the conversation.</p>
+                    </div>
+                </Fade>
             </section>
 
             {/* Contact Options Section */}
             <section className="contact-options">
-                <div className="container">
-                    <h2>How to Reach Us</h2>
-                    <div className="contact-options-grid">
-                        <div className="contact-option">
-                            <i className="fas fa-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p>For general inquiries and support</p>
-                            <a href="mailto:contact@ervotechep.com">contact@ervotechep.com</a>
+                <Fade>
+                    <div className="container">
+                        <h2>How to Reach Us</h2>
+                        <div className="contact-options-grid">
+                            <div className="contact-option">
+                                <i className="fas fa-envelope"></i>
+                                <h3>Email Us</h3>
+                                <p>For general inquiries and support</p>
+                                <a href="mailto:contact@ervotechep.com">contact@ervotechep.com</a>
+                            </div>
+                            <div className="contact-option">
+                                <i className="fas fa-phone-alt"></i>
+                                <h3>Call Us</h3>
+                                <p>We're here to talk, anytime</p>
+                                <a href="tel:+9153410376">+1 (915) 341-0376</a>
+                            </div>
+                            <div className="contact-option">
+                                <i className="fas fa-calendar"></i>
+                                <h3>Schedule a Call</h3>
+                                <p>Book a one-on-one consultation at your convenience</p>
+                                <a href="mailto:contact@ervotech.com">Book Now</a>
+                            </div>
                         </div>
-                        <div className="contact-option">
-                            <i className="fas fa-phone-alt"></i>
-                            <h3>Call Us</h3>
-                            <p>We're here to talk, anytime</p>
-                            <a href="tel:+9153410376">+1 (915) 341-0376</a>
-                        </div>
-                        <div className="contact-option">
-                            <i className="fas fa-calendar"></i>
-                            <h3>Schedule a Call</h3>
-                            <p>Book a one-on-one consultation at your convenience</p>
-                            <a href="mailto:contact@ervotech.com">Book Now</a>
-                        </div>
-
                     </div>
-                </div>
+                </Fade>
             </section>
 
             {/* Contact Form Section */}
             <section className="contact-form-section">
-                <div className="container">
-                    <h2>Send Us a Message</h2>
-                    <p>Fill out the form below, and we’ll get back to you as soon as possible.</p>
-                    <form className="contact-form">
-                        <input type="text" placeholder="Your Name" required />
-                        <input type="email" placeholder="Your Email" required />
-                        <input type="text" placeholder="Subject" required />
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
+                <Fade>
+                    <div className="container">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below, and we’ll get back to you as soon as possible.</p>
+                        <form className="contact-form">
+                            <input type="text" placeholder="Your Name" required />
+                            <input type="email" placeholder="Your Email" required />
+                            <input type="text" placeholder="Subject" required />
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </Fade>
             </section>
 
             {/* Map Section */}

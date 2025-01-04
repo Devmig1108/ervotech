@@ -1,7 +1,6 @@
 import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faSearch, faChartLine, faCogs } from '@fortawesome/free-solid-svg-icons';
+import Fade from 'react-reveal/Fade';
 
 export default function Services({ auth }) {
     return (
@@ -11,64 +10,70 @@ export default function Services({ auth }) {
         >
             <Head title="Our Services" />
 
-            {/* --- Hero Section --- */}
+            {/* Hero Section */}
             <section className="services-hero">
                 <div className="container">
-                    <h1>Our Services</h1>
-                    <p>Empowering your business with tailored digital solutions to drive growth and success.</p>
+                    <Fade>
+                        <h1>Our Services</h1>
+                        <p>We provide a range of digital solutions tailored to your business goals.</p>
+                    </Fade>
                 </div>
             </section>
 
-            {/* --- Services Overview Section --- */}
-            <section className="services-overview">
+            {/* Service Blocks */}
+            <section className="services-list">
                 <div className="container">
-                    <h2>What We Offer</h2>
-                    <div className="services-grid">
-                        <div className="service-card">
-                            <FontAwesomeIcon icon={faLaptopCode} />
-                            <h3>Web Development</h3>
-                            <p>Custom-built websites tailored to your business needs, delivering seamless user experiences.</p>
+                    <Fade>
+                        <h2>What We Offer</h2>
+                        <div className="service-grid">
+                            <div id="website-migration" className="service-card">
+                                <h3>Website Migration</h3>
+                                <p>Seamlessly transfer your website to modern, scalable platforms without downtime.</p>
+                            </div>
+                            <div id="seo-optimization" className="service-card">
+                                <h3>SEO Optimization</h3>
+                                <p>Improve your search engine rankings with our strategic SEO techniques.</p>
+                            </div>
+                            <div id="web-design" className="service-card">
+                                <h3>Web Design & Development</h3>
+                                <p>Custom-designed websites that combine aesthetics and functionality.</p>
+                            </div>
+                            <div id="software-development" className="service-card">
+                                <h3>Software Development</h3>
+                                <p>Bespoke software solutions to address your business challenges.</p>
+                            </div>
+                            <div id="content-strategy" className="service-card">
+                                <h3>Content Strategy</h3>
+                                <p>Engaging content strategies that resonate with your target audience.</p>
+                            </div>
                         </div>
-                        <div className="service-card">
-                            <FontAwesomeIcon icon={faSearch} />
-                            <h3>SEO Optimization</h3>
-                            <p>Boost your online visibility and attract more customers with expert SEO strategies.</p>
-                        </div>
-                        <div className="service-card">
-                            <FontAwesomeIcon icon={faChartLine} />
-                            <h3>Digital Marketing</h3>
-                            <p>Strategic marketing campaigns designed to drive traffic and increase conversion rates.</p>
-                        </div>
-                        <div className="service-card">
-                            <FontAwesomeIcon icon={faCogs} />
-                            <h3>Software Development</h3>
-                            <p>Scalable software solutions to streamline your operations and maximize efficiency.</p>
-                        </div>
+                    </Fade>
+                </div>
+            </section>
+
+            {/* Portfolio Section */}
+            {/* <section className="portfolio">
+                <div className="container">
+                    <h2>Our Work</h2>
+                    <p>Explore some of our successful projects and see how we've helped businesses grow online.</p>
+                    <div className="portfolio-grid">
+                        <div className="portfolio-item">Project 1</div>
+                        <div className="portfolio-item">Project 2</div>
+                        <div className="portfolio-item">Project 3</div>
                     </div>
                 </div>
-            </section>
-
-            {/* --- Why Choose Us Section --- */}
-            <section className="why-choose-us">
-                <div className="container">
-                    <h2>Why Choose Ervotech?</h2>
-                    <ul>
-                        <li><strong>Experienced Team:</strong> Skilled professionals dedicated to excellence.</li>
-                        <li><strong>Data-Driven Decisions:</strong> Analytics and insights that guide our strategies.</li>
-                        <li><strong>Client-Centric Approach:</strong> Your goals drive every decision we make.</li>
-                        <li><strong>Innovative Solutions:</strong> Cutting-edge technology for modern businesses.</li>
-                    </ul>
-                </div>
-            </section>
-
-            {/* --- CTA Section --- */}
-            {/* <section className="services-cta">
-                <div className="container">
-                    <h2>Ready to Elevate Your Business?</h2>
-                    <p>Let us help you achieve your goals with our tailored services.</p>
-                    <a href="/contact" className="primary-btn">Get Started</a>
-                </div>
             </section> */}
+
+            {/* CTA Section */}
+            <section className="services-cta">
+                <Fade>
+                    <div className="container">
+                        <h2>Let’s Build Something Great Together</h2>
+                        <p>Get in touch with us to discuss your project and see how we can help.</p>
+                        <a href="/contact" className="primary-btn">Contact Us</a>
+                    </div>
+                </Fade>
+            </section>
         </PublicLayout>
     );
 }
