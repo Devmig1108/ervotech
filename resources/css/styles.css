@@ -172,7 +172,7 @@ p {
 }
 
 .vision h2 {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     color: var(--accent-purple);
 }
 
@@ -210,7 +210,7 @@ p {
 .split-text h2 {
     color: var(--accent-teal);
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 
@@ -425,7 +425,7 @@ button:hover,
 
 .services-list h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     color: var(--accent-teal);
 }
 
@@ -469,7 +469,7 @@ button:hover,
 
 .services-cta h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .services-cta p {
@@ -541,7 +541,7 @@ button:hover,
 
 .services-cta h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .home-services {
@@ -567,7 +567,7 @@ button:hover,
 
 .portfolio h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .portfolio p {
@@ -602,7 +602,7 @@ button:hover,
 
 .features h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     color: var(--text-light);
 }
 
@@ -663,7 +663,7 @@ button:hover,
 
 .faq h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     color: var(--accent-blue);
 }
 
@@ -901,7 +901,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin: 2.5rem 0;
     position: relative;
 }
 
@@ -1032,11 +1032,6 @@ section.visible {
     /* Ensure text side stays clean */
 }
 
-.split-text h2 {
-    color: var(--accent-teal);
-    margin-bottom: 1rem;
-}
-
 .split-text p {
     font-size: 2rem;
     line-height: 1.6;
@@ -1128,7 +1123,7 @@ footer {
 
 .about-mission h2 {
     color: var(--accent-teal);
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .about-mission p {
@@ -1147,7 +1142,7 @@ footer {
 
 .about-cta h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     color: var(--accent-blue);
 }
 
@@ -1275,7 +1270,7 @@ footer {
 }
 
 .contact-form h2 {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     color: var(--accent-purple);
 }
 
@@ -1312,7 +1307,7 @@ footer {
 }
 
 .contact-details h2 {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .contact-info-grid {
@@ -1349,7 +1344,7 @@ footer {
 }
 
 .contact-cta h2 {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .contact-cta a {
@@ -1400,7 +1395,7 @@ footer {
 }
 
 .contact-options h2 {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     color: var(--accent-purple);
 }
 
@@ -1446,7 +1441,7 @@ footer {
 }
 
 .contact-form-section h2 {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     color: var(--accent-orange);
 }
 
@@ -1488,7 +1483,7 @@ footer {
 }
 
 .contact-map h2 {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     color: var(--accent-blue);
 }
 
@@ -1507,7 +1502,7 @@ footer {
 }
 
 .contact-cta h2 {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .contact-cta a {
@@ -1550,7 +1545,7 @@ footer {
 
 .sitemap-links h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     color: var(--accent-teal);
 }
 
@@ -1587,7 +1582,7 @@ footer {
 
 .sitemap-cta h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .sitemap-cta p {
