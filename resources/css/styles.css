@@ -1654,6 +1654,10 @@ footer {
         .split-image {
             flex: 1 1 100%;
             min-height: 300px;
+            margin-top: 3rem;
+        }
+        .split-image {
+            height: 800px;
         }
         .split-text {
             padding: 2rem;
