@@ -1654,6 +1654,7 @@ footer {
     @media (max-width: 768px) {
         .split-section {
             flex-wrap: wrap;
+            height: 100%;
         }
         .split-text,
         .split-image {
@@ -1666,6 +1667,9 @@ footer {
         }
         .split-text {
             padding: 2rem;
+        }
+        .split-text p {
+            font-size: 1.8rem;
         }
     }
     .service-card {
