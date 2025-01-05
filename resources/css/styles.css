@@ -136,7 +136,7 @@ p {
     /* Improve readability */
     /* color: var(--text-dark); */
     /* Or any preferred color */
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .theme-toggle {
@@ -405,7 +405,7 @@ button:hover,
 }
 
 .services-hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -454,7 +454,7 @@ button:hover,
 }
 
 .service-card p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-light);
 }
 
@@ -473,7 +473,7 @@ button:hover,
 }
 
 .services-cta p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -571,7 +571,7 @@ button:hover,
 }
 
 .portfolio p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -924,7 +924,7 @@ h2::after {
 /* --- Hero Section Enhancements --- */
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -976,7 +976,7 @@ h2::after {
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
@@ -1110,7 +1110,7 @@ footer {
 }
 
 .about-hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -1132,7 +1132,7 @@ footer {
 }
 
 .about-mission p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     color: var(--text-light);
@@ -1152,7 +1152,7 @@ footer {
 }
 
 .about-cta p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: var(--text-light);
     max-width: 600px;
@@ -1210,7 +1210,7 @@ footer {
 }
 
 .about-story p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 
@@ -1260,7 +1260,7 @@ footer {
 }
 
 .contact-hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -1534,7 +1534,7 @@ footer {
 }
 
 .sitemap-hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -1591,7 +1591,7 @@ footer {
 }
 
 .sitemap-cta p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
 }
 
