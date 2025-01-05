@@ -717,6 +717,7 @@ button:hover,
     background-color: var(--secondary-dark);
     color: var(--text-light);
     font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contact-form input:focus,

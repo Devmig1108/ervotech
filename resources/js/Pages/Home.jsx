@@ -59,10 +59,10 @@ export default function Home({ auth }) {
                                 <Zoom><h3>Website Migration</h3>
                                     <p itemprop="description">Seamless migration of your website to modern, scalable platforms.</p></Zoom>
                             </div>
-                            <div class="service-card" itemscope itemtype="https://schema.org/Service">
+                            {/* <div class="service-card" itemscope itemtype="https://schema.org/Service">
                                 <Zoom><h3 itemprop="name">SEO Optimization</h3>
                                     <p itemprop="description">Boost your search rankings with our proven SEO strategies.</p></Zoom>
-                            </div>
+                            </div> */}
 
                             <div class="service-card" itemscope itemtype="https://schema.org/Service">
                                 <Zoom><h3 itemprop="name">Web Design & Development</h3>

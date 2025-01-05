@@ -31,7 +31,7 @@ export default function Sitemap({ auth }) {
                     <h2>Services</h2>
                     <ul>
                         <li><a href="/services#website-migration">Website Migration</a></li>
-                        <li><a href="/services#seo-optimization">SEO Optimization</a></li>
+                        {/* <li><a href="/services#seo-optimization">SEO Optimization</a></li> */}
                         <li><a href="/services#web-design">Web Design & Development</a></li>
                         <li><a href="/services#software-development">Software Development</a></li>
                         <li><a href="/services#content-strategy">Content Strategy</a></li>

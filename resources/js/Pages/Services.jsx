@@ -30,10 +30,10 @@ export default function Services({ auth }) {
                                 <h3>Website Migration</h3>
                                 <p>Seamlessly transfer your website to modern, scalable platforms without downtime.</p>
                             </div>
-                            <div id="seo-optimization" className="service-card">
+                            {/* <div id="seo-optimization" className="service-card">
                                 <h3>SEO Optimization</h3>
                                 <p>Improve your search engine rankings with our strategic SEO techniques.</p>
-                            </div>
+                            </div> */}
                             <div id="web-design" className="service-card">
                                 <h3>Web Design & Development</h3>
                                 <p>Custom-designed websites that combine aesthetics and functionality.</p>
