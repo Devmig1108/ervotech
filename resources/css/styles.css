@@ -1084,6 +1084,10 @@ html {
     z-index: 1001;
 }
 
+[data-theme="light"] .menu-toggle {
+    color: var(--text-dark);
+}
+
 
 /* Footer Styles */
 
