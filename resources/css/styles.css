@@ -42,7 +42,7 @@
 
 [data-theme="light"] .hero h1 {
     /* background: linear-gradient(135deg, #f9fafc 0%, #e6ecf3 100%); */
-    color: var(--accent-blue);
+    color: var(--accent-orange);
 }
 
 [data-theme="light"] .service-card {
@@ -973,6 +973,7 @@ h2::after {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    color: var(--accent-blue);
 }
 
 .hero p {
