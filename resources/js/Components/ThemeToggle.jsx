@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 
 export default function ThemeToggle() {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
@@ -13,12 +14,14 @@ export default function ThemeToggle() {
     };
 
     return (
-        <button
-            onClick={toggleTheme}
-            className="theme-toggle-btn"
-            aria-label="Toggle Dark/Light Theme"
-        >
-            {theme === 'light' ? '🌞' : '🌜'}
-        </button>
+        <Fade>
+            <button
+                onClick={toggleTheme}
+                className="theme-toggle-btn"
+                aria-label="Toggle Dark/Light Theme"
+            >
+                {theme === 'dark' ? '🌞' : '🌜'}
+            </button>
+        </Fade>
     );
 }
