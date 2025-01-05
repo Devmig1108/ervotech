@@ -625,6 +625,10 @@ button:hover,
     margin-bottom: 1rem;
 }
 
+.feature-item p {
+    font-size: 1.3rem;
+}
+
 
 /* Testimonials Section */
 
