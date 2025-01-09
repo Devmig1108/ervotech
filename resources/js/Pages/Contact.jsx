@@ -1,6 +1,7 @@
 import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
 import Fade from 'react-reveal/Fade';
+import ContactForm from '@/Components/ContactForm';
 
 export default function Contact({ auth }) {
     return (
@@ -55,13 +56,7 @@ export default function Contact({ auth }) {
                     <div className="container">
                         <h2>Send Us a Message</h2>
                         <p>Fill out the form below, and we’ll get back to you as soon as possible.</p>
-                        <form className="contact-form">
-                            <input type="text" placeholder="Your Name" required />
-                            <input type="email" placeholder="Your Email" required />
-                            <input type="text" placeholder="Subject" required />
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
+                        <ContactForm />
                     </div>
                 </Fade>
             </section>

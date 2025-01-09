@@ -3,6 +3,7 @@ import { Head } from '@inertiajs/react';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import ContactForm from '@/Components/ContactForm';
 
 
 export default function Home({ auth }) {
@@ -155,18 +156,7 @@ export default function Home({ auth }) {
                 </div>
             </section> */}
             {/* <!-- Contact Section --> */}
-            <section class="contact" id="contact">
-                <div class="container">
-                    <h2>Get in Touch</h2>
-                    <p>We’d love to hear from you. Fill out the form below, and we’ll get back to you shortly.</p>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required />
-                        <input type="email" placeholder="Your Email" required />
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </section>
+            <ContactForm />
         </PublicLayout>
     );
 }

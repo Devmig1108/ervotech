@@ -719,7 +719,7 @@ button:hover,
     border-radius: 5px;
     border: 1px solid var(--primary-dark);
     background-color: var(--secondary-dark);
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
 }
@@ -743,6 +743,107 @@ button:hover,
 
 .contact-form button:hover {
     background-color: var(--accent-teal);
+}
+
+
+/* Modal Wrapper */
+
+.modal {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    pointer-events: none;
+}
+
+
+/* Modal Wrapper */
+
+.modal {
+    position: fixed;
+    top: 8rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    pointer-events: none;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content p {
+    color: var(--primary-dark);
+}
+
+
+/* Success style */
+
+.modal-content.success {
+    border-left: 5px solid var(--accent-teal);
+    /* Green border for success */
+}
+
+
+/* Error style */
+
+.modal-content.error {
+    border-left: 5px solid var(--accent-red);
+    /* Red border for error */
+}
+
+
+/* Close Button */
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #666;
+}
+
+
+/* Close Button hover effect */
+
+.close-btn:hover {
+    color: #333;
+}
+
+
+/* Error Message Below Button */
+
+.error-message {
+    color: #f38167;
+    /* Match the error modal color */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+
+/* Modal Fade-out effect */
+
+.modal-content.hide {
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 
