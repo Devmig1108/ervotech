@@ -281,6 +281,8 @@ button,
 
 .logo img {
     display: block;
+    width: 200px;
+    ;
 }
 
 .logo span {
@@ -995,6 +997,45 @@ footer {
 .footer-links a,
 .footer-contact a {
     color: var(--accent-purple);
+}
+
+.footer-cta {
+    text-align: center;
+    /* padding: 1.5rem; */
+    border-radius: 8px;
+}
+
+.footer-cta .cta-logo {
+    /* width: 100px; */
+    max-width: 150px;
+    /* margin: 0 auto 1rem; */
+    display: inline-block;
+}
+
+.footer-cta h4 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-purple);
+    font-size: 1.25rem;
+}
+
+.footer-cta p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-cta .cta-button {
+    background-color: var(--accent-teal);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer-cta .cta-button:hover {
+    background-color: var(--accent-purple);
 }
 
 

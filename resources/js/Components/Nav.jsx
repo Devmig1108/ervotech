@@ -16,9 +16,9 @@ export default function Nav() {
                 {/* Logo Section */}
                 <div className="logo">
                     <Link href="/">
-                        <img src="images/Logo2.png" alt="Logo" width="100" height="120" />
+                        <img src="images/ervotech-logo.png" alt="Logo"/>
                     </Link>
-                    ervotech<span>.</span>
+                    {/* <div>ervotech<span> .</span></div> */}
                 </div>
 
                 {/* Navigation Links */}
