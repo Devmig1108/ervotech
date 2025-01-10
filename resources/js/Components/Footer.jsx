@@ -27,7 +27,10 @@ export default function Footer() {
 
                 {/* Call-to-Action Section */}
                 <div className="footer-cta">
-                    <img src="images/ervotech-logo.png" alt="Company Logo" className="cta-logo" />
+                    <Link href="/">
+                        <img className="light-logo" src="images/ervotech-logo.png" alt="Logo" />
+                        <img className="dark-logo" src="images/ervotech-logo-dark.png" alt="Logo" />
+                    </Link>
                     {/* <h4>Let's Build Something Extraordinary</h4> */}
                     <p>Ready to take your digital presence to the next level? Contact us today and let's make it happen!</p>
                     <a href="/contact" className="cta-button">Get in Touch</a>
