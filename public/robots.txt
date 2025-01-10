@@ -1,2 +1,7 @@
-User-agent: *
-Disallow:
+User-agent: * 
+
+Disallow: /admin/
+
+
+
+Sitemap: http://www.ervotechep.com/sitemap.xml 
