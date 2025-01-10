@@ -2,6 +2,7 @@
 
 :root {
     --primary-dark: #03071b;
+    --navbar-dark: #374663;
     --secondary-dark: #0e0a10;
     --primary-light: #ffffff;
     --secondary-light: #f9f9f9;
@@ -114,7 +115,7 @@
 }
 
 [data-theme="light"] .contact {
-    background: linear-gradient(135deg, #f9fafc, #e6ecf3);
+    background: var(--secondary-light);
 }
 
 [data-theme="light"] .faq {
@@ -173,7 +174,7 @@ p {
 
 .vision h2 {
     margin: 2rem 0;
-    color: var(--accent-purple);
+    color: var(--accent-teal);
 }
 
 .vision-content p {
@@ -282,7 +283,14 @@ button,
 .logo img {
     display: block;
     width: 200px;
-    ;
+}
+
+[data-theme="light"] .dark-logo {
+    display: none;
+}
+
+[data-theme="dark"] .light-logo {
+    display: none;
 }
 
 .logo span {
@@ -1019,7 +1027,7 @@ footer {
 }
 
 .footer-cta p {
-    color: var(--text-dark);
+    color: var(--text-light);
     margin-bottom: 1rem;
     font-size: 1rem;
 }
@@ -1274,7 +1282,7 @@ footer {
 }
 
 .about-mission h2 {
-    color: var(--accent-teal);
+    color: var(--text-light);
     margin: 1.5rem 0;
 }
 
@@ -1548,7 +1556,7 @@ footer {
 
 .contact-options h2 {
     margin: 2rem 0;
-    color: var(--accent-purple);
+    color: var(--accent-orange);
 }
 
 .contact-options-grid {
@@ -1590,6 +1598,10 @@ footer {
 
 .contact-form-section {
     background-color: var(--secondary-dark);
+}
+
+[data-theme="light"] .contact-form-section {
+    background-color: var(--accent-blue);
 }
 
 .contact-form-section h2 {
