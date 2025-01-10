@@ -1014,10 +1014,7 @@ footer {
 }
 
 .footer-cta .cta-logo {
-    /* width: 100px; */
     max-width: 150px;
-    /* margin: 0 auto 1rem; */
-    display: inline-block;
 }
 
 .footer-cta h4 {
