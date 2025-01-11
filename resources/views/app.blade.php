@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.ervotechep.com/" />
+    <link rel="icon" type="image/x-icon" href="/images/Logo2.svg">
 
     <title inertia>Ervotech - Web Consulting and Development</title>
 
