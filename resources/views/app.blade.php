@@ -7,7 +7,6 @@
     <meta name="description" content="Ervotech offers expert web consulting, including SEO, web design, and software development tailored to your business needs.">
     <meta name="keywords" content="El Paso , Texas, web consulting, seo, web development, website migration, software development, web design, website development, web applications">
     <meta name="author" content="Ervotech">
-    <meta property="og:title" content="Ervotech - Web Consulting and Development">
     <meta property="og:description" content="Modern web solutions for SEO, web design, and software development.">
     <!-- <meta property="og:image" content="images/Logo2.png"> -->
     <meta property="og:url" content="www.ervotechep.com">
@@ -19,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="canonical" href="https://www.ervotechep.com/" />
     <link rel="icon" type="image/x-icon" href="/images/Logo2.png">
 
     <title inertia>Ervotech - Web Consulting and Development</title>
