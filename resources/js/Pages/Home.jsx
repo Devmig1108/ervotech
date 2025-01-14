@@ -28,87 +28,86 @@ export default function Home({ auth }) {
                     className="aspect-[2/1] hero">
                     <div class="hero-overlay"></div>
                     <div class="hero-content">
-                        <Fade><h1>Transform Your Web Presence</h1></Fade>
-                        <Fade><p>We specialize in modern web solutions, including SEO, website design, and software development tailored to your needs.</p></Fade>
+                        <Fade><h1>Transform Your Business with Expert Web Consulting</h1></Fade>
+                        <Fade>
+                            <p>Ervotech specializes in modern web solutions, including SEO optimization, website migration, and custom web development to meet your business needs.</p>
+                        </Fade>
                         <div class="hero-buttons">
-                            <a href="#services" class="primary-btn">Explore Services</a>
-                            <a href="#contact" class="secondary-btn">Contact Us</a>
+                            <a href="#services" class="primary-btn">Explore Our Services</a>
+                            <a href="#contact" class="secondary-btn">Get in Touch</a>
                         </div>
                     </div>
                 </ParallaxBanner>
 
                 {/* <!-- Split Section --> */}
-                <p>
-                    At Ervotech, we are committed to delivering digital solutions that drive growth, innovation, and success for your business.
-                    Our <strong>web consulting</strong>, <strong>SEO strategies</strong>, and <strong>web development services</strong> are tailored to help you thrive.
-                </p>
-
                 <section className="split-section">
                     <Fade>
                         <div className="split-text">
                             <Parallax speed={-10}>
-                                <h2>Our Commitment</h2>
+                                <h2>Our Commitment to Web Consulting Excellence</h2>
                                 <p>
-                                    At Ervotech, we are committed to delivering digital solutions that drive growth, innovation, and success for your business.
-                                    Our team combines expertise, creativity, and technology to craft websites and applications tailored to your unique needs.
-                                    We don't just build projects; we build partnerships that last.
-                        </p>
+                                    At Ervotech, we are committed to delivering digital solutions that drive growth, innovation, and success.
+                                    Our <strong className="font-blue">web consulting</strong>, <strong className="font-blue">SEO optimization</strong>, and <strong className="font-blue">web development services</strong> empower businesses to thrive online.
+                                </p>
                                 <p>
-                                    <em>Your success is our priority, and every project reflects our dedication to excellence.</em>
+                                    <em>Your success is our priority. Every project reflects our dedication to delivering impactful, scalable solutions.</em>
                                 </p>
                             </Parallax>
                         </div>
                     </Fade>
-                    <div class="split-image" role="img" aria-label="Modern desk setup with a laptop, notepad, and coffee mug in a clean workspace"></div>
+                    <div
+                        class="split-image"
+                        role="img"
+                        aria-label="Modern workspace setup for web consulting with a laptop, notepad, and coffee cup"></div>
                 </section>
+
 
                 {/* <!-- Services Section --> */}
                 <section class="home-services" id="home-services">
                     <div class="container">
                         <Parallax speed={-10}>
-                            <h2>Our Services</h2>
+                            <h2>Our Web Consulting and Development Services</h2>
                             <div class="service-grid">
                                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                                    <Zoom><h3>Website Migration</h3>
-                                        <p itemprop="description">Seamless migration of your website to modern, scalable platforms.</p></Zoom>
+                                    <Zoom><h3 itemprop="name">Website Migration</h3>
+                                        <p itemprop="description">Seamlessly migrate your website to modern, scalable platforms for better performance.</p>
+                                    </Zoom>
                                 </div>
-                                {/* <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                                <Zoom><h3 itemprop="name">SEO Optimization</h3>
-                                    <p itemprop="description">Boost your search rankings with our proven SEO strategies.</p></Zoom>
-                            </div> */}
-
                                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                                     <Zoom><h3 itemprop="name">Web Design & Development</h3>
-                                        <p itemprop="description">Create stunning, user-friendly websites for your business.</p></Zoom>
+                                        <p itemprop="description">Craft stunning, user-friendly websites tailored to your brand and audience.</p>
+                                    </Zoom>
                                 </div>
                                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                                     <Zoom><h3 itemprop="name">Software Development</h3>
-                                        <p itemprop="description">Custom web applications tailored to meet your business goals.</p></Zoom>
+                                        <p itemprop="description">Custom web applications designed to align with your business goals and scale effectively.</p>
+                                    </Zoom>
                                 </div>
                                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                                     <Zoom><h3 itemprop="name">Content Strategy</h3>
-                                        <p itemprop="description">Crafting compelling content to drive engagement and results.</p></Zoom>
+                                        <p itemprop="description">Engaging content that drives traffic and boosts customer engagement.</p>
+                                    </Zoom>
                                 </div>
                             </div>
                         </Parallax>
                     </div>
                 </section>
 
+
                 {/* <!-- Vision Section --> */}
                 <section className="vision" id="vision">
                     <div className="container">
                         <Parallax speed={-10}>
-                            <h2>Our Vision</h2>
+                            <h2>Our Vision for Empowering Businesses</h2>
                             <div className="vision-content">
                                 <p>
-                                    At Ervotech, our vision is to empower businesses with cutting-edge digital solutions
-                                    that foster growth, efficiency, and success. We aim to create websites and applications that not
-                                    only meet expectations but exceed them.
-                        </p>
+                                    At Ervotech, our vision is to empower businesses with innovative <strong className="font-blue">web consulting </strong>
+                                    and <strong className="font-blue">digital solutions</strong> that drive growth and efficiency.
+                                </p>
                                 <p>
-                                    Our approach combines innovative technologies, strategic thinking, and a deep commitment
-                                    to customer satisfaction. Every project is an opportunity to make a meaningful impact.
-                        </p>
+                                    With a focus on <strong className="font-blue">SEO optimization</strong> and <strong className="font-blue">custom web development</strong>,
+                                    we aim to exceed expectations and help our clients achieve measurable success.
+                                </p>
                             </div>
                             <div className="vision-cta">
                                 <a href="#contact" className="primary-btn">Let's Build Together</a>
@@ -118,33 +117,34 @@ export default function Home({ auth }) {
                 </section>
 
 
+
                 {/* <!-- Why Choose Us Section --> */}
                 <section className="features" id="features">
-
                     <div className="container">
                         <Parallax speed={-10}>
-                            <h2>Why Choose Us?</h2>
+                            <h2>Why Choose Ervotech for Web Consulting?</h2>
                             <div className="feature-grid">
                                 <div className="feature-item">
                                     <h3>Innovative Solutions</h3>
-                                    <p>We blend creativity with technology to deliver impactful results.</p>
+                                    <p>We blend creativity and technology to deliver impactful web solutions.</p>
                                 </div>
                                 <div className="feature-item">
-                                    <h3>Client-Centered Approach</h3>
-                                    <p>Every project is built around your unique business goals.</p>
+                                    <h3>Client-Focused Approach</h3>
+                                    <p>Your business goals are at the center of everything we create.</p>
                                 </div>
                                 <div className="feature-item">
-                                    <h3>Scalable Design</h3>
-                                    <p>We future-proof your website with scalable solutions.</p>
+                                    <h3>Scalable Web Design</h3>
+                                    <p>We future-proof your digital presence with scalable web development.</p>
                                 </div>
                                 <div className="feature-item">
-                                    <h3>Transparent Communication</h3>
-                                    <p>Clear and consistent communication throughout every step.</p>
+                                    <h3>Clear Communication</h3>
+                                    <p>We ensure a transparent and collaborative process from start to finish.</p>
                                 </div>
                             </div>
                         </Parallax>
                     </div>
                 </section>
+
 
 
                 {/* <!-- Testimonials Section --> */}

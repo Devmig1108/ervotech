@@ -140,6 +140,11 @@ p {
     font-size: 1.3rem;
 }
 
+.font-blue {
+    color: var(--accent-blue);
+    font-weight: 400;
+}
+
 .theme-toggle {
     position: fixed;
     top: 1rem;
