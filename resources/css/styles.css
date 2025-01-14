@@ -463,9 +463,10 @@ button:hover,
     transform: translateY(-5px);
 }
 
-.service-card h3 {
+.service-card h3 a {
     margin-bottom: 0.5rem;
     color: var(--accent-purple);
+    text-decoration: none;
 }
 
 .service-card p {

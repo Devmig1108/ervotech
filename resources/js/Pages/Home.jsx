@@ -63,36 +63,47 @@ export default function Home({ auth }) {
 
 
                 {/* <!-- Services Section --> */}
-                <section class="home-services" id="home-services">
-                    <div class="container">
+                <section className="home-services" id="home-services">
+                    <div className="container">
                         <Parallax speed={-10}>
-                            <h2>Our Web Consulting and Development Services</h2>
-                            <div class="service-grid">
-                                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                                    <Zoom><h3 itemprop="name">Website Migration</h3>
-                                        <p itemprop="description">Seamlessly migrate your website to modern, scalable platforms for better performance.</p>
+                            <h2>Our Services</h2>
+                            <div className="service-grid">
+                                <div className="service-card" itemscope itemtype="https://schema.org/Service">
+                                    <Zoom>
+                                        <h3>
+                                            <a href="/services#website-migration" itemprop="name">Website Migration</a>
+                                        </h3>
+                                        <p itemprop="description">Seamless migration of your website to modern, scalable platforms.</p>
                                     </Zoom>
                                 </div>
-                                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                                    <Zoom><h3 itemprop="name">Web Design & Development</h3>
-                                        <p itemprop="description">Craft stunning, user-friendly websites tailored to your brand and audience.</p>
+                                <div className="service-card" itemscope itemtype="https://schema.org/Service">
+                                    <Zoom>
+                                        <h3>
+                                            <a href="/services#web-design" itemprop="name">Web Design & Development</a>
+                                        </h3>
+                                        <p itemprop="description">Create stunning, user-friendly websites for your business.</p>
                                     </Zoom>
                                 </div>
-                                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                                    <Zoom><h3 itemprop="name">Software Development</h3>
-                                        <p itemprop="description">Custom web applications designed to align with your business goals and scale effectively.</p>
+                                <div className="service-card" itemscope itemtype="https://schema.org/Service">
+                                    <Zoom>
+                                        <h3>
+                                            <a href="/services#software-development" itemprop="name">Software Development</a>
+                                        </h3>
+                                        <p itemprop="description">Custom web applications tailored to meet your business goals.</p>
                                     </Zoom>
                                 </div>
-                                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                                    <Zoom><h3 itemprop="name">Content Strategy</h3>
-                                        <p itemprop="description">Engaging content that drives traffic and boosts customer engagement.</p>
+                                <div className="service-card" itemscope itemtype="https://schema.org/Service">
+                                    <Zoom>
+                                        <h3>
+                                            <a href="/services#content-strategy" itemprop="name">Content Strategy</a>
+                                        </h3>
+                                        <p itemprop="description">Crafting compelling content to drive engagement and results.</p>
                                     </Zoom>
                                 </div>
                             </div>
                         </Parallax>
                     </div>
                 </section>
-
 
                 {/* <!-- Vision Section --> */}
                 <section className="vision" id="vision">
@@ -115,8 +126,6 @@ export default function Home({ auth }) {
                         </Parallax>
                     </div>
                 </section>
-
-
 
                 {/* <!-- Why Choose Us Section --> */}
                 <section className="features" id="features">
@@ -144,8 +153,6 @@ export default function Home({ auth }) {
                         </Parallax>
                     </div>
                 </section>
-
-
 
                 {/* <!-- Testimonials Section --> */}
                 {/* <section class="testimonials" id="testimonials">
