@@ -38,6 +38,11 @@ export default function Home({ auth }) {
                 </ParallaxBanner>
 
                 {/* <!-- Split Section --> */}
+                <p>
+                    At Ervotech, we are committed to delivering digital solutions that drive growth, innovation, and success for your business.
+                    Our <strong>web consulting</strong>, <strong>SEO strategies</strong>, and <strong>web development services</strong> are tailored to help you thrive.
+                </p>
+
                 <section className="split-section">
                     <Fade>
                         <div className="split-text">
