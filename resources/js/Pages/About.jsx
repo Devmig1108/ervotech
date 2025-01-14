@@ -1,11 +1,11 @@
 import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
 import Fade from 'react-reveal/Fade';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Gallery({ auth }) {
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/about" />
                 <title>About Us | Ervotech - Your Web Consulting Partner</title>
@@ -59,11 +59,11 @@ export default function Gallery({ auth }) {
                                 innovative and user-centric digital solutions. We aim to bridge the gap
                                 between vision and execution, helping businesses build strong, impactful,
                                 and sustainable online presences.
-        </p>
+                            </p>
                             <p>
                                 Every project we undertake is a step towards making the digital world
                                 more accessible, intuitive, and results-driven for businesses of all sizes.
-        </p>
+                             </p>
                         </Fade>
                     </div>
                 </section>
@@ -85,16 +85,15 @@ export default function Gallery({ auth }) {
                             <p>
                                 Whether you're looking to enhance your web presence, optimize your SEO, or develop custom software solutions,
                                 Ervotech is here to partner with you every step of the way. Our team is dedicated to turning your vision into reality.
-        </p>
+                            </p>
                             <p>
                                 Let's collaborate to build something extraordinary together. Reach out to us today and let's start your journey toward digital success.
-        </p>
+                            </p>
                             <a href="/contact" className="primary-btn">Get in Touch</a>
                         </Fade>
                     </div>
                 </section>
-
             </PublicLayout >
-        </>
+        </HelmetProvider>
     );
 }

@@ -1,11 +1,11 @@
 import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
 import Fade from 'react-reveal/Fade';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Services({ auth }) {
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/services" />
                 <title>Our Services | Ervotech - Tailored Web Solutions</title>
@@ -82,6 +82,6 @@ export default function Services({ auth }) {
                     </Fade>
                 </section>
             </PublicLayout>
-        </>
+        </HelmetProvider>
     );
 }

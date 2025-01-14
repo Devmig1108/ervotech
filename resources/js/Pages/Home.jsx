@@ -4,12 +4,12 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
 import ContactForm from '@/Components/ContactForm';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 
 export default function Home({ auth }) {
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/" />
                 <meta property="og:title" content="Ervotech - Web Consulting and Development" />
@@ -170,6 +170,6 @@ export default function Home({ auth }) {
                 {/* <!-- Contact Section --> */}
                 <ContactForm />
             </PublicLayout>
-        </>
+        </HelmetProvider>
     );
 }

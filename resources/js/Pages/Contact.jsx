@@ -2,11 +2,11 @@ import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
 import Fade from 'react-reveal/Fade';
 import ContactForm from '@/Components/ContactForm';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Contact({ auth }) {
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/contact" />
                 <title>Contact Us | Ervotech - Let’s Work Together</title>
@@ -94,6 +94,6 @@ export default function Contact({ auth }) {
                     </div>
                 </section>
             </PublicLayout>
-        </>
+        </HelmetProvider>
     );
 }
