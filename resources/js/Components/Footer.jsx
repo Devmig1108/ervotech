@@ -28,8 +28,8 @@ export default function Footer() {
                 {/* Call-to-Action Section */}
                 <div className="footer-cta">
                     <Link href="/">
-                        <img className="cta-logo light-logo" src="images/ervotech-logo.png" alt="Logo" />
-                        <img className="cta-logo dark-logo" src="images/ervotech-logo-dark.png" alt="Logo" />
+                        <img className="cta-logo light-logo" src="/images/ervotech-logo.png" alt="Logo" />
+                        <img className="cta-logo dark-logo" src="/images/ervotech-logo-dark.png" alt="Logo" />
                     </Link>
                     {/* <h4>Let's Build Something Extraordinary</h4> */}
                     <p>Ready to take your digital presence to the next level? Contact us today and let's make it happen!</p>
@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Ervotech. All Rights Reserved.</p>
+                <p>&copy; 2025 Ervotech. All Rights Reserved.</p>
             </div>
         </footer>
 

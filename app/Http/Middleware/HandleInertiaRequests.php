@@ -31,6 +31,8 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
+            'errors' => session('errors') ? session('errors')->getBag('default')->toArray() : (object) [],
+            'success' => session('success') ?? null, // ✅ Ensure success messages are passed without redirection
             'auth' => [
                 'user' => $request->user(),
             ],
