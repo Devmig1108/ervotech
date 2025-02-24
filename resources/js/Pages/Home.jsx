@@ -11,9 +11,12 @@ export default function Home({ auth }) {
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/" />
-                <meta property="og:title" content="Ervotech | El Paso Web Design & Development" />
-                <meta name="description" content="Ervotech provides expert web design, SEO optimization, and custom software development for small to medium-sized businesses in El Paso." />
-                <title>Ervotech | El Paso Web Design & Development</title>
+                <meta property="og:title" content="Custom Web Design & SEO Services | Ervotech El Paso" />
+                <meta property="og:description" content="Boost your online presence with expert web design & SEO solutions. Ervotech helps businesses in El Paso grow with modern digital strategies." />
+                <meta property="og:image" content="https://www.ervotechep.com/images/Logo2.png" />
+                <meta property="og:url" content="https://www.ervotechep.com/" />
+                <meta name="description" content="Looking for expert web design and SEO services? Ervotech provides custom websites & SEO solutions to help your business grow. Contact us today!" />
+                <title>Custom Web Design & SEO Services | Ervotech El Paso</title>
             </Helmet>
             <PublicLayout
                 user={auth.user}
@@ -46,7 +49,7 @@ export default function Home({ auth }) {
                             <Parallax speed={-10}>
                                 <h2>El Paso Web Design & SEO Services</h2>
                                 <p>
-                                    At Ervotech, we are committed to providing top-notch <strong className="font-blue">web design</strong>, <strong className="font-blue">SEO solutions</strong>, and <strong className="font-blue">custom software development</strong> tailored for businesses in El Paso.
+                                    At Ervotech, we are committed to providing top-notch <strong className="font-blue">web design</strong>, <strong className="font-blue">SEO solutions</strong>, and <strong className="font-blue">custom software development</strong> tailored for businesses in El Paso and the surrounding area.
                                 </p>
                                 <p>
                                     <em>We help local businesses enhance their online presence, attract customers, and scale through modern digital solutions.</em>
