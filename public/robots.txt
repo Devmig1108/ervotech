@@ -1,7 +1,8 @@
 User-agent: * 
 
 Disallow: /admin/
+Disallow: /search/
 
 
 
-Sitemap: http://www.ervotechep.com/sitemap.xml 
+Sitemap: https://www.ervotechep.com/sitemap.xml 
