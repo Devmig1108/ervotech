@@ -42,28 +42,27 @@
     </script>
     <script type="application/ld+json">
         {
-            JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "Ervotech",
-                "url": "https://www.ervotechep.com",
-                "logo": "https://www.ervotechep.com/images/Logo2.png",
-                "description": "Custom web design, SEO, and digital marketing services in El Paso.",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "El Paso",
-                    "addressRegion": "TX",
-                    "postalCode": "79938",
-                    "addressCountry": "US"
-                },
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+1-915-341-0376",
-                    "contactType": "customer service"
-                }
-            })
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Ervotech",
+            "url": "https://www.ervotechep.com",
+            "logo": "https://www.ervotechep.com/images/Logo2.png",
+            "description": "Custom web design, SEO, and digital marketing services in El Paso.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "El Paso",
+                "addressRegion": "TX",
+                "postalCode": "79938",
+                "addressCountry": "US"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-915-341-0376",
+                "contactType": "customer service"
+            }
         }
     </script>
+
 </head>
 
 <body class="font-sans antialiased">
