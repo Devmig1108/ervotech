@@ -8,21 +8,22 @@ export default function Services({ auth }) {
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/services" />
-                <title>Our Services | Ervotech - Tailored Web Solutions</title>
-                <meta property="og:title" content="Our Services | Ervotech - Tailored Web Solutions" />
+                <title>Web Design & Development Services in El Paso | Ervotech</title>
+                <meta property="og:title" content="Web Design & Development Services in El Paso | Ervotech" />
+                <meta name="description" content="Explore Ervotech's professional web design, development, SEO, and software solutions tailored for businesses in El Paso." />
             </Helmet>
             <PublicLayout
                 user={auth.user}
-                header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Services</h2>}
+                header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Web Design & Development Services in El Paso</h2>}
             >
-                <Head title="Our Services" />
+                <Head title="Web Design & Development Services | Ervotech" />
 
                 {/* Hero Section */}
                 <section className="services-hero">
                     <div className="container">
                         <Fade>
-                            <h1>Our Services</h1>
-                            <p>We provide a range of digital solutions tailored to your business goals.</p>
+                            <h1>Professional Web Design & SEO Services</h1>
+                            <p>We provide a range of digital solutions tailored to your business goals, including website development, SEO optimization, and custom software solutions.</p>
                         </Fade>
                     </div>
                 </section>
@@ -31,52 +32,39 @@ export default function Services({ auth }) {
                 <section className="services-list">
                     <div className="container">
                         <Fade>
-                            <h2>What We Offer</h2>
+                            <h2>Our Web Services</h2>
                             <div className="service-grid">
                                 <div id="website-migration" className="service-card">
                                     <h3>Website Migration</h3>
-                                    <p>Seamlessly transfer your website to modern, scalable platforms without downtime.</p>
+                                    <p>Seamlessly transfer your website to modern, scalable platforms with minimal downtime.</p>
                                 </div>
-                                {/* <div id="seo-optimization" className="service-card">
-                                <h3>SEO Optimization</h3>
-                                <p>Improve your search engine rankings with our strategic SEO techniques.</p>
-                            </div> */}
                                 <div id="web-design" className="service-card">
-                                    <h3>Web Design & Development</h3>
-                                    <p>Custom-designed websites that combine aesthetics and functionality.</p>
+                                    <h3>Custom Web Design & Development</h3>
+                                    <p>We design visually stunning, high-performing websites for businesses in El Paso.</p>
                                 </div>
                                 <div id="software-development" className="service-card">
-                                    <h3>Software Development</h3>
-                                    <p>Bespoke software solutions to address your business challenges.</p>
+                                    <h3>Custom Software Development</h3>
+                                    <p>Tailored software solutions to optimize business operations and efficiency.</p>
+                                </div>
+                                <div id="seo-strategy" className="service-card">
+                                    <h3>SEO Optimization for Local Businesses</h3>
+                                    <p>Improve your search rankings and attract more customers with our local SEO strategies.</p>
                                 </div>
                                 <div id="content-strategy" className="service-card">
-                                    <h3>Content Strategy</h3>
-                                    <p>Engaging content strategies that resonate with your target audience.</p>
+                                    <h3>Content Strategy & Digital Marketing</h3>
+                                    <p>Engaging, conversion-driven content to boost your online presence.</p>
                                 </div>
                             </div>
                         </Fade>
                     </div>
                 </section>
 
-                {/* Portfolio Section */}
-                {/* <section className="portfolio">
-                <div className="container">
-                    <h2>Our Work</h2>
-                    <p>Explore some of our successful projects and see how we've helped businesses grow online.</p>
-                    <div className="portfolio-grid">
-                        <div className="portfolio-item">Project 1</div>
-                        <div className="portfolio-item">Project 2</div>
-                        <div className="portfolio-item">Project 3</div>
-                    </div>
-                </div>
-            </section> */}
-
                 {/* CTA Section */}
                 <section className="services-cta">
                     <Fade>
                         <div className="container">
-                            <h2>Let’s Build Something Great Together</h2>
-                            <p>Get in touch with us to discuss your project and see how we can help.</p>
+                            <h2>Partner with a Top Web Design Agency in El Paso</h2>
+                            <p>Get in touch with us today to discuss how we can elevate your digital presence.</p>
                             <a href="/contact" className="primary-btn">Contact Us</a>
                         </div>
                     </Fade>

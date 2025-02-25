@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ervotech offers expert web consulting, including SEO, web design, and software development tailored to your business needs.">
+    <meta name="description" content="Looking for expert web design and SEO services? Ervotech provides custom websites & SEO solutions to help your business grow. Contact us today!">
     <meta name="keywords" content="El Paso , Texas, web consulting, seo, web development, website migration, software development, web design, website development, web applications">
     <meta name="author" content="Ervotech">
     <meta property="og:description" content="Modern web solutions for SEO, web design, and software development.">
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/Logo2.png">
 
-    <title inertia>Ervotech - Web Consulting and Development</title>
+    <title>Custom Web Design & SEO Services | Ervotech El Paso</title>
 
     <!-- Scripts -->
     @routes
@@ -39,6 +39,30 @@
         gtag('js', new Date());
 
         gtag('config', 'G-Y55H1W6TCX');
+    </script>
+    <script type="application/ld+json">
+        {
+            JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Ervotech",
+                "url": "https://www.ervotechep.com",
+                "logo": "https://www.ervotechep.com/images/Logo2.png",
+                "description": "Custom web design, SEO, and digital marketing services in El Paso.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "El Paso",
+                    "addressRegion": "TX",
+                    "postalCode": "79938",
+                    "addressCountry": "US"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-915-341-0376",
+                    "contactType": "customer service"
+                }
+            })
+        }
     </script>
 </head>
 
