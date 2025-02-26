@@ -50,12 +50,10 @@ export default function Home({ auth }) {
                 >
                     <div className="hero-overlay"></div>
                     <div className="hero-content">
-                        <Fade>
-                            <h1>
-                                Custom Web Design & SEO Services in El Paso That
-                                Help Your Business Grow
-                            </h1>
-                        </Fade>
+                        <h1>
+                            Custom Web Design & SEO Services in El Paso That
+                            Help Your Business Grow
+                        </h1>
                         <Fade>
                             <p>
                                 Looking for expert web design and SEO services
