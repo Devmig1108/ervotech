@@ -6,8 +6,11 @@ export default defineConfig({
     plugins: [
         laravel({
             input: 'resources/js/app.jsx',
-            refresh: true,
+            ssr: 'resources/js/ssr.js', // Enable SSR
         }),
         react(),
     ],
+    ssr: {
+        noExternal: ['@inertiajs/server'],
+    },
 });
