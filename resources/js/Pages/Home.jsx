@@ -215,6 +215,86 @@ export default function Home({ auth }) {
                     </div>
                 </section>
 
+                {/* Why Choose Us Section */}
+                {/* <section className="why-choose-us">
+                    <div className="container">
+                        <h2>Why Choose Ervotech?</h2>
+                        <p>
+                            At Ervotech, we don’t just build websites – we create digital experiences designed to help businesses grow.
+                            Our custom websites are fast, optimized, and tailored to your unique brand.
+                        </p>
+                        <div className="why-grid">
+                            <div className="why-card">
+                                <h3>Tailored Web Solutions</h3>
+                                <p>
+                                    Every business is unique. We create custom websites and applications to suit your brand’s goals.
+                                </p>
+                            </div>
+                            <div className="why-card">
+                                <h3>SEO That Drives Traffic</h3>
+                                <p>
+                                    Our SEO strategies help your business rank higher in search results and attract more customers.
+                                </p>
+                            </div>
+                            <div className="why-card">
+                                <h3>Mobile-First & Responsive</h3>
+                                <p>
+                                    Your website will be fully optimized for all devices, ensuring a seamless experience on mobile, tablet, and desktop.
+                                </p>
+                            </div>
+                            <div className="why-card">
+                                <h3>Dedicated Support</h3>
+                                <p>
+                                    We provide ongoing maintenance and support to keep your website performing at its best.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section> */}
+
+                {/* SEO-Optimized Blog Highlights Section */}
+                {/* <section className="blog-highlights">
+                    <div className="container">
+                        <h2>Latest Insights & Web Design Tips</h2>
+                        <p>
+                            Stay ahead in the digital world with our expert insights on web design, SEO, and digital marketing.
+                            Explore our latest articles to learn more about optimizing your online presence.
+                        </p>
+                        <div className="blog-grid">
+                            <div className="blog-card">
+                                <h3><a href="/blog/top-web-design-trends">Top Web Design Trends for 2024</a></h3>
+                                <p>Discover the latest design trends that can make your website stand out.</p>
+                            </div>
+                            <div className="blog-card">
+                                <h3><a href="/blog/seo-best-practices">SEO Best Practices for Small Businesses</a></h3>
+                                <p>Learn how to improve your website’s search ranking and attract more local customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section> */}
+
+                {/* New FAQ Section for SEO & User Engagement */}
+                {/* <section className="faq-section">
+                    <div className="container">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Find answers to common questions about our web design and SEO services.</p>
+                        <div className="faq-grid">
+                            <div className="faq-item">
+                                <h3>How can a custom website help my business grow?</h3>
+                                <p>A well-designed website improves credibility, attracts customers, and enhances online visibility, helping your business thrive.</p>
+                            </div>
+                            <div className="faq-item">
+                                <h3>Why is SEO important for my website?</h3>
+                                <p>SEO increases your website’s ranking on search engines, making it easier for potential customers to find your business online.</p>
+                            </div>
+                            <div className="faq-item">
+                                <h3>How long does it take to build a website?</h3>
+                                <p>Our timeline varies based on project complexity, but most websites are completed within 4-6 weeks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section> */}
+
                 {/* Contact CTA */}
                 <section className="vision" id="vision">
                     <div className="container">
