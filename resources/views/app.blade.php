@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Looking for expert web design and SEO services? Ervotech provides custom websites & SEO solutions to help your business grow. Contact us today!">
-    <meta name="keywords" content="El Paso , Texas, web consulting, seo, web development, website migration, software development, web design, website development, web applications, el paso web design, el paso web development">
+    <meta name="keywords" content="El Paso , Texas, web design, web development, website migration, software development, web design el paso, website development, web applications, el paso web design, el paso web development, LocalBusiness markup code">
     <meta name="author" content="Ervotech">
     <meta property="og:description" content="Modern web solutions for SEO, web design, and software development.">
     <!-- <meta property="og:image" content="images/Logo2.png"> -->
