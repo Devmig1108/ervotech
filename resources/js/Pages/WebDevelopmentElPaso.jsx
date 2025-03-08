@@ -23,11 +23,11 @@ export default function WebDevelopment({ auth }) {
                 </title>
                 <meta
                     property="og:title"
-                    content="Web Development in El Paso, TX | Custom Websites & SEO"
+                    content="Web Design in El Paso, TX | Custom Websites & SEO"
                 />
                 <meta
                     name="description"
-                    content="Looking for expert web development in El Paso, TX? Ervotech builds high-performance websites tailored for businesses. Get a custom website today!"
+                    content="Looking for expert web design in El Paso, TX? Ervotech builds high-performance websites tailored for businesses. Get a custom website today!"
                 />
             </Helmet>
             <PublicLayout
@@ -38,7 +38,7 @@ export default function WebDevelopment({ auth }) {
                     </h2>
                 }
             >
-                <Head title="Web Development in El Paso | Ervotech" />
+                <Head title="Web Design in El Paso | Ervotech" />
 
                 {/* Hero Section */}
                 <section className="webdev-hero">
