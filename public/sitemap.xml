@@ -64,7 +64,14 @@
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
-
+    
+    <!-- Web Design El Paso -->
+    <url>
+        <loc>https://www.ervotechep.com/web-design-el-paso</loc>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
     <!-- Additional Resources -->
     <!-- Uncomment if these pages exist -->
     <!-- 

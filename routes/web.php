@@ -42,7 +42,7 @@ Route::get('/contact', function () {
 Route::get('/services', function () {
     return Inertia::render('Services');
 })->name('services');
-Route::get('/web-development-el-paso', function () {
+Route::get('/web-design-el-paso', function () {
     return Inertia::render('WebDevelopmentElPaso');
 })->name('services');
 Route::get('/sitemap', function () {

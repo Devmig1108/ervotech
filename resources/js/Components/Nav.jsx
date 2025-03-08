@@ -37,7 +37,7 @@ export default function Nav() {
                             <span className="dropdown-toggle">Services ▾</span>
                             <ul className={`dropdown-menu ${isServicesDropdownOpen ? 'open' : ''}`}>
                                 <Link href="/services"><li>All ServicesAll Services</li></Link>
-                                <Link href="/web-development-el-paso"><li>Web Development in El Paso</li></Link>
+                                <Link href="/web-design-el-paso"><li>Web Development in El Paso</li></Link>
                             </ul>
                         </li>
 

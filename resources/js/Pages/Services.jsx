@@ -39,7 +39,7 @@ export default function Services({ auth }) {
                                     <p>Seamlessly transfer your website to modern, scalable platforms with minimal downtime.</p>
                                 </div>
                                 <div id="web-design" className="service-card">
-                                <a href="/web-development-el-paso" className='card-link'>
+                                <a href="/web-design-el-paso" className='card-link'>
                                     <h3>Custom Web Design & Development</h3>
                                     <p>We design visually stunning, high-performing websites for businesses in El Paso.</p>
                                 </a></div>
