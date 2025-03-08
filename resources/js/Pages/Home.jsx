@@ -81,7 +81,7 @@ export default function Home({ auth }) {
                     <Fade>
                         <div className="split-text">
                             <Parallax speed={-10}>
-                                <h2>El Paso Web Design & SEO Services</h2>
+                                <h1>El Paso Web Design & SEO Services</h1>
                                 <p>
                                     At Ervotech, we are committed to providing
                                     top-notch{" "}
