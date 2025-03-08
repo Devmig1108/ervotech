@@ -16,7 +16,7 @@ export default function WebDevelopment({ auth }) {
             <Helmet>
                 <link
                     rel="canonical"
-                    href="https://www.ervotechep.com/web-design"
+                    href="https://www.ervotechep.com/web-design-el-paso"
                 />
                 <title>
                     Web Design and Development in El Paso, TX | Custom Websites & SEO
