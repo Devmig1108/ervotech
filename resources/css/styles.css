@@ -2,7 +2,7 @@
 
 :root {
     --primary-dark: #03071b;
-    --navbar-dark: #374663;
+    --navbar-dark: #22304b;
     --secondary-dark: #0e0a10;
     --primary-light: #ffffff;
     --secondary-light: #f9f9f9;
@@ -251,17 +251,17 @@ button,
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
 }
 
 
 /* Navbar */
 
 .navbar {
-    background-color: var(--primary-dark);
+    background-color: var(--navbar-dark);
     color: var(--text-light);
     position: sticky;
     top: 0;
@@ -318,6 +318,12 @@ button,
     display: flex;
     gap: 1.5rem;
     list-style: none;
+}
+
+.nav-links li a,
+span {
+    font-weight: normal !important;
+    font-size: 1.1rem;
 }
 
 .nav-links li a {
