@@ -23,6 +23,30 @@ Route::get('/sitemap', fn() => Inertia::render('Sitemap'))->name('sitemap');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{blogPost:slug}', [BlogController::class, 'show'])->name('blog.show');
 
+Route::get('/', function () {
+    return Inertia::render('Home');
+})->name('home');
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+Route::get('/case-studies', function () {
+    return Inertia::render('Case');
+})->name('casestudies');
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+Route::get('/services', function () {
+    return Inertia::render('Services');
+})->name('services');
+Route::get('/web-design-el-paso', function () {
+    return Inertia::render('WebDevelopmentElPaso');
+})->name('services');
+Route::get('/sitemap', function () {
+    return Inertia::render('Sitemap');
+})->name('sitemap');
+// Route::get('/faq', function () {
+//     return Inertia::render('FAQ');
+// })->name('faq');
 
 // ✅ Authentication & Dashboard
 Route::middleware(['auth', 'verified'])->group(function () {
