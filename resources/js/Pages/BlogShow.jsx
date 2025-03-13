@@ -2,7 +2,7 @@ import React from "react";
 import { usePage } from "@inertiajs/react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import PublicLayout from "@/Layouts/PublicLayout";
-import DOMPurify from "dompurify"; // Sanitize HTML content
+import DOMPurify from "dompurify";
 
 export default function BlogShow() {
     const { blog } = usePage().props;
@@ -16,36 +16,45 @@ export default function BlogShow() {
                 />
                 <meta
                     property="og:title"
-                    content={`Ervotech - ${blog.title}`}
+                    content={`${blog.title} | Ervotech`}
+                />
+                <meta
+                    property="og:description"
+                    content={
+                        blog.excerpt ||
+                        "Read more about this topic on our blog."
+                    }
+                />
+                <meta
+                    property="og:image"
+                    content={
+                        blog.image
+                            ? `https://www.ervotechep.com/storage/${blog.image}`
+                            : "https://www.ervotechep.com/default-thumbnail.jpg"
+                    }
                 />
                 <title>{blog.title} | Ervotech - Blog</title>
             </Helmet>
-            <PublicLayout
-                header={
-                    <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                        {blog.title}
-                    </h2>
-                }
-            >
-                <div className="blog-show">
-                    <div className="container">
-                        {blog.image && (
-                            <img
-                                src={`/storage/${blog.image}`}
-                                alt={blog.title}
-                                className="blog-image"
-                            />
-                        )}
-                        <h1>{blog.title}</h1>
-                        <p>
-                            Published on:{" "}
-                            {new Date(blog.created_at).toLocaleDateString()}
-                        </p>
-                        <div
-                            className="blog-content"
-                            dangerouslySetInnerHTML={{ __html: blog.content }}
+            <PublicLayout>
+                <div className="blog-container">
+                    <h1 className="blog-title">{blog.title}</h1>
+                    <p className="blog-meta">
+                        {new Date(blog.created_at).toLocaleDateString()} • By{" "}
+                        {blog.author}
+                    </p>
+                    {blog.image && (
+                        <img
+                            src={`/storage/${blog.image}`}
+                            alt={blog.title}
+                            className="blog-image"
                         />
-                    </div>
+                    )}
+                    <div
+                        className="blog-content"
+                        dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(blog.content),
+                        }}
+                    />
                 </div>
             </PublicLayout>
         </HelmetProvider>

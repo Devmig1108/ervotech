@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogPost;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Storage;
@@ -42,34 +43,47 @@ class AdminBlogController extends Controller
 
         BlogPost::create($validated);
 
-        return redirect()->route('admin.dashboard')->with('success', 'Post created successfully.');
+        return redirect()->route('admin.posts.index')->with('success', 'Post created successfully.');
     }
+
 
     public function update(Request $request, BlogPost $blogPost)
     {
         $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'slug' => 'required|string|unique:blog_posts,slug,' . $blogPost->id,
+            'title'   => 'required|string|max:255',
+            'slug'    => 'required|string|unique:blog_posts,slug,' . $blogPost->id,
             'content' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image'   => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        // If a new image is uploaded, delete the old one
         if ($request->hasFile('image')) {
             if ($blogPost->image) {
-                \Storage::disk('public')->delete($blogPost->image); // Delete old image
+                Storage::disk('public')->delete($blogPost->image);
             }
-            $imagePath = $request->file('image')->store('blog_images', 'public');
-            $blogPost->image = $imagePath;
+            $validated['image'] = $request->file('image')->store('blog_images', 'public');
+        } else {
+            $validated['image'] = $blogPost->image; // Keep old image
         }
 
-        $blogPost->update([
-            'title' => $validated['title'],
-            'slug' => $validated['slug'],
-            'content' => $validated['content'],
-            'image' => $blogPost->image ?? $blogPost->getOriginal('image'), // Keep old image if not updated
-        ]);
+        $blogPost->update($validated);
 
         return back()->with('success', 'Post updated successfully.');
+    }
+
+
+    public function uploadImage(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        try {
+            $path = $request->file('file')->store('blog_images', 'public');
+            return response()->json(['location' => asset("storage/$path")]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Upload failed.'], 500);
+        }
     }
 
 

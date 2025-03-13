@@ -1,38 +1,34 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useForm } from "@inertiajs/react";
-import Quill from "quill";
-import "quill/dist/quill.snow.css"; // Quill's CSS for styling
+import React, { useState } from "react";
+import { Link, router } from "@inertiajs/react";
+import { Editor } from "@tinymce/tinymce-react";
 import "../../../../css/admin.css";
 
 export default function Create() {
-    const { data, setData, post, errors } = useForm({
+    const [form, setForm] = useState({
         title: "",
         slug: "",
         content: "",
         image: null,
     });
 
+    const [errors, setErrors] = useState({});
     const [preview, setPreview] = useState(null);
-    const editorRef = useRef(null);
+    const [successMessage, setSuccessMessage] = useState(""); // ✅ Success banner state
 
-    useEffect(() => {
-        const quill = new Quill("#editor", {
-            theme: "snow",
-            placeholder: "Write your content here...",
-        });
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
 
-        quill.on("text-change", () => {
-            setData("content", quill.root.innerHTML); // Store HTML content
-        });
-
-        editorRef.current = quill;
-    }, []);
+    const handleEditorChange = (content) => {
+        setForm({ ...form, content });
+    };
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
-        setData("image", file);
-
         if (file) {
+            setForm({ ...form, image: file });
+
+            // Preview the selected image
             const reader = new FileReader();
             reader.onloadend = () => {
                 setPreview(reader.result);
@@ -41,40 +37,46 @@ export default function Create() {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const formData = new FormData();
-        formData.append("title", data.title);
-        formData.append("slug", data.slug);
-        formData.append("content", data.content);
-        if (data.image) {
-            formData.append("image", data.image);
-        }
 
-        post("/admin/posts", formData);
+        const formData = new FormData();
+        Object.entries(form).forEach(([key, value]) => {
+            if (key === "image" && value instanceof File) {
+                formData.append(key, value);
+            } else {
+                formData.append(key, value ?? "");
+            }
+        });
+
+        router.post("/admin/posts", formData, {
+            forceFormData: true,
+            preserveScroll: true,
+            onSuccess: () => {
+                setSuccessMessage("Post published successfully! ✅");
+                setTimeout(() => setSuccessMessage(""), 3000); // Hide after 3 sec
+                setForm({ title: "", slug: "", content: "", image: null }); // Clear form
+                setPreview(null);
+            },
+            onError: (errors) => setErrors(errors),
+        });
     };
 
     return (
         <div className="admin-dashboard">
-            {/* Sidebar */}
             <aside className="sidebar">
                 <div className="logo">
-                    <h1>ervotech blog</h1>
+                    <h1>Ervotech Blog</h1>
                 </div>
                 <nav>
-                    <Link href="/admin/dashboard">
-                        <i className="icon-dashboard"></i> Dashboard
-                    </Link>
+                    <Link href="/admin/dashboard">Dashboard</Link>
                     <Link href="/admin/posts/create" className="active">
-                        <i className="icon-new-post"></i> New Post
+                        New Post
                     </Link>
-                    <Link href="/admin/posts">
-                        <i className="icon-my-posts"></i> My Posts
-                    </Link>
+                    <Link href="/admin/posts">My Posts</Link>
                 </nav>
             </aside>
 
-            {/* Main Content */}
             <main className="main-content">
                 <div className="edit-header">
                     <h2>Create New Post</h2>
@@ -83,60 +85,129 @@ export default function Create() {
                     </Link>
                 </div>
 
-                <form onSubmit={handleSubmit} className="edit-form" encType="multipart/form-data">
-                    {/* Title Input */}
-                    <div className="form-group">
-                        <label htmlFor="title">Title</label>
-                        <input
-                            type="text"
-                            id="title"
-                            name="title"
-                            value={data.title}
-                            onChange={(e) => setData("title", e.target.value)}
-                            className={errors.title ? "input-error" : ""}
-                        />
-                        {errors.title && <p className="error">{errors.title}</p>}
-                    </div>
+                {/* ✅ Success Banner */}
+                {successMessage && (
+                    <div className="success-banner">{successMessage}</div>
+                )}
 
-                    {/* Slug Input */}
-                    <div className="form-group">
-                        <label htmlFor="slug">Slug</label>
-                        <input
-                            type="text"
-                            id="slug"
-                            name="slug"
-                            value={data.slug}
-                            onChange={(e) => setData("slug", e.target.value)}
-                            className={errors.slug ? "input-error" : ""}
-                        />
-                        {errors.slug && <p className="error">{errors.slug}</p>}
-                    </div>
+                <div className="edit-container">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="edit-form"
+                        encType="multipart/form-data"
+                    >
+                        {/* Title Input */}
+                        <div className="form-group">
+                            <label htmlFor="title">Title</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                value={form.title}
+                                onChange={handleChange}
+                                className={errors.title ? "input-error" : ""}
+                            />
+                            {errors.title && (
+                                <p className="error">{errors.title}</p>
+                            )}
+                        </div>
 
-                    {/* Image Upload */}
-                    <div className="form-group">
-                        <label htmlFor="image">Featured Image</label>
-                        {preview && <img src={preview} alt="Preview" className="preview-img" />}
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            accept="image/*"
-                            onChange={handleImageChange}
-                        />
-                        {errors.image && <p className="error">{errors.image}</p>}
-                    </div>
+                        {/* Slug Input */}
+                        <div className="form-group">
+                            <label htmlFor="slug">Slug</label>
+                            <input
+                                type="text"
+                                id="slug"
+                                name="slug"
+                                value={form.slug}
+                                onChange={handleChange}
+                                className={errors.slug ? "input-error" : ""}
+                            />
+                            {errors.slug && (
+                                <p className="error">{errors.slug}</p>
+                            )}
+                        </div>
 
-                    {/* WYSIWYG Editor */}
-                    <div className="form-group">
-                        <label htmlFor="content">Content</label>
-                        <div id="editor"></div> {/* Quill Editor */}
-                        {errors.content && <p className="error">{errors.content}</p>}
-                    </div>
+                        {/* Image Upload */}
+                        <div className="form-group">
+                            <label htmlFor="image">Featured Image</label>
+                            {preview && (
+                                <img
+                                    src={preview}
+                                    alt="Preview"
+                                    className="preview-img"
+                                />
+                            )}
+                            <input
+                                type="file"
+                                id="image"
+                                name="image"
+                                accept="image/*"
+                                onChange={handleImageChange}
+                            />
+                            {errors.image && (
+                                <p className="error">{errors.image}</p>
+                            )}
+                        </div>
 
-                    <button type="submit" className="btn-save">
-                        Publish Post
-                    </button>
-                </form>
+                        {/* TinyMCE Editor */}
+                        <div className="form-group">
+                            <label htmlFor="content">Content</label>
+                            <Editor
+                                apiKey="your-tinymce-api-key"
+                                value={form.content}
+                                init={{
+                                    height: 300,
+                                    menubar: false,
+                                    plugins: "paste",
+                                    toolbar:
+                                        "undo redo | bold italic | bullist numlist | link",
+                                    paste_data_images: true, // ✅ Allows pasted/dropped images
+                                    images_upload_handler: (
+                                        blobInfo,
+                                        success,
+                                        failure
+                                    ) => {
+                                        const formData = new FormData();
+                                        formData.append(
+                                            "file",
+                                            blobInfo.blob(),
+                                            blobInfo.filename()
+                                        );
+
+                                        fetch("/admin/posts/upload-image", {
+                                            method: "POST",
+                                            body: formData,
+                                            headers: {
+                                                "X-CSRF-TOKEN": document
+                                                    .querySelector(
+                                                        'meta[name="csrf-token"]'
+                                                    )
+                                                    ?.getAttribute("content"),
+                                            },
+                                        })
+                                            .then((response) => response.json())
+                                            .then((data) =>
+                                                success(data.location)
+                                            )
+                                            .catch(() =>
+                                                failure("Image upload failed.")
+                                            );
+                                    },
+                                }}
+                                onEditorChange={handleEditorChange}
+                            />
+
+                            {errors.content && (
+                                <p className="error">{errors.content}</p>
+                            )}
+                        </div>
+
+                        <button type="submit" className="btn-save">
+                            Publish Post
+                        </button>
+                    </form>
+                </div>
             </main>
         </div>
     );

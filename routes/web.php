@@ -73,8 +73,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/posts/create', [AdminBlogController::class, 'create'])->name('admin.posts.create'); // ✅ Create new post
     Route::post('/posts', [AdminBlogController::class, 'store'])->name('admin.posts.store'); // ✅ Store post
     Route::get('/posts/{blogPost:slug}/edit', [AdminBlogController::class, 'edit'])->name('admin.posts.edit'); // ✅ Edit post
-    Route::put('/posts/{blogPost:slug}', [AdminBlogController::class, 'update'])->name('admin.posts.update'); // ✅ Update post
+    Route::post('/posts/{blogPost:slug}', [AdminBlogController::class, 'update'])->name('admin.posts.update'); // ✅ Update post
     Route::delete('/posts/{blogPost:slug}', [AdminBlogController::class, 'destroy'])->name('admin.posts.destroy'); // ✅ Delete post
+    Route::post('/posts/upload-image', [AdminBlogController::class, 'uploadImage'])->name('admin.posts.upload-image');
+
 });
 
 // ✅ Contact Form Submission
