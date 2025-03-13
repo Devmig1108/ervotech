@@ -154,46 +154,72 @@ export default function Create() {
                         <div className="form-group">
                             <label htmlFor="content">Content</label>
                             <Editor
-                                apiKey="your-tinymce-api-key"
+                                apiKey={import.meta.env.VITE_TINYMCE_API_KEY} 
                                 value={form.content}
                                 init={{
-                                    height: 300,
-                                    menubar: false,
-                                    plugins: "paste",
+                                    plugins: [
+                                        // Core editing features
+                                        "anchor",
+                                        "autolink",
+                                        "charmap",
+                                        "codesample",
+                                        "emoticons",
+                                        "image",
+                                        "link",
+                                        "lists",
+                                        "media",
+                                        "searchreplace",
+                                        "table",
+                                        "visualblocks",
+                                        "wordcount",
+                                        // Your account includes a free trial of TinyMCE premium features
+                                        // Try the most popular premium features until Mar 25, 2025:
+                                        "checklist",
+                                        "mediaembed",
+                                        "casechange",
+                                        "export",
+                                        "formatpainter",
+                                        "pageembed",
+                                        "a11ychecker",
+                                        "tinymcespellchecker",
+                                        "permanentpen",
+                                        "powerpaste",
+                                        "advtable",
+                                        "advcode",
+                                        "editimage",
+                                        "advtemplate",
+                                        "ai",
+                                        "mentions",
+                                        "tinycomments",
+                                        "tableofcontents",
+                                        "footnotes",
+                                        "mergetags",
+                                        "autocorrect",
+                                        "typography",
+                                        "inlinecss",
+                                        "markdown",
+                                        "importword",
+                                        "exportword",
+                                        "exportpdf",
+                                    ],
                                     toolbar:
-                                        "undo redo | bold italic | bullist numlist | link",
-                                    paste_data_images: true, // ✅ Allows pasted/dropped images
-                                    images_upload_handler: (
-                                        blobInfo,
-                                        success,
-                                        failure
-                                    ) => {
-                                        const formData = new FormData();
-                                        formData.append(
-                                            "file",
-                                            blobInfo.blob(),
-                                            blobInfo.filename()
-                                        );
-
-                                        fetch("/admin/posts/upload-image", {
-                                            method: "POST",
-                                            body: formData,
-                                            headers: {
-                                                "X-CSRF-TOKEN": document
-                                                    .querySelector(
-                                                        'meta[name="csrf-token"]'
-                                                    )
-                                                    ?.getAttribute("content"),
-                                            },
-                                        })
-                                            .then((response) => response.json())
-                                            .then((data) =>
-                                                success(data.location)
+                                        "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
+                                    tinycomments_mode: "embedded",
+                                    tinycomments_author: "Author name",
+                                    paste_data_images: "true",
+                                    mergetags_list: [
+                                        {
+                                            value: "First.Name",
+                                            title: "First Name",
+                                        },
+                                        { value: "Email", title: "Email" },
+                                    ],
+                                    ai_request: (request, respondWith) =>
+                                        respondWith.string(() =>
+                                            Promise.reject(
+                                                "See docs to implement AI Assistant"
                                             )
-                                            .catch(() =>
-                                                failure("Image upload failed.")
-                                            );
-                                    },
+                                        ),
                                 }}
                                 onEditorChange={handleEditorChange}
                             />

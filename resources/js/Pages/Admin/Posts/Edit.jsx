@@ -158,7 +158,7 @@ export default function Edit({ blogPost }) {
                         <div className="form-group">
                             <label htmlFor="content">Content</label>
                             <Editor
-                                apiKey="jfqng7zzpawp6enj8vr7smg353mb915mz2h2ep4m64l2t26l"
+                                apiKey={import.meta.env.VITE_TINYMCE_API_KEY} 
                                 value={form.content}
                                 init={{
                                     plugins: [
