@@ -130,7 +130,7 @@ h4 {
 }
 
 p {
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Bellefair', serif;
     /* font-size: 3rem; */
     /* Adjust size as needed */
     line-height: 2.6;
@@ -2196,12 +2196,15 @@ footer {
 
 /* Blog Page Container */
 
-[data-theme="light"] .blog-container {
+.blog-container {
     /* max-width: 800px; */
     margin: 0 auto;
     padding: 3rem 1.5rem;
+}
+
+[data-theme="light"] .blog-container {
+    /* max-width: 800px; */
     color: var(--primary-dark);
-    font-family: 'Arial', sans-serif;
     background-color: #fff;
 }
 
