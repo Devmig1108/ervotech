@@ -53,7 +53,7 @@ export default function AdminDashboard() {
                 {/* Blog Posts Grid */}
                 <div className="card-grid">
                     {posts && posts.map((post) => (
-                        <div className="card" key={post.id}>
+                        <div className="blog-card" key={post.id}>
                             <img src={post.image} alt={post.title} className="card-img" />
                             <h3>{post.title}</h3>
                             <p>{post.excerpt || 'No description provided.'}</p>
