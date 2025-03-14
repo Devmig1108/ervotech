@@ -1,5 +1,23 @@
 /* General Layout */
 
+:root {
+    --primary-dark: #03071b;
+    --navbar-dark: #22304b;
+    --secondary-dark: #0e0a10;
+    --primary-light: #ffffff;
+    --secondary-light: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #ffffff;
+    --accent-purple: #a56cf0;
+    --accent-teal: #4ccc97;
+    /* --accent-blue: #3b82f6; */
+    --accent-blue: #2e7fc3;
+    --accent-orange: #f38167;
+    --accent-pink: #d362a4;
+    --accent-red: #c43535;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -117,6 +135,7 @@ body {
 .top-nav h2 {
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--accent-blue);
 }
 
 .filters {
