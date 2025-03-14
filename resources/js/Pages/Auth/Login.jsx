@@ -29,7 +29,7 @@ export default function Login({ status, canResetPassword }) {
         <GuestLayout>
             <Head title="Log in" />
             <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+                <div className="full max-w-md bg-white shadow-md rounded-lg p-6">
                     <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Welcome Back</h2>
 
                     {status && (
