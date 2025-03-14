@@ -73,14 +73,26 @@ export default function Edit({ blogPost }) {
                     <h1>ervotech blog</h1>
                 </div>
                 <nav>
-                    <Link href="/admin/dashboard">Dashboard</Link>
-                    <Link href="/admin/posts/create">New Post</Link>
-                    <Link href="/admin/posts" className="active">
-                        My Posts
+                    <Link href="/admin/dashboard" className="active">
+                        <i className="icon-dashboard"></i> Dashboard
+                    </Link>
+                    <Link href="/admin/posts/create">
+                        <i className="icon-new-post"></i> New Post
+                    </Link>
+                    <Link href="/admin/posts">
+                        <i className="icon-my-posts"></i> My Posts
+                    </Link>
+                    <Link href="/admin/category">
+                        <i className="icon-category"></i> Category
+                    </Link>
+                    <Link href="/admin/analytics">
+                        <i className="icon-analytics"></i> Analytics
                     </Link>
                 </nav>
+                <div className="support">
+                    <i className="icon-support"></i> Support
+                </div>
             </aside>
-
             <main className="main-content">
                 <div className="edit-header">
                     <h2>Edit Blog Post</h2>
@@ -158,7 +170,10 @@ export default function Edit({ blogPost }) {
                         <div className="form-group">
                             <label htmlFor="content">Content</label>
                             <Editor
-                                apiKey={import.meta.env.VITE_TINYMCE_API_KEY || "jfqng7zzpawp6enj8vr7smg353mb915mz2h2ep4m64l2t26l"}
+                                apiKey={
+                                    import.meta.env.VITE_TINYMCE_API_KEY ||
+                                    "jfqng7zzpawp6enj8vr7smg353mb915mz2h2ep4m64l2t26l"
+                                }
                                 value={form.content}
                                 init={{
                                     plugins: [

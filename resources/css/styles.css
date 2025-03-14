@@ -2191,6 +2191,155 @@ footer {
 }
 
 
+/* Centering the Login Card */
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+
+/* Login Card */
+
+.w-full {
+    max-width: 1200px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 5%;
+}
+
+
+/* Headings */
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/* Labels */
+
+label {
+    font-weight: 600;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+
+/* Input Fields */
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+}
+
+
+/* Error Messages */
+
+.text-red-600 {
+    font-size: 0.85rem;
+    margin-top: 4px;
+    color: #dc2626;
+}
+
+
+/* Checkbox */
+
+.flex.items-center input {
+    margin-right: 8px;
+}
+
+
+/* Forgot Password Link */
+
+.text-indigo-600 {
+    color: #4f46e5;
+    transition: color 0.2s ease-in-out;
+}
+
+.text-indigo-600:hover {
+    color: #4338ca;
+}
+
+
+/* Login Button */
+
+.bg-indigo-600 {
+    width: 100%;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.bg-indigo-600:hover {
+    background-color: #4338ca;
+}
+
+
+/* Sign Up Link */
+
+.text-sm {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+}
+
+.text-sm a {
+    color: #4f46e5;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.text-sm a:hover {
+    color: #4338ca;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    .w-full {
+        padding: 1.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    input[type="email"],
+    input[type="password"] {
+        font-size: 0.95rem;
+    }
+    .bg-indigo-600 {
+        font-size: 0.95rem;
+    }
+}
+
+
 /* BLogshow */
 
 

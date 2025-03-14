@@ -64,17 +64,31 @@ export default function Create() {
 
     return (
         <div className="admin-dashboard">
+            {/* Sidebar */}
             <aside className="sidebar">
                 <div className="logo">
-                    <h1>Ervotech Blog</h1>
+                    <h1>ervotech blog</h1>
                 </div>
                 <nav>
-                    <Link href="/admin/dashboard">Dashboard</Link>
-                    <Link href="/admin/posts/create" className="active">
-                        New Post
+                    <Link href="/admin/dashboard" className="active">
+                        <i className="icon-dashboard"></i> Dashboard
                     </Link>
-                    <Link href="/admin/posts">My Posts</Link>
+                    <Link href="/admin/posts/create">
+                        <i className="icon-new-post"></i> New Post
+                    </Link>
+                    <Link href="/admin/posts">
+                        <i className="icon-my-posts"></i> My Posts
+                    </Link>
+                    <Link href="/admin/category">
+                        <i className="icon-category"></i> Category
+                    </Link>
+                    <Link href="/admin/analytics">
+                        <i className="icon-analytics"></i> Analytics
+                    </Link>
                 </nav>
+                <div className="support">
+                    <i className="icon-support"></i> Support
+                </div>
             </aside>
 
             <main className="main-content">
@@ -154,7 +168,10 @@ export default function Create() {
                         <div className="form-group">
                             <label htmlFor="content">Content</label>
                             <Editor
-                                apiKey={import.meta.env.VITE_TINYMCE_API_KEY || "jfqng7zzpawp6enj8vr7smg353mb915mz2h2ep4m64l2t26l"}
+                                apiKey={
+                                    import.meta.env.VITE_TINYMCE_API_KEY ||
+                                    "jfqng7zzpawp6enj8vr7smg353mb915mz2h2ep4m64l2t26l"
+                                }
                                 value={form.content}
                                 init={{
                                     plugins: [
