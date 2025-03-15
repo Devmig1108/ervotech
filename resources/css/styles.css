@@ -26,7 +26,7 @@
 }
 
 [data-theme="light"] .navbar {
-    background-color: var(--secondary-dark);
+    background-color: var(--primary-light);
     /* Softer navbar background */
     color: var(--text-dark);
     box-shadow: var(--box-shadow);
@@ -38,6 +38,11 @@
 
 [data-theme="light"] .nav-links a {
     color: var(--accent-purple);
+}
+
+[data-theme="light"] .nav-links li:hover a {
+    color: var(--accent-blue);
+    text-decoration: none;
 }
 
 [data-theme="light"] .hero {
@@ -366,33 +371,35 @@ span {
     min-width: 200px;
     list-style: none;
     padding: 0;
+    z-index: 1000;
 }
+
+[data-theme="light"] .dropdown-menu {
+    background: var(--primary-light);
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: var(--accent-purple);
+    color: white;
+}
+
+
+/* Show dropdown on hover */
 
 .dropdown:hover .dropdown-menu,
 .dropdown-menu.open {
     display: block;
-}
-
-.dropdown-toggle {
-    color: var(--text-light);
-    font-weight: bold;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.dropdown-toggle {
-    color: var(--text-light);
-    font-weight: bold;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.dropdown-toggle:hover {
-    color: var(--accent-purple);
-}
-
-[data-theme="light"] .dropdown-toggle {
-    color: var(--accent-purple);
 }
 
 
@@ -430,9 +437,15 @@ span {
 
 .nav-actions a {
     text-decoration: none;
+    color: white;
 }
 
-.nav-btn:hover a {
+.nav-btn a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+[data-theme="light"] .nav-actions a {
     text-decoration: none;
     color: white;
 }
@@ -1403,6 +1416,9 @@ html {
     }
     [data-theme="light"] .dropdown-toggle {
         color: var(--accent-purple);
+    }
+    [data-theme="light"] .dropdown-toggle:hover {
+        color: var(--accent-blue);
     }
     scroll-behavior: smooth;
 }
