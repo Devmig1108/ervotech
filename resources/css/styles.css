@@ -2545,6 +2545,10 @@ input[type="password"]:focus {
     margin-top: 1.5rem;
 }
 
+[data-theme="light"] .blog-content h3 {
+    color: var(--primary-dark);
+}
+
 
 /* Paragraphs */
 
