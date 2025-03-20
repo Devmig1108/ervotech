@@ -27,7 +27,7 @@ export default function Index() {
                 <div className="logo">
                     <h1>ervotech blog</h1>
                 </div>
-                <nav>
+                <nav className="admin-nav">
                     <Link href="/admin/dashboard" className="active">
                         <i className="icon-dashboard"></i> Dashboard
                     </Link>
