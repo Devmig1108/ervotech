@@ -14,6 +14,10 @@ use Inertia\Inertia;
 */
 
 // ✅ Public Pages
+Route::get('/alt', function () {
+    return view('home');
+});
+
 Route::get('/', fn() => Inertia::render('Home'))->name('home');
 Route::get('/about', fn() => Inertia::render('About'))->name('about');
 Route::get('/case-studies', fn() => Inertia::render('Case'))->name('casestudies');
