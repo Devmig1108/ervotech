@@ -16,6 +16,8 @@
     --accent-pink: #d362a4;
     --accent-red: #c43535;
     --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --h1-font: 2.5rem;
+    --p-mobile-font: 1rem;
 }
 
 [data-theme="light"] {
@@ -131,6 +133,10 @@
     background: linear-gradient(135deg, #e8f5e9, #ffffff);
 }
 
+h1 {
+    font-size: var(--h1-font);
+}
+
 h1,
 h2,
 h3,
@@ -225,7 +231,6 @@ p {
 
 .split-text h1 {
     color: var(--accent-teal);
-    font-size: 2rem;
     margin: 4rem 0 1rem 0;
 }
 
@@ -2160,6 +2165,9 @@ footer {
 /* --- Responsive Enhancements --- */
 
 @media (max-width: 768px) {
+    p {
+        font-size: var(--p-mobile-font);
+    }
     .hero h1 {
         font-size: 2.5rem;
     }
