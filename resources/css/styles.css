@@ -516,6 +516,7 @@ span {
 @media (max-width: 1024px) {
     .nav-actions {
         width: 100%;
+        display: none;
     }
     .navbar .container {
         flex-direction: row;
