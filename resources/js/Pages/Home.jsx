@@ -135,7 +135,7 @@ export default function Home({ auth }) {
                                                 href="/services#website-migration"
                                                 itemprop="name"
                                             >
-                                                Website Migration
+                                                Professional Website Migration Services for El Paso Businesses
                                             </a>
                                         </h3>
                                         <p itemprop="description">
