@@ -44,6 +44,9 @@ Route::get('/services', function () {
 Route::get('/web-consulting-el-paso', function () {
     return Inertia::render('Consulting');
 })->name('web-consulting-el-paso');
+Route::get('/portfolio', function () {
+    return Inertia::render('Portfolio');
+})->name('portfolio');
 Route::get('/web-design-el-paso', function () {
     return Inertia::render('WebDevelopmentElPaso');
 })->name('services');

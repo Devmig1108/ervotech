@@ -57,6 +57,7 @@ export default function Nav() {
                                 <Link href="/services"><li>All Services</li></Link>
                                 <Link href="/web-consulting-el-paso"><li>Consulting</li></Link>
                                 <Link href="/web-design-el-paso"><li>Web Design in El Paso</li></Link>
+                                <Link href="/portfolio"><li>Our Work</li></Link>
                             </ul>
                         </li>
 
