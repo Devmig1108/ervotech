@@ -479,11 +479,13 @@ span {
 
 .call-btn {
     background-color: var(--accent-teal);
+    text-decoration: none;
     /* Call button color */
 }
 
 .quote-btn {
     background-color: var(--accent-purple);
+    text-decoration: none;
     /* Quote button color */
 }
 
@@ -491,8 +493,8 @@ span {
     /* opacity: 0.85;
     transform: translateY(-2px); */
     background-color: var(--accent-pink);
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important;
+    color: white !important;
 }
 
 
@@ -1257,6 +1259,7 @@ footer {
 
 .footer-cta .cta-button:hover {
     background-color: var(--accent-purple);
+    color: white;
 }
 
 
@@ -2093,7 +2096,6 @@ footer {
 }
 
 .hero-trust li::before {
-    content: "✓";
     position: absolute;
     left: 0;
     top: 0;
@@ -2691,6 +2693,35 @@ footer {
 }
 
 
+.dominate-section {
+    padding: 6rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--section-alt) !important;
+    /* Keeps the gradient for authority */
+    color: var(--text-light) !important;
+    /* Forces light text because the gradient is dark */
+}
+
+.dominate-section h2 {
+    color: var(--accent-teal);
+    /* High contrast and local trust signal */
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.dominate-section p {
+    color: var(--text-2);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.4rem;
+}
+
+.dominate-section .local-areas {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
 /* --- Responsive Enhancements --- */
 
 @media (max-width: 1024px) {
@@ -3105,6 +3136,51 @@ input[type="password"]:focus {
 
 [data-theme="light"] .blog-content h3 {
     color: var(--primary-dark);
+}
+
+/* --- Master Guru Theme Stability Fixes --- */
+
+/* 1. Force High-Impact Sections to Stay Dark Mode */
+/* This covers Hero, Dominate, Vision, and About CTA sections */
+[data-theme="light"] .services-hero.local-landing,
+[data-theme="light"] .dominate-section,
+[data-theme="light"] .vision,
+[data-theme="light"] .services-cta {
+    background: var(--primary-dark) !important; /* Keep authoritative background */
+    color: var(--text-light) !important;
+}
+
+[data-theme="light"] .about-cta ,
+[data-theme="light"] .contact-form-section {
+    background: var(--accent-teal) !important; /* Keep authoritative background */
+    color: var(--text-light) !important;
+}
+
+
+/* 2. Ensure Text Hierarchy inside Forced-Dark sections */
+[data-theme="light"] :is(.services-hero, .dominate-section, .about-cta, .vision, .services-cta) :is(h1, h2, h3, p, span, .local-areas) {
+    color: var(--text-light) !important; /* Force all nested text to white */
+}
+
+/* 3. Fix Results Cards (The 99% / 1s / 0.01 section) */
+[data-theme="light"] .results-card {
+    background: var(--surface-1); /* Light surface for readability */
+    border: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .results-card h3 {
+    color: var(--accent-blue); /* Professional pop for headings */
+}
+
+[data-theme="light"] .results-card p {
+    color: var(--text-dark); /* Dark text on light card */
+}
+
+/* 4. Keep 'Tech' Icons dark for contrast */
+[data-theme="light"] .process-step {
+    background: var(--primary-dark) !important;
+    color: var(--accent-teal) !important;
+    border: 1px solid var(--accent-teal);
 }
 
 

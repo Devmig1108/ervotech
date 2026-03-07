@@ -38,6 +38,12 @@ Route::get('/contact', function () {
 Route::get('/services', function () {
     return Inertia::render('Services');
 })->name('services');
+Route::get('/services', function () {
+    return Inertia::render('Services');
+})->name('services');
+Route::get('/web-consulting-el-paso', function () {
+    return Inertia::render('Consulting');
+})->name('web-consulting-el-paso');
 Route::get('/web-design-el-paso', function () {
     return Inertia::render('WebDevelopmentElPaso');
 })->name('services');

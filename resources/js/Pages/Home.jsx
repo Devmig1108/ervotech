@@ -11,314 +11,122 @@ export default function Home({ auth }) {
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/" />
-                <meta
-                    property="og:title"
-                    content="Custom Web Design & SEO Services | Ervotech El Paso"
-                />
-                <meta
-                    property="og:description"
-                    content="Boost your online presence with expert web design & SEO solutions. Ervotech helps businesses in El Paso grow with modern digital strategies."
-                />
-                <meta
-                    property="og:image"
-                    content="https://www.ervotechep.com/images/Logo2.png"
-                />
-                <meta property="og:url" content="https://www.ervotechep.com/" />
-                <meta
-                    name="description"
-                    content="Looking for expert web design and SEO services? Ervotech provides custom websites & SEO solutions to help your business grow. Contact us today!"
-                />
-                <title>
-                    Custom Web Design & SEO Services | Ervotech El Paso
-                </title>
+                <title>High-Performance Web Design & SEO El Paso | Ervotech</title>
+                <meta name="description" content="Ervotech builds high-performance Laravel & React websites for El Paso businesses. 99% performance grade, local SEO, and custom software. Get a free audit." />
             </Helmet>
-            <PublicLayout
-                user={auth.user}
-                header={
-                    <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                        El Paso Web Design & Development
-                    </h2>
-                }
-            >
-                <Head title="El Paso Web Design & Development | Ervotech" />
+            <PublicLayout user={auth.user}>
+                <Head title="El Paso Web Design & High-Performance Development | Ervotech" />
+
+                {/* HERO: Enhanced with Performance Signals */}
                 <ParallaxBanner
-                    layers={[
-                        { image: "../images/hero3.webp", speed: -30 },
-                        { image: "../images/hero3.webp", speed: -10 },
-                    ]}
+                    layers={[{ image: "../images/hero3.webp", speed: -30 }]}
                     className="aspect-[2/1] hero"
+                    style={{ height: '100vh', display: 'flex', alignItems: 'center' }}
                 >
-                    <div className="hero-overlay"></div>
-                    <div className="hero-content">
-                        <h1>
-                            Custom Web Design & SEO Services in El Paso That
-                            Help Your Business Grow
-                        </h1>
-                        <Fade>
-                            <p>
-                                Looking for expert web design and SEO services
-                                in El Paso? Ervotech builds high-performance
-                                websites and search-optimized strategies
-                                tailored for small businesses and startups. Our
-                                team ensures your website ranks higher, loads
-                                faster, and converts visitors into customers.
+                    <div className="hero-overlay" style={{ background: 'rgba(3, 7, 27, 0.85)', position: 'absolute', inset: 0, zIndex: 1 }}></div>
+                    <div className="hero-content" style={{ position: 'relative', zIndex: 10, color: '#ffffff' }}>
+                        <Fade bottom cascade duration={1000}>
+                            <div>
+                                <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', color: 'var(--accent-blue)', display: 'block', marginBottom: '1rem' }}>
+                                    99% Performance Infrastructure
+                                </span>
+                                <h1 style={{ fontSize: '3.5rem', fontWeight: '800', lineHeight: '1.2' }}>
+                                    Custom Web Design & SEO Services in El Paso
+                                </h1>
+                            </div>
+                        </Fade>
+                        <Fade delay={400}>
+                            <p style={{ fontSize: '1.4rem', maxWidth: '800px', margin: '1.5rem auto', color: 'rgba(255, 255, 255, 0.9)' }}>
+                                Ervotech builds high-performance websites and search-optimized strategies 
+                                tailored for local businesses and startups. Rank higher, load faster, and convert leads.
                             </p>
                         </Fade>
-
-                        <div className="hero-buttons">
-                            <a href="#services" className="primary-btn">
-                                Explore Our Services
-                            </a>
-                            <a href="#contact" className="secondary-btn">
-                                Get in Touch
-                            </a>
-                        </div>
+                        <Fade bottom delay={600}>
+                            <div className="hero-buttons">
+                                <a href="#home-services" className="nav-btn quote-btn" style={{ width: '250px' }}>Explore Our Services</a>
+                                <a href="#contact" className="nav-btn call-btn" style={{ width: '250px' }}>Get in Touch</a>
+                            </div>
+                        </Fade>
                     </div>
                 </ParallaxBanner>
 
-                {/* Local SEO-Optimized Split Section */}
+                {/* SPLIT SECTION: Local Authority Signals */}
                 <section className="split-section">
-                    <Fade>
+                    <Fade left>
                         <div className="split-text">
-                            <Parallax speed={-10}>
-                                <h2>El Paso Web Design & SEO Services</h2>
+                            <Parallax speed={-5}>
+                                <h2>El Paso Web Design & SEO Authority</h2>
                                 <p>
-                                    At Ervotech, we are committed to providing
-                                    top-notch{" "}
-                                    <strong className="font-blue">
-                                        web design
-                                    </strong>
-                                    ,{" "}
-                                    <strong className="font-blue">
-                                        SEO solutions
-                                    </strong>
-                                    , and{" "}
-                                    <strong className="font-blue">
-                                        custom software development
-                                    </strong>{" "}
-                                    tailored for businesses in El Paso and the
-                                    surrounding area.
+                                    At Ervotech, we provide top-notch <strong className="font-blue">web design</strong>, 
+                                    <strong className="font-blue"> SEO solutions</strong>, and <strong className="font-blue"> custom software</strong> 
+                                    tailored for businesses in El Paso and the surrounding areas.
                                 </p>
                                 <p>
                                     <em>
-                                        We help local businesses enhance their
-                                        online presence, attract customers, and
-                                        scale through modern digital solutions.
+                                        We replace slow, generic templates with high-performance Laravel/React architecture 
+                                        that helps you scale and dominate local search results.
                                     </em>
                                 </p>
                             </Parallax>
                         </div>
                     </Fade>
-                    <div
-                        className="split-image"
-                        role="img"
-                        aria-label="El Paso business owners working on their website redesign"
-                    ></div>
+                    <div className="split-image" role="img" aria-label="High-performance web development in El Paso"></div>
                 </section>
 
-                {/* Updated Services Section with Local SEO */}
-                <section className="home-services" id="home-services">
+                {/* SERVICES GRID: Theme-Stable Authority Cards */}
+                <section className="home-services local-landing" id="home-services" style={{ background: 'var(--surface-1)', padding: '6rem 0' }}>
                     <div className="container">
-                        <Parallax speed={-10}>
-                            <h2>
-                                Our Web Design & Development Services in El Paso
+                        <Fade bottom>
+                            <h2 className="text-center font-blue" style={{ marginBottom: '4rem' }}>
+                                Performance-Driven Services for El Paso Businesses
                             </h2>
                             <div className="service-grid">
-                                <div
-                                    className="service-card"
-                                    itemscope
-                                    itemtype="https://schema.org/Service"
-                                >
-                                    <Zoom>
-                                        <h3>
-                                            <a
-                                                href="/services#website-migration"
-                                                itemprop="name"
-                                            >
-                                                Professional Website Migration Services for El Paso Businesses
-                                            </a>
-                                        </h3>
-                                        <p itemprop="description">
-                                            Seamless migration of your website
-                                            to modern, scalable platforms,
-                                            ensuring improved performance.
-                                        </p>
+                                {[
+                                    { title: "Website Migration", link: "/services#website-migration", desc: "Seamless migration to modern, scalable Laravel/React platforms." },
+                                    { title: "Custom Web Design", link: "/web-design-el-paso", desc: "High-performing websites engineered for the local El Paso market." },
+                                    { title: "Software Development", link: "/services#software-development", desc: "Custom web applications designed to improve business efficiency." },
+                                    { title: "Local SEO & Content", link: "/services#seo-strategy", desc: "Strategic visibility for West Side, East Side, and Horizon City searches." }
+                                ].map((service, i) => (
+                                    <Zoom key={i} delay={i * 100}>
+                                        <div className="service-card results-card" style={{ textAlign: 'center', height: '100%' }}>
+                                            <h3>
+                                                <a href={service.link} style={{ color: 'var(--accent-purple)', textDecoration: 'none' }}>{service.title}</a>
+                                            </h3>
+                                            <p style={{ marginTop: '1rem' }}>{service.desc}</p>
+                                        </div>
                                     </Zoom>
-                                </div>
-                                <div
-                                    className="service-card"
-                                    itemscope
-                                    itemtype="https://schema.org/Service"
-                                >
-                                    <Zoom>
-                                        <h3>
-                                            <a
-                                                href="/services#web-design"
-                                                itemprop="name"
-                                            >
-                                                Custom Web Design in El Paso
-                                            </a>
-                                        </h3>
-                                        <p itemprop="description">
-                                            Build a stunning, high-performing
-                                            website tailored for your local
-                                            business.
-                                        </p>
-                                    </Zoom>
-                                </div>
-                                <div
-                                    className="service-card"
-                                    itemscope
-                                    itemtype="https://schema.org/Service"
-                                >
-                                    <Zoom>
-                                        <h3>
-                                            <a
-                                                href="/services#software-development"
-                                                itemprop="name"
-                                            >
-                                                Software Development for Local
-                                                Businesses
-                                            </a>
-                                        </h3>
-                                        <p itemprop="description">
-                                            Custom web applications designed for
-                                            El Paso businesses to improve
-                                            efficiency and growth.
-                                        </p>
-                                    </Zoom>
-                                </div>
-                                <div
-                                    className="service-card"
-                                    itemscope
-                                    itemtype="https://schema.org/Service"
-                                >
-                                    <Zoom>
-                                        <h3>
-                                            <a
-                                                href="/services#seo-strategy"
-                                                itemprop="name"
-                                            >
-                                                Local SEO & Content Strategy
-                                            </a>
-                                        </h3>
-                                        <p itemprop="description">
-                                            Improve search rankings and attract
-                                            more El Paso customers with
-                                            optimized content and SEO
-                                            strategies.
-                                        </p>
-                                    </Zoom>
-                                </div>
+                                ))}
                             </div>
-                        </Parallax>
+                        </Fade>
                     </div>
                 </section>
 
-                {/* Why Choose Us Section */}
-                {/* <section className="why-choose-us">
-                    <div className="container">
-                        <h2>Why Choose Ervotech?</h2>
-                        <p>
-                            At Ervotech, we don’t just build websites – we create digital experiences designed to help businesses grow.
-                            Our custom websites are fast, optimized, and tailored to your unique brand.
-                        </p>
-                        <div className="why-grid">
-                            <div className="why-card">
-                                <h3>Tailored Web Solutions</h3>
-                                <p>
-                                    Every business is unique. We create custom websites and applications to suit your brand’s goals.
-                                </p>
-                            </div>
-                            <div className="why-card">
-                                <h3>SEO That Drives Traffic</h3>
-                                <p>
-                                    Our SEO strategies help your business rank higher in search results and attract more customers.
-                                </p>
-                            </div>
-                            <div className="why-card">
-                                <h3>Mobile-First & Responsive</h3>
-                                <p>
-                                    Your website will be fully optimized for all devices, ensuring a seamless experience on mobile, tablet, and desktop.
-                                </p>
-                            </div>
-                            <div className="why-card">
-                                <h3>Dedicated Support</h3>
-                                <p>
-                                    We provide ongoing maintenance and support to keep your website performing at its best.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
-
-                {/* SEO-Optimized Blog Highlights Section */}
-                {/* <section className="blog-highlights">
-                    <div className="container">
-                        <h2>Latest Insights & Web Design Tips</h2>
-                        <p>
-                            Stay ahead in the digital world with our expert insights on web design, SEO, and digital marketing.
-                            Explore our latest articles to learn more about optimizing your online presence.
-                        </p>
-                        <div className="blog-grid">
-                            <div className="blog-card">
-                                <h3><a href="/blog/top-web-design-trends">Top Web Design Trends for 2024</a></h3>
-                                <p>Discover the latest design trends that can make your website stand out.</p>
-                            </div>
-                            <div className="blog-card">
-                                <h3><a href="/blog/seo-best-practices">SEO Best Practices for Small Businesses</a></h3>
-                                <p>Learn how to improve your website’s search ranking and attract more local customers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
-
-                {/* New FAQ Section for SEO & User Engagement */}
-                {/* <section className="faq-section">
-                    <div className="container">
-                        <h2>Frequently Asked Questions</h2>
-                        <p>Find answers to common questions about our web design and SEO services.</p>
-                        <div className="faq-grid">
-                            <div className="faq-item">
-                                <h3>How can a custom website help my business grow?</h3>
-                                <p>A well-designed website improves credibility, attracts customers, and enhances online visibility, helping your business thrive.</p>
-                            </div>
-                            <div className="faq-item">
-                                <h3>Why is SEO important for my website?</h3>
-                                <p>SEO increases your website’s ranking on search engines, making it easier for potential customers to find your business online.</p>
-                            </div>
-                            <div className="faq-item">
-                                <h3>How long does it take to build a website?</h3>
-                                <p>Our timeline varies based on project complexity, but most websites are completed within 4-6 weeks.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
-
-                {/* Contact CTA */}
-                <section className="vision" id="vision">
-                    <div className="container">
-                        <Parallax speed={-10}>
-                            <h2>
-                                Partner with the Leading Web Design Agency in El
-                                Paso
-                            </h2>
-                            <p>
-                                We help small and medium-sized businesses
-                                establish a strong online presence through
-                                expert web development and SEO solutions.
+                {/* VISION SECTION: Force-Dark Authority Block */}
+                <section className="vision nominate-section" id="vision" style={{ background: 'var(--section-alt)', padding: '6rem 0' }}>
+                    <div className="container text-center">
+                        <Fade bottom>
+                            <h2 style={{ color: 'var(--accent-teal)' }}>Partner with El Paso's Technical Authority</h2>
+                            <p style={{ color: 'var(--text-light)', fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto 2.5rem' }}>
+                                We help small and medium-sized businesses establish a strong online presence through 
+                                99% performance infrastructure and results-driven SEO.
                             </p>
                             <div className="vision-cta">
-                                <a href="#contact" className="primary-btn">
-                                    Let's Build Together
-                                </a>
+                                <a href="#contact" className="nav-btn quote-btn" style={{ width: '280px', margin: '0 auto' }}>Let's Build Together</a>
                             </div>
-                        </Parallax>
+                        </Fade>
                     </div>
                 </section>
 
-                {/* Contact Form */}
-                <ContactForm />
+                {/* CONTACT FORM */}
+                <section id="contact" style={{ padding: '6rem 0', background: 'var(--surface-2)' }}>
+                    <div className="container">
+                        <Fade bottom>
+                            <h2 className="text-center font-blue" style={{ marginBottom: '1rem' }}>Start Your Project</h2>
+                            <p className="text-center" style={{ marginBottom: '3rem' }}>Ready for a sub-second website? Request your free audit today.</p>
+                            <ContactForm />
+                        </Fade>
+                    </div>
+                </section>
             </PublicLayout>
         </HelmetProvider>
     );

@@ -55,6 +55,7 @@ export default function Nav() {
                             </span>
                             <ul className={`dropdown-menu ${isServicesDropdownOpen ? 'open' : ''}`}>
                                 <Link href="/services"><li>All Services</li></Link>
+                                <Link href="/web-consulting-el-paso"><li>Consulting</li></Link>
                                 <Link href="/web-design-el-paso"><li>Web Design in El Paso</li></Link>
                             </ul>
                         </li>

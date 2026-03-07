@@ -8,65 +8,86 @@ export default function Services({ auth }) {
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/services" />
-                <title>Web Design & Development Services in El Paso | Ervotech</title>
-                <meta property="og:title" content="Web Design & Development Services in El Paso | Ervotech" />
-                <meta name="description" content="Explore Ervotech's professional web design, development, SEO, and software solutions tailored for businesses in El Paso." />
+                <title>Web Design & SEO Services in El Paso | Ervotech</title>
+                <meta name="description" content="High-performance web development, local SEO, and technical consulting for El Paso businesses. Built with Laravel and React." />
             </Helmet>
-            <PublicLayout
-                user={auth.user}
-                header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Web Design & Development Services in El Paso</h2>}
-            >
-                <Head title="Web Design & Development Services | Ervotech" />
+            <PublicLayout user={auth.user}>
+                <Head title="Our Services | Ervotech" />
 
-                {/* Hero Section */}
-                <section className="services-hero">
-                    <div className="container">
-                        <Fade>
-                            <h1>Professional Web Design & SEO Services</h1>
-                            <p>We provide a range of digital solutions tailored to your business goals, including website development, SEO optimization, and custom software solutions.</p>
+                {/* HERO: Matches the Consulting Page Intensity */}
+                <section className="services-hero local-landing" style={{ padding: '8rem 0' }}>
+                    <div className="container hero-content text-center">
+                        <Fade bottom>
+                            <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+                                Premium Digital Solutions
+                            </span>
+                            <h1 style={{ fontSize: '3.5rem', marginTop: '1rem' }}>Engineered for Growth</h1>
+                            <p className="section-intro" style={{ fontSize: '1.4rem', maxWidth: '800px', margin: '1.5rem auto' }}>
+                                We build the high-performance infrastructure El Paso businesses need to dominate their industry.
+                            </p>
                         </Fade>
                     </div>
                 </section>
 
-                {/* Service Blocks */}
-                <section className="services-list">
+                {/* SERVICE GRID: Using your .service-card and .local-landing glass styles */}
+                <section className="services-list local-landing" style={{ padding: '6rem 0' }}>
                     <div className="container">
-                        <Fade>
-                            <h2>Our Web Services</h2>
+                        <Fade bottom>
+                            <h2 className="font-blue text-center" style={{ marginBottom: '4rem' }}>Our Technical Expertise</h2>
                             <div className="service-grid">
-                                <div id="website-migration" className="service-card">
-                                    <h3>Website Migration</h3>
-                                    <p>Seamlessly transfer your website to modern, scalable platforms with minimal downtime.</p>
+                                
+                                {/* Service 1: Custom Web Design */}
+                                <div className="service-card results-card">
+                                    <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-teal)' }}>
+                                        <span style={{ color: 'var(--accent-teal)' }}>WP</span>
+                                    </div>
+                                    <h3>Custom Web Design</h3>
+                                    <p>Visually stunning, high-performing websites built specifically for the El Paso market.</p>
+                                    <a href="/web-design-el-paso" className="font-blue" style={{ marginTop: '1rem', display: 'inline-block' }}>View Details &rarr;</a>
                                 </div>
-                                <div id="web-design" className="service-card">
-                                <a href="/web-design-el-paso" className='card-link'>
-                                    <h3>Custom Web Design & Development</h3>
-                                    <p>We design visually stunning, high-performing websites for businesses in El Paso.</p>
-                                </a></div>
-                                <div id="software-development" className="service-card">
-                                    <h3>Custom Software Development</h3>
-                                    <p>Tailored software solutions to optimize business operations and efficiency.</p>
+
+                                {/* Service 2: Technical Consulting */}
+                                <div className="service-card results-card">
+                                    <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-purple)' }}>
+                                        <span style={{ color: 'var(--accent-purple)' }}>TC</span>
+                                    </div>
+                                    <h3>Technical Consulting</h3>
+                                    <p>Architecture audits and scalability roadmaps to help you outscale local competitors.</p>
+                                    <a href="/web-consulting-el-paso" className="font-blue" style={{ marginTop: '1rem', display: 'inline-block' }}>View Details &rarr;</a>
                                 </div>
-                                <div id="seo-strategy" className="service-card">
-                                    <h3>SEO Optimization for Local Businesses</h3>
-                                    <p>Improve your search rankings and attract more customers with our local SEO strategies.</p>
+
+                                {/* Service 3: Local SEO */}
+                                <div className="service-card results-card">
+                                    <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-blue)' }}>
+                                        <span style={{ color: 'var(--accent-blue)' }}>SEO</span>
+                                    </div>
+                                    <h3>Local SEO Strategy</h3>
+                                    <p>Dominating the El Paso "Map Pack" and organic search results through semantic authority.</p>
                                 </div>
-                                <div id="content-strategy" className="service-card">
-                                    <h3>Content Strategy & Digital Marketing</h3>
-                                    <p>Engaging, conversion-driven content to boost your online presence.</p>
+
+                                {/* Service 4: Software Dev */}
+                                <div className="service-card results-card">
+                                    <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-pink)' }}>
+                                        <span style={{ color: 'var(--accent-pink)' }}>DEV</span>
+                                    </div>
+                                    <h3>Software Development</h3>
+                                    <p>Custom Laravel applications and React frontends tailored for business efficiency.</p>
                                 </div>
+
                             </div>
                         </Fade>
                     </div>
                 </section>
 
-                {/* CTA Section */}
-                <section className="services-cta">
+                {/* CTA: Consistent with the new "Guru" look */}
+                <section className="services-cta dominate-section">
                     <Fade>
-                        <div className="container">
-                            <h2>Partner with a Top Web Design Agency in El Paso</h2>
-                            <p>Get in touch with us today to discuss how we can elevate your digital presence.</p>
-                            <a href="/contact" className="primary-btn">Contact Us</a>
+                        <div className="container text-center">
+                            <h2 style={{ color: 'var(--accent-teal)' }}>Ready to Outpace the Competition?</h2>
+                            <p style={{ color: 'var(--text-light)', marginBottom: '2.5rem' }}>
+                                Let's build a website that doesn't just look good, but performs at the highest level.
+                            </p>
+                            <a href="/contact" className="nav-btn quote-btn" style={{ width: '250px', margin: '0 auto' }}>Get a Custom Quote</a>
                         </div>
                     </Fade>
                 </section>

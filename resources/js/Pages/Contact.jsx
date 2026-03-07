@@ -1,6 +1,7 @@
 import PublicLayout from '@/Layouts/PublicLayout';
 import { Head } from '@inertiajs/react';
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import ContactForm from '@/Components/ContactForm';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -9,88 +10,88 @@ export default function Contact({ auth }) {
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/contact" />
-                <title>Contact Us | Ervotech - Let’s Work Together</title>
-                <meta property="og:title" content="Contact Us | Ervotech - Let’s Work Together" />
+                <title>Contact Ervotech | Technical Web Consulting El Paso</title>
+                <meta name="description" content="Ready to scale? Contact Ervotech for expert web consulting, SEO audits, and custom software development in El Paso and Horizon City." />
             </Helmet>
             <PublicLayout
                 user={auth.user}
-                header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Contact Us</h2>}
+                header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Start Your Technical Audit</h2>}
             >
-                <Head title="Contact Us" />
+                <Head title="Contact Us - Technical Web Consulting" />
 
-                {/* Hero Section */}
-                <section className="contact-hero">
-                    <Fade>
-                        <div className="container">
-                            <h1>Let’s Connect</h1>
-                            <p>Have a question, idea, or just want to say hello? Reach out and let's start the conversation.</p>
-                        </div>
-                    </Fade>
-                </section>
-
-                {/* Contact Options Section */}
-                <section className="contact-options">
-                    <Fade>
-                        <div className="container">
-                            <h2>How to Reach Us</h2>
-                            <div className="contact-options-grid">
-                                <div className="contact-option">
-                                    <i className="fas fa-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>For general inquiries and support</p>
-                                    <a href="mailto:contact@ervotechep.com">contact@ervotechep.com</a>
-                                </div>
-                                <div className="contact-option">
-                                    <i className="fas fa-phone-alt"></i>
-                                    <h3>Call Us</h3>
-                                    <p>We're here to talk, anytime</p>
-                                    <a href="tel:+9153410376">+1 (915) 341-0376</a>
-                                </div>
-                                <div className="contact-option">
-                                    <i className="fas fa-calendar"></i>
-                                    <h3>Schedule a Call</h3>
-                                    <p>Book a one-on-one consultation at your convenience</p>
-                                    <a href="mailto:contact@ervotech.com">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </Fade>
-                </section>
-
-                {/* Contact Form Section */}
-                <section className="contact-form-section">
-                    <Fade>
-                        <div className="container">
-                            <h2>Send Us a Message</h2>
-                            <p>Fill out the form below, and we’ll get back to you as soon as possible.</p>
-                            <ContactForm />
-                        </div>
-                    </Fade>
-                </section>
-
-                {/* Map Section */}
-                {/* <section className="contact-map">
-                <div className="container">
-                    <h2>Our Location</h2>
-                    <p>Find us on the map and come say hello!</p>
-                    <div className="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.939456872603!2d-106.4860079848913!3d31.761877981293936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e759b5a0e1b7d7%3A0xe5b6a7e6e9648f50!2sEl%20Paso%2C%20TX!5e0!3m2!1sen!2sus!4v1645382652398!5m2!1sen!2sus"
-                            width="100%"
-                            height="400"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                        ></iframe>
+                {/* HERO SECTION: High-Authority Branding */}
+                <section className="contact-hero services-hero local-landing" style={{ padding: '8rem 0' }}>
+                    <div className="container hero-content text-center">
+                        <Fade bottom cascade duration={1000}>
+                            <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+                                99% Performance Infrastructure Ready
+                            </span>
+                            <h1 style={{ fontSize: '3.5rem', marginTop: '1rem', color: '#ffffff' }}>Let’s Build for Scale</h1>
+                            <p className="section-intro" style={{ fontSize: '1.4rem', maxWidth: '800px', margin: '1.5rem auto', color: 'rgba(255, 255, 255, 0.9)' }}>
+                                Whether you're in Downtown El Paso or Horizon City, we provide the technical roadmap your business needs to outpace the competition.
+                            </p>
+                        </Fade>
                     </div>
-                </div>
-            </section> */}
+                </section>
 
-                {/* CTA Section */}
-                <section className="contact-cta">
+                {/* CONTACT OPTIONS: Using the "Guru" Card Grid */}
+                <section className="contact-options local-landing" style={{ background: 'var(--surface-1)', padding: '6rem 0' }}>
                     <div className="container">
-                        <h2>Let’s Build Something Great Together</h2>
-                        <a href="/services" className="primary-btn">Explore Our Services</a>
+                        <Fade bottom>
+                            <h2 className="font-blue text-center" style={{ marginBottom: '3rem' }}>Direct Channels</h2>
+                            <div className="contact-options-grid">
+                                <Zoom delay={100}>
+                                    <div className="contact-option results-card" style={{ background: 'var(--surface-2)', padding: '2rem', textAlign: 'center' }}>
+                                        <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-teal)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>📧</div>
+                                        <h3>Email Us</h3>
+                                        <p>For audits and project inquiries</p>
+                                        <a href="mailto:contact@ervotechep.com" className="font-blue">contact@ervotechep.com</a>
+                                    </div>
+                                </Zoom>
+                                <Zoom delay={300}>
+                                    <div className="contact-option results-card" style={{ background: 'var(--surface-2)', padding: '2rem', textAlign: 'center' }}>
+                                        <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-purple)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>📞</div>
+                                        <h3>Call Us</h3>
+                                        <p>Direct technical support</p>
+                                        <a href="tel:+9153410376" className="font-blue">+1 (915) 341-0376</a>
+                                    </div>
+                                </Zoom>
+                                <Zoom delay={500}>
+                                    <div className="contact-option results-card" style={{ background: 'var(--surface-2)', padding: '2rem', textAlign: 'center' }}>
+                                        <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-blue)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🗓️</div>
+                                        <h3>Strategy Session</h3>
+                                        <p>Book a deep-dive technical call</p>
+                                        <a href="mailto:contact@ervotechep.com" className="font-blue">Schedule Now</a>
+                                    </div>
+                                </Zoom>
+                            </div>
+                        </Fade>
+                    </div>
+                </section>
+
+                {/* CONTACT FORM: The "Engine Room" */}
+                <section className="contact-form-section" style={{ padding: '6rem 0', background: 'var(--surface-2)' }}>
+                    <div className="container">
+                        <Fade bottom>
+                            <h2 className="text-center font-blue" style={{ marginBottom: '1rem' }}>Send Us a Message</h2>
+                            <p className="text-center" style={{ marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
+                                Fill out the form below to receive your **Free Website + SEO Audit** punch list.
+                            </p>
+                            <ContactForm />
+                        </Fade>
+                    </div>
+                </section>
+
+                {/* FOOTER CTA: Theme Stable */}
+                <section className="contact-cta dominate-section" style={{ background: 'var(--section-alt)', padding: '6rem 0' }}>
+                    <div className="container text-center">
+                        <Fade bottom>
+                            <h2 style={{ color: 'var(--accent-teal)' }}>Dominate the El Paso Market</h2>
+                            <p style={{ color: 'var(--text-light)', marginBottom: '2.5rem' }}>
+                                Join the local businesses scaling with sub-second performance and strategic SEO.
+                            </p>
+                            <a href="/services" className="nav-btn quote-btn" style={{ width: '280px', margin: '0 auto' }}>Explore All Services</a>
+                        </Fade>
                     </div>
                 </section>
             </PublicLayout>
