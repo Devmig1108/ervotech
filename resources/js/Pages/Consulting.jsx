@@ -119,7 +119,7 @@ export default function Consulting({ auth }) {
                                 Stop guessing and start scaling with a technical partner who understands the local landscape.
                             </p>
                             <div className="local-areas" style={{ marginBottom: '3rem', opacity: '0.7', fontSize: '0.9rem', textTransform: 'uppercase' }}>
-                                West Side &bull; Downtown &bull; East Side &bull; Horizon City &bull; Cielo Vista
+                                West Side &bull; Downtown &bull; East Side &bull; Horizon City &bull;
                             </div>
                             <a href="/contact" className="nav-btn quote-btn" style={{ width: '280px', margin: '0 auto' }}>Scale Your Business Today</a>
                         </div>
