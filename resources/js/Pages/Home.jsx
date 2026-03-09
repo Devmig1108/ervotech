@@ -17,34 +17,38 @@ export default function Home({ auth }) {
             <PublicLayout user={auth.user}>
                 <Head title="El Paso Web Design & High-Performance Development | Ervotech" />
 
-                {/* HERO: Enhanced with Performance Signals */}
+                {/* HERO: Mobile-Optimized with Responsive Typography */}
                 <ParallaxBanner
                     layers={[{ image: "../images/hero3.webp", speed: -30 }]}
                     className="aspect-[2/1] hero"
-                    style={{ height: '100vh', display: 'flex', alignItems: 'center' }}
+                    style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                     <div className="hero-overlay" style={{ background: 'rgba(3, 7, 27, 0.85)', position: 'absolute', inset: 0, zIndex: 1 }}></div>
-                    <div className="hero-content" style={{ position: 'relative', zIndex: 10, color: '#ffffff' }}>
+                    
+                    {/* Container with padding prevents text from hitting screen edges on mobile */}
+                    <div className="hero-content container" style={{ position: 'relative', zIndex: 10, color: '#ffffff', textAlign: 'center', padding: '0 20px' }}>
                         <Fade bottom cascade duration={1000}>
                             <div>
-                                <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', color: 'var(--accent-blue)', display: 'block', marginBottom: '1rem' }}>
+                                <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', color: 'var(--accent-blue)', display: 'block', marginBottom: '1rem' }}>
                                     99% Performance Infrastructure
                                 </span>
-                                <h1 style={{ fontSize: '3.5rem', fontWeight: '800', lineHeight: '1.2' }}>
+                                {/* clamp() scales font-size between 2rem and 3.5rem based on screen width */}
+                                <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)', fontWeight: '800', lineHeight: '1.1', maxWidth: '900px', margin: '0 auto' }}>
                                     Custom Web Design & SEO Services in El Paso
                                 </h1>
                             </div>
                         </Fade>
                         <Fade delay={400}>
-                            <p style={{ fontSize: '1.4rem', maxWidth: '800px', margin: '1.5rem auto', color: 'rgba(255, 255, 255, 0.9)' }}>
+                            <p style={{ fontSize: 'clamp(1rem, 3vw, 1.4rem)', maxWidth: '800px', margin: '1.5rem auto', color: 'rgba(255, 255, 255, 0.9)' }}>
                                 Ervotech builds high-performance websites and search-optimized strategies 
                                 tailored for local businesses and startups. Rank higher, load faster, and convert leads.
                             </p>
                         </Fade>
                         <Fade bottom delay={600}>
-                            <div className="hero-buttons">
-                                <a href="#home-services" className="nav-btn quote-btn" style={{ width: '250px' }}>Explore Our Services</a>
-                                <a href="#contact" className="nav-btn call-btn" style={{ width: '250px' }}>Get in Touch</a>
+                            {/* Flex-wrap and max-width ensures buttons stack neatly on small screens */}
+                            <div className="hero-buttons" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '15px' }}>
+                                <a href="#home-services" className="nav-btn quote-btn" style={{ width: '100%', maxWidth: '250px' }}>Explore Our Services</a>
+                                <a href="#contact" className="nav-btn call-btn" style={{ width: '100%', maxWidth: '250px' }}>Get in Touch</a>
                             </div>
                         </Fade>
                     </div>
