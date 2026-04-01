@@ -80,7 +80,7 @@ return [
 
         'zeptomail' => [
             'transport' => 'zeptomail',
-            'host' => 'com',
+            'host' => 'https://api.zeptomail.com/v1.1/email', // Full endpoint
         ],
         'failover' => [
             'transport' => 'failover',
