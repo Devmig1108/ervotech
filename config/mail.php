@@ -80,7 +80,7 @@ return [
 
         'zeptomail' => [
             'transport' => 'zeptomail',
-            'host' => 'com', // ONLY the string 'com', no https or api.
+            'host' => 'zoho.com', // Try 'zoho.com' instead of just 'com'
         ],
         'failover' => [
             'transport' => 'failover',
