@@ -80,6 +80,7 @@ return [
 
         'zeptomail' => [
             'transport' => 'zeptomail',
+            'host' => 'api.zeptomail.com', // Add this line
         ],
 
         'failover' => [
