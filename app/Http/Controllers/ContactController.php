@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\RateLimiter;
+use App\Mail\ContactFormMail;
 
 class ContactController extends Controller
 {
@@ -14,21 +13,25 @@ class ContactController extends Controller
         $key = 'contact-form:' . $request->ip();
 
         if (RateLimiter::tooManyAttempts($key, 5)) {
-            return back()->with('error', 'Too many submissions. Please try again later.');
+            return response()->json(['error' => 'Too many attempts.'], 429);
         }
 
-        RateLimiter::hit($key, 60); // Limit to 5 requests per minute
-        // Validate incoming request
+        // 1. Backend Honeypot Check
+        if ($request->filled('zip_code')) {
+            return response()->json(['message' => 'Spam detected'], 422);
+        }
+
+        RateLimiter::hit($key, 60);
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'message' => 'required|string|min:10',
         ]);
 
-        // Send email
+        // 2. Send email using the Mailable
         Mail::to('contact@ervotechep.com')->send(new ContactFormMail($validated));
 
-        // Return response
-        return back()->with('success', 'Your message has been sent successfully!');
+        return response()->json(['success' => 'Message sent!'], 200);
     }
 }

@@ -1,27 +1,27 @@
 <?php
-
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $formData;
+    public $data;
 
-    public function __construct($formData)
+    public function __construct($data)
     {
-        $this->formData = $formData;
+        $this->data = $data;
     }
 
     public function build()
     {
-        return $this->subject('New Contact Form Submission')
-                    ->view('emails.contact-form')
-                    ->with('formData', $this->formData);
+        return $this->from('website@ervotechep.com', 'Ervotech Website')
+                    ->replyTo($this->data['email'], $this->data['name'])
+                    ->subject('New Lead from ' . $this->data['name'])
+                    ->view('emails.contact') // Ensure you have resources/views/emails/contact.blade.php
+                    ->with(['data' => $this->data]);
     }
 }
