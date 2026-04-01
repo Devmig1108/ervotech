@@ -80,8 +80,7 @@ return [
 
         'zeptomail' => [
             'transport' => 'zeptomail',
-            'host' => 'api.zeptomail.com',
-            'apikey' => env('ZEPTOMAIL_API_KEY'), // This maps your .env to the driver
+            'host' => 'com',
         ],
         'failover' => [
             'transport' => 'failover',
