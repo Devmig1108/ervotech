@@ -4,139 +4,130 @@ import Fade from 'react-reveal/Fade';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Consulting({ auth }) {
-    // Structured Data for Google (LocalBusiness + Service)
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "serviceType": "Technical Web Consulting",
+        "serviceType": "Technical Web Consulting & SEO Strategy",
         "provider": {
             "@type": "LocalBusiness",
             "name": "Ervotech",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "El Paso",
-                "addressRegion": "TX"
-            }
-        },
-        "areaServed": "El Paso, TX",
-        "description": "Expert technical web consulting in El Paso. Specialized in Laravel performance, React architecture, and Local SEO strategy."
+            "areaServed": ["El Paso", "Las Cruces", "Horizon City"],
+            "description": "Ervotech provides enterprise-grade technical web consulting. We specialize in high-performance Laravel/React architecture and local search dominance."
+        }
     };
 
     return (
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/web-consulting-el-paso" />
-                <title>Web Consulting El Paso | Technical Strategy & SEO | Ervotech</title>
-                <meta name="description" content="Stop losing leads to slow websites. Ervotech provides technical web consulting in El Paso, specializing in Laravel audits, React performance, and scaling local businesses." />
-                <script type="application/ld+json">
-                    {JSON.stringify(structuredData)}
-                </script>
+                <title>Technical Web Consulting El Paso | Enterprise Strategy | Ervotech</title>
+                <meta name="description" content="Ervotech provides high-performance web consulting for El Paso businesses. Our team specializes in Laravel audits, React performance, and scalable SEO roadmaps." />
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
             <PublicLayout user={auth.user}>
                 <Head title="Web Consulting El Paso | Ervotech" />
 
                 {/* HERO SECTION */}
-                <section className="services-hero local-landing" style={{ padding: '8rem 0', textAlign: 'center' }}>
-                    <div className="container hero-content">
+                <section className="services-hero local-landing" style={{ padding: '9rem 0', textAlign: 'center' }}>
+                    <div className="container">
                         <Fade bottom>
-                            <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: 'bold' }}>
-                                Specialist Web Consulting in El Paso, TX
+                            <span className="font-blue" style={{ letterSpacing: '3px', textTransform: 'uppercase', fontSize: '0.85rem', fontWeight: '800' }}>
+                                El Paso's Technical Authority
                             </span>
-                            <h1 style={{ fontSize: '3.5rem', marginTop: '1rem', lineHeight: '1.1' }}>
-                                Technical Strategy to <br /><span className="font-blue">Scale Your Local Business</span>
+                            <h1 style={{ fontSize: '3.8rem', marginTop: '1.5rem', fontWeight: '900' }}>
+                                Strategic Web Consulting <br /><span className="font-blue">for Scalable Growth</span>
                             </h1>
-                            <p className="section-intro" style={{ fontSize: '1.4rem', maxWidth: '850px', margin: '1.5rem auto', color: 'var(--text-2)' }}>
-                                Most El Paso agencies focus on "pretty" design. We focus on <strong>infrastructure, speed, and search dominance</strong> using Laravel and React.
+                            <p style={{ fontSize: '1.4rem', maxWidth: '900px', margin: '2rem auto', color: 'var(--text-2)', lineHeight: '1.6' }}>
+                                We bridge the gap between "pretty design" and high-performance engineering. Our consulting team helps El Paso firms outpace national competitors through superior architecture.
                             </p>
-                            <div className="hero-buttons" style={{ marginTop: '2.5rem' }}>
-                                <a href="/contact" className="nav-btn quote-btn" style={{ width: '300px' }}>Schedule Your Free Technical Audit</a>
+                            <div style={{ marginTop: '3rem' }}>
+                                <a href="/contact" className="nav-btn quote-btn" style={{ padding: '1.2rem 3rem', fontSize: '1.1rem' }}>Request an Enterprise Audit</a>
                             </div>
                         </Fade>
                     </div>
                 </section>
 
-                {/* THE PROBLEM SECTION (Adding Depth for Google) */}
-                <section style={{ padding: '4rem 0', background: 'var(--surface-2)' }}>
-                    <div className="container">
-                        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                            <h2 className="font-blue" style={{ marginBottom: '2rem' }}>Why Generic Web Design Fails in the El Paso Market</h2>
-                            <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                In a competitive local landscape—from the <strong>Upper Valley to East Side El Paso</strong>—your website is often the first point of failure. If your site is built on a bloated CMS like WordPress, you are likely losing 40-50% of your mobile traffic before the page even loads.
-                            </p>
-                            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginTop: '1rem' }}>
-                                As your technical consultant, I look under the hood of your digital presence to identify <strong>Largest Contentful Paint (LCP)</strong> issues, layout shifts, and SEO gaps that allow national competitors to outrank local El Paso firms.
-                            </p>
+                {/* THE "WHY" SECTION - Expanded for SEO Depth */}
+                <section style={{ padding: '6rem 0', background: 'var(--surface-2)' }}>
+                    <div className="container" style={{ maxWidth: '1100px' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                            <Fade left>
+                                <div>
+                                    <h2 className="font-blue">Infrastructure as a Competitive Advantage</h2>
+                                    <p style={{ fontSize: '1.15rem', marginBottom: '1.5rem' }}>
+                                        Most local agencies rely on generic, bloated templates that fail under modern search scrutiny. At Ervotech, <strong>we engineer for speed</strong>.
+                                    </p>
+                                    <p style={{ fontSize: '1.15rem' }}>
+                                        From the <strong>Upper Valley to East Side El Paso</strong>, businesses are losing revenue because their digital foundations are unstable. Our consulting services identify critical bottlenecks in your React components and Laravel backends that inhibit growth.
+                                    </p>
+                                </div>
+                            </Fade>
+                            <Fade right>
+                                <div style={{ background: 'var(--primary-dark)', padding: '3rem', borderRadius: '20px', border: '1px solid var(--border-subtle)' }}>
+                                    <h4 style={{ color: 'var(--accent-teal)', marginBottom: '1rem' }}>Our Core Focus Areas:</h4>
+                                    <ul style={{ listStyle: 'none', padding: 0, lineHeight: '2.5', fontSize: '1.1rem' }}>
+                                        <li>✔ Performance & LCP Optimization</li>
+                                        <li>✔ Scalable SEO Content Siloing</li>
+                                        <li>✔ Database & API Architecture Audits</li>
+                                        <li>✔ Custom Laravel/React Integration</li>
+                                    </ul>
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                 </section>
 
-                {/* PERFORMANCE METRICS SECTION (Your Original Stats) */}
-                <section className="results-section local-landing" style={{ padding: '6rem 0', borderTop: '1px solid var(--border-subtle)' }}>
-                    <div className="container">
-                        <Fade bottom>
-                            <h2 className="font-blue" style={{ textAlign: 'center' }}>The Ervotech Performance Standard</h2>
-                            <div className="results-grid" style={{ marginTop: '3rem' }}>
-                                <div className="results-card" style={{ textAlign: 'center' }}>
-                                    <div className="process-step" style={{ margin: '0 auto 1.5rem', width: '70px', height: '70px', borderRadius: '15px', background: 'var(--primary-dark)', border: '1px solid var(--accent-teal)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <span style={{ color: 'var(--accent-teal)', fontWeight: 'bold', fontSize: '1.2rem' }}>99%</span>
-                                    </div>
-                                    <h3>Page Speed</h3>
-                                    <p>Sub-second load times optimized for El Paso's mobile networks.</p>
-                                </div>
-                                <div className="results-card" style={{ textAlign: 'center' }}>
-                                    <div className="process-step" style={{ margin: '0 auto 1.5rem', width: '70px', height: '70px', borderRadius: '15px', background: 'var(--primary-dark)', border: '1px solid var(--accent-purple)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <span style={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: '1.2rem' }}>Top 3</span>
-                                    </div>
-                                    <h3>Search Rank</h3>
-                                    <p>Targeted Local SEO strategies to dominate El Paso service terms.</p>
-                                </div>
-                                <div className="results-card" style={{ textAlign: 'center' }}>
-                                    <div className="process-step" style={{ margin: '0 auto 1.5rem', width: '70px', height: '70px', borderRadius: '15px', background: 'var(--primary-dark)', border: '1px solid var(--accent-blue)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <span style={{ color: 'var(--accent-blue)', fontWeight: 'bold', fontSize: '1.2rem' }}>100%</span>
-                                    </div>
-                                    <h3>Full Control</h3>
-                                    <p>Zero templates. Custom Laravel/React code you own entirely.</p>
-                                </div>
-                            </div>
-                        </Fade>
-                    </div>
-                </section>
-
-                {/* LOCAL FAQ SECTION (Crucial for "Consulting" Keywords) */}
+                {/* STRATEGIC PROCESS SECTION (This adds the "Business" feel) */}
                 <section style={{ padding: '6rem 0' }}>
                     <div className="container">
-                        <h2 className="font-blue" style={{ marginBottom: '3rem' }}>Web Consulting FAQ for El Paso Businesses</h2>
-                        <div style={{ display: 'grid', gap: '2rem', maxWidth: '1000px' }}>
+                        <h2 className="font-blue" style={{ textAlign: 'center', marginBottom: '4rem' }}>Our Strategic Consulting Process</h2>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+                            {[
+                                { step: "01", title: "Technical Audit", desc: "We deep-dive into your current code, hosting, and SEO health to find friction points." },
+                                { step: "02", title: "Performance Roadmap", desc: "We draft a sub-second response strategy using modern headless architecture." },
+                                { step: "03", title: "Local Market Siloing", desc: "We architect your content to dominate El Paso and surrounding regional search terms." },
+                                { step: "04", title: "Scalable Execution", desc: "Our team implements the high-performance stack that your business owns for life." }
+                            ].map((item, index) => (
+                                <div key={index} style={{ padding: '2.5rem', background: 'var(--surface-1)', border: '1px solid var(--border-subtle)', borderRadius: '12px' }}>
+                                    <span className="font-blue" style={{ fontSize: '2rem', fontWeight: 'bold' }}>{item.step}</span>
+                                    <h3 style={{ marginTop: '1rem' }}>{item.title}</h3>
+                                    <p style={{ color: 'var(--text-2)', marginTop: '1rem' }}>{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* FAQ SECTION (Long-tail SEO capture) */}
+                <section style={{ padding: '6rem 0', background: 'var(--surface-2)' }}>
+                    <div className="container">
+                        <h2 className="font-blue" style={{ marginBottom: '3rem' }}>Web Consulting FAQ for El Paso Firms</h2>
+                        <div style={{ display: 'grid', gap: '2.5rem', maxWidth: '1000px' }}>
                             <div>
-                                <h3 style={{ color: 'var(--accent-teal)' }}>What does a technical web consultant actually do?</h3>
-                                <p>Unlike a traditional designer, I audit your <strong>entire tech stack</strong>. I identify security vulnerabilities, database bottlenecks in Laravel, and rendering issues in React that prevent your site from converting El Paso leads into customers.</p>
+                                <h3 style={{ color: 'var(--accent-teal)' }}>Why does Ervotech prioritize Laravel and React?</h3>
+                                <p>We have found that custom-engineered stacks provide the security and speed that off-the-shelf builders cannot match. This technical edge is what allows our clients to outrank competitors in the El Paso market.</p>
                             </div>
                             <div>
-                                <h3 style={{ color: 'var(--accent-teal)' }}>How do you help with Local SEO in El Paso?</h3>
-                                <p>We implement technical signals—like <strong>JSON-LD Schema</strong> and localized content siloing—that help Google understand your relevance to the El Paso, Socorro, and Las Cruces markets.</p>
+                                <h3 style={{ color: 'var(--accent-teal)' }}>Can you consult on existing WordPress sites?</h3>
+                                <p>Yes. While we prefer modern stacks, we often consult for local businesses to optimize their current WordPress performance, improve core web vitals, and plan migrations to more scalable platforms.</p>
                             </div>
                             <div>
-                                <h3 style={{ color: 'var(--accent-teal)' }}>Why choose a Laravel/React specialist over a WordPress agency?</h3>
-                                <p>Security and Speed. Custom-coded solutions are inherently more secure and load significantly faster than plugin-heavy WordPress sites, giving you a massive advantage in search rankings.</p>
+                                <h3 style={{ color: 'var(--accent-teal)' }}>What is the ROI of technical consulting?</h3>
+                                <p>Our clients typically see a massive reduction in bounce rates and a direct increase in organic leads. By fixing the "hidden" technical issues, we make your digital marketing efforts significantly more effective.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* FINAL CTA */}
-                <section className="dominate-section" style={{ background: 'var(--section-alt)', padding: '6rem 0', textAlign: 'center' }}>
-                    <Fade>
-                        <div className="container">
-                            <h2 style={{ color: 'var(--accent-teal)', marginBottom: '1.5rem' }}>Ready to Outpace the Competition?</h2>
-                            <p style={{ color: 'var(--text-2)', maxWidth: '800px', margin: '0 auto 2.5rem', fontSize: '1.3rem' }}>
-                                Get a professional technical audit from El Paso's leading Laravel and React consultant.
-                            </p>
-                            <div className="local-areas" style={{ marginBottom: '3rem', opacity: '0.7', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                Serving: El Paso • Las Cruces
-                            </div>
-                            <a href="/contact" className="nav-btn quote-btn" style={{ width: '320px', margin: '0 auto' }}>Request Your Consulting Session</a>
-                        </div>
-                    </Fade>
+                {/* CTA */}
+                <section className="dominate-section" style={{ padding: '7rem 0', textAlign: 'center' }}>
+                    <div className="container">
+                        <h2 style={{ color: 'var(--accent-teal)', fontSize: '2.5rem' }}>Partner with El Paso’s Digital Engineers</h2>
+                        <p style={{ maxWidth: '700px', margin: '2rem auto', fontSize: '1.2rem', color: 'var(--text-2)' }}>
+                            Stop settling for "good enough" web design. Hire a technical partner dedicated to your long-term scalability.
+                        </p>
+                        <a href="/contact" className="nav-btn quote-btn" style={{ width: '350px', margin: '0 auto' }}>Book Your Consultation</a>
+                    </div>
                 </section>
             </PublicLayout>
         </HelmetProvider>
