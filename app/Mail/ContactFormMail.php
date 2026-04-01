@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
@@ -19,9 +20,9 @@ class ContactFormMail extends Mailable
     public function build()
     {
         return $this->from('website@ervotechep.com', 'Ervotech Website')
-                    ->replyTo($this->data['email'], $this->data['name'])
-                    ->subject('New Lead from ' . $this->data['name'])
-                    ->view('emails.contact') // Ensure you have resources/views/emails/contact.blade.php
-                    ->with(['data' => $this->data]);
+            ->replyTo($this->data['email'], $this->data['name'])
+            ->subject('New Lead from ' . $this->data['name'])
+            ->view('emails.contact-form') // <--- Add '-form' here
+            ->with(['formData' => $this->data]); // Match the variable name in your blade
     }
 }
