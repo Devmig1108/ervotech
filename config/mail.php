@@ -80,7 +80,8 @@ return [
 
         'zeptomail' => [
             'transport' => 'zeptomail',
-            'host' => 'api.zeptomail.com', // Add this line
+            'host' => 'api.zeptomail.com',
+            'apikey' => env('ZEPTOMAIL_API_KEY'), 
         ],
 
         'failover' => [
