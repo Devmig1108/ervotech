@@ -4,124 +4,137 @@ import Fade from 'react-reveal/Fade';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Consulting({ auth }) {
+    // Structured Data for Google (LocalBusiness + Service)
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Technical Web Consulting",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Ervotech",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "El Paso",
+                "addressRegion": "TX"
+            }
+        },
+        "areaServed": "El Paso, TX",
+        "description": "Expert technical web consulting in El Paso. Specialized in Laravel performance, React architecture, and Local SEO strategy."
+    };
+
     return (
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/web-consulting-el-paso" />
-                <title>Technical Web Consulting & Strategy El Paso | Ervotech</title>
-                <meta name="description" content="Expert technical consulting for El Paso businesses. Specializing in Laravel/React performance audits, SEO strategy, and custom software roadmaps." />
+                <title>Web Consulting El Paso | Technical Strategy & SEO | Ervotech</title>
+                <meta name="description" content="Stop losing leads to slow websites. Ervotech provides technical web consulting in El Paso, specializing in Laravel audits, React performance, and scaling local businesses." />
+                <script type="application/ld+json">
+                    {JSON.stringify(structuredData)}
+                </script>
             </Helmet>
             <PublicLayout user={auth.user}>
-                <Head title="Technical Web Consulting | Ervotech" />
+                <Head title="Web Consulting El Paso | Ervotech" />
 
-                {/* HERO SECTION: High-Authority Branding */}
-                <section className="services-hero local-landing" style={{ padding: '8rem 0' }}>
+                {/* HERO SECTION */}
+                <section className="services-hero local-landing" style={{ padding: '8rem 0', textAlign: 'center' }}>
                     <div className="container hero-content">
                         <Fade bottom>
-                            <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>
-                                El Paso's Technical Authority
+                            <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: 'bold' }}>
+                                Specialist Web Consulting in El Paso, TX
                             </span>
-                            <h1 style={{ fontSize: '3.5rem', marginTop: '1rem' }}>Technical Web Consulting</h1>
-                            <p className="section-intro" style={{ fontSize: '1.4rem', maxWidth: '800px', margin: '1.5rem auto' }}>
-                                We provide deep-dive technical audits and scalable roadmaps to help your business outpace local competition through superior architecture.
+                            <h1 style={{ fontSize: '3.5rem', marginTop: '1rem', lineHeight: '1.1' }}>
+                                Technical Strategy to <br /><span className="font-blue">Scale Your Local Business</span>
+                            </h1>
+                            <p className="section-intro" style={{ fontSize: '1.4rem', maxWidth: '850px', margin: '1.5rem auto', color: 'var(--text-2)' }}>
+                                Most El Paso agencies focus on "pretty" design. We focus on <strong>infrastructure, speed, and search dominance</strong> using Laravel and React.
                             </p>
                             <div className="hero-buttons" style={{ marginTop: '2.5rem' }}>
-                                <a href="/contact" className="nav-btn quote-btn" style={{ width: '250px' }}>Request a Technical Audit</a>
+                                <a href="/contact" className="nav-btn quote-btn" style={{ width: '300px' }}>Schedule Your Free Technical Audit</a>
                             </div>
                         </Fade>
                     </div>
                 </section>
 
-                {/* DATA-DRIVEN RESULTS: Perfectly Aligned */}
-                <section className="results-section local-landing" style={{ background: 'var(--surface-1)', borderTop: '1px solid var(--border-subtle)' }}>
+                {/* THE PROBLEM SECTION (Adding Depth for Google) */}
+                <section style={{ padding: '4rem 0', background: 'var(--surface-2)' }}>
                     <div className="container">
-                        <Fade bottom>
-                            <h2 className="font-blue">Performance-First Strategy</h2>
-                            <div className="results-grid" style={{ marginTop: '3rem' }}>
-
-                                {/* Infrastructure Score */}
-                                <div className="results-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                                    <div className="process-step" style={{ width: '60px', height: '60px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifySelf: 'center', marginBottom: '1rem', background: 'var(--primary-dark)', border: '1px solid var(--accent-teal)' }}>
-                                        <span style={{ color: 'var(--accent-teal)', fontWeight: 'bold', width: '100%' }}>99%</span>
-                                    </div>
-                                    <h3>Infrastructure Score</h3>
-                                    <p>Eliminating the "bloat" of standard local agency sites.</p>
-                                </div>
-
-                                {/* LCP Velocity */}
-                                <div className="results-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                                    <div className="process-step" style={{ width: '60px', height: '60px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifySelf: 'center', marginBottom: '1rem', background: 'var(--primary-dark)', border: '1px solid var(--accent-purple)' }}>
-                                        <span style={{ color: 'var(--accent-purple)', fontWeight: 'bold', width: '100%' }}>&lt; 1s</span>
-                                    </div>
-                                    <h3>LCP Velocity</h3>
-                                    <p>Meeting the strictest 2026 Core Web Vital standards.</p>
-                                </div>
-
-                                {/* UI Stability */}
-                                <div className="results-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                                    <div className="process-step" style={{ width: '60px', height: '60px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifySelf: 'center', marginBottom: '1rem', background: 'var(--primary-dark)', border: '1px solid var(--accent-blue)' }}>
-                                        <span style={{ color: 'var(--accent-blue)', fontWeight: 'bold', width: '100%' }}>0.01</span>
-                                    </div>
-                                    <h3>UI Stability</h3>
-                                    <p>Professional UX with zero visual jitter or layout shift.</p>
-                                </div>
-
-                            </div>
-                        </Fade>
-                    </div>
-                </section>
-
-                {/* THE "WHY": Deep Technical Value */}
-                <section className="audit-section local-landing" style={{ padding: '6rem 0' }}>
-                    <div className="container">
-                        <div className="audit-grid">
-                            <Fade left>
-                                <div className="audit-text">
-                                    <h2 className="font-blue" style={{ textAlign: 'left' }}>Your Tech Stack is Your Bottom Line</h2>
-                                    <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-                                        Most El Paso businesses are losing 40% of their mobile traffic to slow load times. We don't just "design" sites; we engineer growth through:
-                                    </p>
-                                    <ul className="audit-list" style={{ marginTop: '1.5rem' }}>
-                                        <li><strong>Performance:</strong> Converting bounces back into leads with sub-second response times.</li>
-                                        <li><strong>Security:</strong> Implementing government-grade reliability for every local client.</li>
-                                        <li><strong>SEO Authority:</strong> Technical signals that help you climb from Page 10 to Page 1.</li>
-                                    </ul>
-                                </div>
-                            </Fade>
-
-                            <Fade right>
-                                <div className="audit-card" style={{ background: 'var(--surface-2)', padding: '2.5rem' }}>
-                                    <h3 style={{ color: 'var(--accent-teal)' }}>Free Strategy Session</h3>
-                                    <p>We’ll analyze your current site and find the exact friction points where you’re losing money.</p>
-                                    <div className="audit-card-mini" style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.5rem' }}>
-                                        <div className="mini-row">
-                                            <span>Speed</span>
-                                            <span>SEO</span>
-                                            <span>UX</span>
-                                            <span>Scale</span>
-                                        </div>
-                                    </div>
-                                    <div className="audit-cta" style={{ marginTop: '2rem' }}>
-                                        <a href="/contact" className="nav-btn call-btn" style={{ width: '100%' }}>Book Consultation</a>
-                                    </div>
-                                </div>
-                            </Fade>
+                        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                            <h2 className="font-blue" style={{ marginBottom: '2rem' }}>Why Generic Web Design Fails in the El Paso Market</h2>
+                            <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                In a competitive local landscape—from the <strong>Upper Valley to East Side El Paso</strong>—your website is often the first point of failure. If your site is built on a bloated CMS like WordPress, you are likely losing 40-50% of your mobile traffic before the page even loads.
+                            </p>
+                            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginTop: '1rem' }}>
+                                As your technical consultant, I look under the hood of your digital presence to identify <strong>Largest Contentful Paint (LCP)</strong> issues, layout shifts, and SEO gaps that allow national competitors to outrank local El Paso firms.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                {/* DOMINATE SECTION: Cleaned for Readability */}
-                <section className="dominate-section" style={{ background: 'var(--section-alt)', padding: '6rem 0' }}>
+                {/* PERFORMANCE METRICS SECTION (Your Original Stats) */}
+                <section className="results-section local-landing" style={{ padding: '6rem 0', borderTop: '1px solid var(--border-subtle)' }}>
+                    <div className="container">
+                        <Fade bottom>
+                            <h2 className="font-blue" style={{ textAlign: 'center' }}>The Ervotech Performance Standard</h2>
+                            <div className="results-grid" style={{ marginTop: '3rem' }}>
+                                <div className="results-card" style={{ textAlign: 'center' }}>
+                                    <div className="process-step" style={{ margin: '0 auto 1.5rem', width: '70px', height: '70px', borderRadius: '15px', background: 'var(--primary-dark)', border: '1px solid var(--accent-teal)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <span style={{ color: 'var(--accent-teal)', fontWeight: 'bold', fontSize: '1.2rem' }}>99%</span>
+                                    </div>
+                                    <h3>Page Speed</h3>
+                                    <p>Sub-second load times optimized for El Paso's mobile networks.</p>
+                                </div>
+                                <div className="results-card" style={{ textAlign: 'center' }}>
+                                    <div className="process-step" style={{ margin: '0 auto 1.5rem', width: '70px', height: '70px', borderRadius: '15px', background: 'var(--primary-dark)', border: '1px solid var(--accent-purple)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <span style={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: '1.2rem' }}>Top 3</span>
+                                    </div>
+                                    <h3>Search Rank</h3>
+                                    <p>Targeted Local SEO strategies to dominate El Paso service terms.</p>
+                                </div>
+                                <div className="results-card" style={{ textAlign: 'center' }}>
+                                    <div className="process-step" style={{ margin: '0 auto 1.5rem', width: '70px', height: '70px', borderRadius: '15px', background: 'var(--primary-dark)', border: '1px solid var(--accent-blue)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <span style={{ color: 'var(--accent-blue)', fontWeight: 'bold', fontSize: '1.2rem' }}>100%</span>
+                                    </div>
+                                    <h3>Full Control</h3>
+                                    <p>Zero templates. Custom Laravel/React code you own entirely.</p>
+                                </div>
+                            </div>
+                        </Fade>
+                    </div>
+                </section>
+
+                {/* LOCAL FAQ SECTION (Crucial for "Consulting" Keywords) */}
+                <section style={{ padding: '6rem 0' }}>
+                    <div className="container">
+                        <h2 className="font-blue" style={{ marginBottom: '3rem' }}>Web Consulting FAQ for El Paso Businesses</h2>
+                        <div style={{ display: 'grid', gap: '2rem', maxWidth: '1000px' }}>
+                            <div>
+                                <h3 style={{ color: 'var(--accent-teal)' }}>What does a technical web consultant actually do?</h3>
+                                <p>Unlike a traditional designer, I audit your <strong>entire tech stack</strong>. I identify security vulnerabilities, database bottlenecks in Laravel, and rendering issues in React that prevent your site from converting El Paso leads into customers.</p>
+                            </div>
+                            <div>
+                                <h3 style={{ color: 'var(--accent-teal)' }}>How do you help with Local SEO in El Paso?</h3>
+                                <p>We implement technical signals—like <strong>JSON-LD Schema</strong> and localized content siloing—that help Google understand your relevance to the El Paso, Socorro, and Las Cruces markets.</p>
+                            </div>
+                            <div>
+                                <h3 style={{ color: 'var(--accent-teal)' }}>Why choose a Laravel/React specialist over a WordPress agency?</h3>
+                                <p>Security and Speed. Custom-coded solutions are inherently more secure and load significantly faster than plugin-heavy WordPress sites, giving you a massive advantage in search rankings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* FINAL CTA */}
+                <section className="dominate-section" style={{ background: 'var(--section-alt)', padding: '6rem 0', textAlign: 'center' }}>
                     <Fade>
                         <div className="container">
-                            <h2 style={{ color: 'var(--accent-teal)', marginBottom: '1.5rem' }}>Dominate the El Paso Market</h2>
+                            <h2 style={{ color: 'var(--accent-teal)', marginBottom: '1.5rem' }}>Ready to Outpace the Competition?</h2>
                             <p style={{ color: 'var(--text-2)', maxWidth: '800px', margin: '0 auto 2.5rem', fontSize: '1.3rem' }}>
-                                Stop guessing and start scaling with a technical partner who understands the local landscape.
+                                Get a professional technical audit from El Paso's leading Laravel and React consultant.
                             </p>
-                            <div className="local-areas" style={{ marginBottom: '3rem', opacity: '0.7', fontSize: '0.9rem', textTransform: 'uppercase' }}>
-                                West Side &bull; Downtown &bull; East Side &bull; Horizon City &bull;
+                            <div className="local-areas" style={{ marginBottom: '3rem', opacity: '0.7', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                Serving: El Paso • Las Cruces
                             </div>
-                            <a href="/contact" className="nav-btn quote-btn" style={{ width: '280px', margin: '0 auto' }}>Scale Your Business Today</a>
+                            <a href="/contact" className="nav-btn quote-btn" style={{ width: '320px', margin: '0 auto' }}>Request Your Consulting Session</a>
                         </div>
                     </Fade>
                 </section>
