@@ -39,6 +39,9 @@ export default function Footer() {
             <div className="footer-bottom">
                 <p>&copy; 2026 Ervotech. All Rights Reserved.</p>
             </div>
+
+            <script> (function(ss,ex){window.ldfdr = window.ldfdr || function () { (ldfdr._q = ldfdr._q || []).push([].slice.call(arguments)); }; (function(d,s){fs = d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('Xbp1oaE5BokaEdVj'); </script>
+
         </footer>
 
     );
