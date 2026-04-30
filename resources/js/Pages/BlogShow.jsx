@@ -62,9 +62,9 @@ export default function BlogShow({ auth }) {
                         </div>
                     </section>
 
-                    {/* 2. FEATURED IMAGE: Overlaps the Hero section slightly for depth */}
+                    {/* 2. FEATURED IMAGE: Using var(--page-bg) so it swaps cleanly */}
                     {blog.image && (
-                        <section style={{ background: 'var(--primary-dark)', padding: '0 1rem', marginTop: '-6rem', position: 'relative', zIndex: 20 }}>
+                        <section style={{ background: 'var(--page-bg)', padding: '0 1rem', marginTop: '-6rem', position: 'relative', zIndex: 20 }}>
                             <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
                                 <Fade bottom delay={400} duration={1000}>
                                     <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)', background: 'var(--surface-1)', border: '1px solid var(--border-subtle)' }}>
@@ -79,12 +79,13 @@ export default function BlogShow({ auth }) {
                         </section>
                     )}
 
-                    {/* 3. ARTICLE CONTENT: Clean, highly legible reading experience */}
-                    <section style={{ background: 'var(--primary-dark)', padding: '5rem 1rem 8rem' }}>
+                    {/* 3. ARTICLE CONTENT: Using var(--page-bg) so it swaps cleanly */}
+                    <section style={{ background: 'var(--page-bg)', padding: '5rem 1rem 8rem' }}>
                         <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             <Fade bottom duration={800}>
                                 <div
                                     className="blog-content"
+                                    style={{ color: 'var(--text-1)' }} /* Ensures text switches perfectly */
                                     dangerouslySetInnerHTML={{
                                         __html: DOMPurify.sanitize(blog.content),
                                     }}
@@ -93,8 +94,8 @@ export default function BlogShow({ auth }) {
                         </div>
                     </section>
 
-                    {/* 4. POST-ARTICLE LEAD MAGNET: Catch them while they are engaged */}
-                    <section id="audit" className="audit-cta-section" style={{ padding: '4rem 1rem 8rem', background: 'var(--secondary-dark)', borderTop: '1px solid var(--border-subtle)' }}>
+                    {/* 4. POST-ARTICLE LEAD MAGNET: Removed inline background so the CSS class handles the theme swap */}
+                    <section id="audit" className="audit-cta-section" style={{ padding: '4rem 1rem 8rem', borderTop: '1px solid var(--border-subtle)' }}>
                         <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             <Fade bottom duration={800}>
                                 <div className="audit-box aurora-bg-subtle">
