@@ -13,7 +13,7 @@ export default function Home({ auth }) {
         "image": "https://www.ervotechep.com/images/ervotech-logo-dark.png",
         "@id": "https://www.ervotechep.com/",
         "url": "https://www.ervotechep.com/",
-        "telephone": "", // Add your phone number here
+        "telephone": "(915)341-0376", // Add your phone number here
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "El Paso",

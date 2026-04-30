@@ -5,15 +5,70 @@ import ContactForm from "@/Components/ContactForm";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Services({ auth }) {
+    // Structured Data explicitly listing the services you offer in El Paso
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Design and SEO Services",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Ervotech",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "El Paso",
+                "addressRegion": "TX"
+            }
+        },
+        "areaServed": ["El Paso, TX", "Las Cruces, NM", "Horizon City, TX"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Marketing and Web Development Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Custom Web Design"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Local SEO Strategy"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Technical Consulting"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Custom Software Development"
+                    }
+                }
+            ]
+        }
+    };
+
     return (
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/services" />
                 <title>Web Design & Local SEO Services in El Paso | Ervotech</title>
                 <meta name="description" content="Ervotech provides premium custom web design, local SEO, and software development services designed to help El Paso businesses capture more leads and revenue." />
+                {/* Injecting the structured data for Google */}
+                <script type="application/ld+json">
+                    {JSON.stringify(structuredData)}
+                </script>
             </Helmet>
             
-            <PublicLayout user={auth.user}>
+            <PublicLayout user={auth?.user}>
                 <Head title="Our Services | Ervotech" />
 
                 <main className="home-main">
