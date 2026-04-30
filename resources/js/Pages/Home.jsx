@@ -1,136 +1,319 @@
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Head } from "@inertiajs/react";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import { ParallaxBanner } from "react-scroll-parallax";
 import ContactForm from "@/Components/ContactForm";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Home({ auth }) {
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ervotech",
+        "image": "https://www.ervotechep.com/images/ervotech-logo-dark.png",
+        "@id": "https://www.ervotechep.com/",
+        "url": "https://www.ervotechep.com/",
+        "telephone": "", // Add your phone number here
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "El Paso",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "description": "Custom web design and local SEO services for El Paso businesses. We build fast, professional websites designed to get more leads and customers.",
+        "priceRange": "$$$"
+    };
+
+    // Live Client Portfolio Data with Images
+    const portfolioClients = [
+        {
+            name: "Roofing Repair El Paso",
+            url: "https://roofingrepairelpaso.com/",
+            image: "/images/lone-star.png",
+            description: "Hyper-local lead generation website for roofing contractors. Engineered to capture high-intent emergency repair traffic.",
+            accent: "var(--accent-orange)"
+        },
+        {
+            name: "The Hard Truth AF",
+            url: "https://thehardtruthaf.com/",
+            image: "/images/hard-truth.png",
+            description: "Dynamic lifestyle brand and podcast platform. Built for high performance, content streaming, and brand authority.",
+            accent: "var(--accent-purple)"
+        },
+        {
+            name: "C&A Dumpsters",
+            url: "https://ca-dumpsters.com/",
+            image: "/images/ca-dumpsters.png", // Just add this image to your public/images folder
+            description: "Local dumpster rental and junk removal services. Highly optimized for local search and lead capture in the El Paso area.",
+            accent: "var(--accent-teal)"
+        },
+        {
+            name: "Lawn Heros",
+            url: "https://lawnheros.com/",
+            image: "/images/lawn-heros.png", 
+            description: "Weed control and premium lawn care services. Features a clean, green-industry design built to convert local homeowners.",
+            accent: "var(--accent-blue)"
+        },
+        {
+            name: "Unique Roofing NM",
+            url: "https://uniqueroofingnm.com/",
+            image: "/images/unique-roofing.png",
+            description: "Regional roofing contractor covering New Mexico. Professional, trust-building design tailored for commercial and residential clients.",
+            accent: "var(--accent-pink)"
+        },
+        {
+            name: "Ervotech Innovation Sandbox",
+            url: "https://ervotech.site/",
+            image: "/images/sandbox.png",
+            description: "Our dedicated development environment. This is where we stress-test experimental React components, push the limits of Laravel architectures, and pioneer new UI/UX designs before they go live.",
+            accent: "var(--accent-teal)"
+        }
+    ];
+
     return (
         <HelmetProvider>
             <Helmet>
                 <link rel="canonical" href="https://www.ervotechep.com/" />
-                <title>High-Performance Web Design & SEO El Paso | Ervotech</title>
-                <meta name="description" content="Ervotech builds high-performance Laravel & React websites for El Paso businesses. 99% performance grade, local SEO, and custom software. Get a free audit." />
+                <title>Top Web Design & Local SEO in El Paso | Ervotech</title>
+                <meta name="description" content="Ervotech builds professional, custom websites and provides local SEO to help El Paso businesses get found on Google, attract more customers, and grow." />
+                <script type="application/ld+json">
+                    {JSON.stringify(structuredData)}
+                </script>
             </Helmet>
+
             <PublicLayout user={auth.user}>
-                <Head title="El Paso Web Design & High-Performance Development | Ervotech" />
+                <Head title="El Paso Web Design & SEO | Ervotech" />
 
-                {/* HERO: Mobile-Optimized with Responsive Typography */}
-                <ParallaxBanner
-                    layers={[{ image: "../images/hero3.webp", speed: -30 }]}
-                    className="aspect-[2/1] hero"
-                    style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                >
-                    <div className="hero-overlay" style={{ background: 'rgba(3, 7, 27, 0.85)', position: 'absolute', inset: 0, zIndex: 1 }}></div>
+                <main className="home-main">
                     
-                    {/* Container with padding prevents text from hitting screen edges on mobile */}
-                    <div className="hero-content container" style={{ position: 'relative', zIndex: 10, color: '#ffffff', textAlign: 'center', padding: '0 20px' }}>
-                        <Fade bottom cascade duration={1000}>
-                            <div>
-                                <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', color: 'var(--accent-blue)', display: 'block', marginBottom: '1rem' }}>
-                                    99% Performance Infrastructure
+                    {/* 1. HERO: SEO Optimized & High-Converting */}
+                    <ParallaxBanner
+                        layers={[{ image: "/images/Office.webp", speed: -15 }]}
+                        className="hero-modern aurora-bg"
+                        style={{ minHeight: '85vh', position: 'relative', display: 'flex', alignItems: 'center' }}
+                    >
+                        <div className="hero-overlay"></div>
+                        
+                        <div className="container" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 10 }}>
+                            <Fade bottom duration={1000}>
+                                <span className="badge-premium" style={{ fontSize: 'inherit', fontWeight: '600' }}>
+                                    Top-Rated Technical Agency
                                 </span>
-                                {/* clamp() scales font-size between 2rem and 3.5rem based on screen width */}
-                                <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)', fontWeight: '800', lineHeight: '1.1', maxWidth: '900px', margin: '0 auto' }}>
-                                    Custom Web Design & SEO Services in El Paso
+                            </Fade>
+                            
+                            <Fade bottom delay={200} duration={1000}>
+                                <h1 className="display-heading">
+                                    El Paso Web Design <br />
+                                    <span className="text-gradient">& Local SEO.</span>
                                 </h1>
-                            </div>
-                        </Fade>
-                        <Fade delay={400}>
-                            <p style={{ fontSize: 'clamp(1rem, 3vw, 1.4rem)', maxWidth: '800px', margin: '1.5rem auto', color: 'rgba(255, 255, 255, 0.9)' }}>
-                                Ervotech builds high-performance websites and search-optimized strategies 
-                                tailored for local businesses and startups. Rank higher, load faster, and convert leads.
-                            </p>
-                        </Fade>
-                        <Fade bottom delay={600}>
-                            {/* Flex-wrap and max-width ensures buttons stack neatly on small screens */}
-                            <div className="hero-buttons" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '15px' }}>
-                                <a href="#home-services" className="nav-btn quote-btn" style={{ width: '100%', maxWidth: '250px' }}>Explore Our Services</a>
-                                <a href="#contact" className="nav-btn call-btn" style={{ width: '100%', maxWidth: '250px' }}>Get in Touch</a>
-                            </div>
-                        </Fade>
-                    </div>
-                </ParallaxBanner>
-
-                {/* SPLIT SECTION: Local Authority Signals */}
-                <section className="split-section">
-                    <Fade left>
-                        <div className="split-text">
-                            <Parallax speed={-5}>
-                                <h2>El Paso Web Design & SEO Authority</h2>
-                                <p>
-                                    At Ervotech, we provide top-notch <strong className="font-blue">web design</strong>, 
-                                    <strong className="font-blue"> SEO solutions</strong>, and <strong className="font-blue"> custom software</strong> 
-                                    tailored for businesses in El Paso and the surrounding areas.
+                            </Fade>
+                            
+                            <Fade bottom delay={400} duration={1000}>
+                                <p className="hero-subtext">
+                                    <strong>Turn your website into a lead-generating machine.</strong> We engineer fast, professional React & Laravel digital assets that outrank your competitors and convert traffic into revenue.
                                 </p>
-                                <p>
-                                    <em>
-                                        We replace slow, generic templates with high-performance Laravel/React architecture 
-                                        that helps you scale and dominate local search results.
-                                    </em>
-                                </p>
-                            </Parallax>
+                            </Fade>
+                            
+                            <Fade bottom delay={600} duration={1000}>
+                                <div className="hero-actions">
+                                    <a href="#audit" className="btn-primary magnetic-btn">
+                                        Get Your Free Website Review
+                                    </a>
+                                    <a href="#bento-services" className="btn-secondary">
+                                        See How We Help
+                                    </a>
+                                </div>
+                            </Fade>
                         </div>
-                    </Fade>
-                    <div className="split-image" role="img" aria-label="High-performance web development in El Paso"></div>
-                </section>
+                    </ParallaxBanner>
 
-                {/* SERVICES GRID: Theme-Stable Authority Cards */}
-                <section className="home-services local-landing" id="home-services" style={{ background: 'var(--surface-1)', padding: '6rem 0' }}>
-                    <div className="container">
-                        <Fade bottom>
-                            <h2 className="text-center font-blue" style={{ marginBottom: '4rem' }}>
-                                Performance-Driven Services for El Paso Businesses
-                            </h2>
-                            <div className="service-grid">
-                                {[
-                                    { title: "Website Migration", link: "/services#website-migration", desc: "Seamless migration to modern, scalable Laravel/React platforms." },
-                                    { title: "Custom Web Design", link: "/web-design-el-paso", desc: "High-performing websites engineered for the local El Paso market." },
-                                    { title: "Software Development", link: "/services#software-development", desc: "Custom web applications designed to improve business efficiency." },
-                                    { title: "Local SEO & Content", link: "/services#seo-strategy", desc: "Strategic visibility for West Side, East Side, and Horizon City searches." }
-                                ].map((service, i) => (
-                                    <Zoom key={i} delay={i * 100}>
-                                        <div className="service-card results-card" style={{ textAlign: 'center', height: '100%' }}>
-                                            <h3>
-                                                <a href={service.link} style={{ color: 'var(--accent-purple)', textDecoration: 'none' }}>{service.title}</a>
-                                            </h3>
-                                            <p style={{ marginTop: '1rem' }}>{service.desc}</p>
+                    {/* 2. SOCIAL PROOF */}
+                    <Fade bottom duration={800}>
+                        <section className="client-strip">
+                            <p>WE HELP SOUTHWEST BUSINESSES DOMINATE THEIR LOCAL MARKETS</p>
+                            <div className="logo-track">
+                                <span>CUSTOM WEB DESIGN</span>
+                                <span>LOCAL SEO</span>
+                                <span>E-COMMERCE</span>
+                                <span>LEAD GENERATION</span>
+                                <span>BRANDING</span>
+                            </div>
+                        </section>
+                    </Fade>
+
+                    {/* 3. BENTO BOX UI */}
+                    <section id="bento-services" className="bento-section">
+                        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <div className="section-header">
+                                    <h2>Custom Websites, Not Generic Templates.</h2>
+                                    <p>Your business is unique. Your website shouldn't look like everyone else's, and it shouldn't be slow and hard to use.</p>
+                                </div>
+                            </Fade>
+
+                            <div className="bento-grid">
+                                <div className="bento-large" style={{ gridColumn: 'span 8', gridRow: 'span 2' }}>
+                                    <Fade bottom duration={800}>
+                                        <div className="bento-card aurora-bg-subtle" style={{ height: '100%' }}>
+                                            <div className="bento-content">
+                                                <h3 className="color-pop-purple">Websites Built to Grow Your Business</h3>
+                                                <p>We build beautiful, easy-to-use websites from the ground up. Whether you need a simple local business page or a complex online store, we ensure it looks perfectly tailored to your brand.</p>
+                                            </div>
+                                            <div className="bento-visual code-visual">
+                                                <code>
+                                                    "business_status": "Online",<br/>
+                                                    "monthly_leads": "Growing",<br/>
+                                                    "website_speed": "Lightning Fast"
+                                                </code>
+                                            </div>
                                         </div>
-                                    </Zoom>
+                                    </Fade>
+                                </div>
+
+                                <div className="bento-medium" style={{ gridColumn: 'span 4' }}>
+                                    <Fade bottom delay={200} duration={800}>
+                                        <div className="bento-card" style={{ height: '100%' }}>
+                                            <div className="bento-content">
+                                                <h3 className="color-pop-orange">Be Found on Google</h3>
+                                                <p>Having a website doesn't matter if no one can find it. We use proven Local SEO strategies to put your business in front of customers exactly when they are searching for your services.</p>
+                                            </div>
+                                        </div>
+                                    </Fade>
+                                </div>
+
+                                <div className="bento-medium" style={{ gridColumn: 'span 4' }}>
+                                    <Fade bottom delay={400} duration={800}>
+                                        <div className="bento-card" style={{ height: '100%' }}>
+                                            <div className="bento-content">
+                                                <h3 className="color-pop-teal">Lightning Fast Speeds</h3>
+                                                <p>A slow website costs you customers. We use modern coding practices to ensure your site loads instantly on smartphones, tablets, and computers.</p>
+                                            </div>
+                                        </div>
+                                    </Fade>
+                                </div>
+
+                                <div className="bento-wide" style={{ gridColumn: 'span 8' }}>
+                                    <Fade bottom delay={600} duration={800}>
+                                        <div className="bento-card" style={{ height: '100%' }}>
+                                            <div className="bento-content">
+                                                <h3 className="color-pop-pink">Your All-In-One Digital Partner</h3>
+                                                <p>You run your business; we handle the web. From designing your logo to managing your website and getting you more reviews, we act as your dedicated, in-house web team.</p>
+                                            </div>
+                                        </div>
+                                    </Fade>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 4. PERFORMANCE ADVANTAGE */}
+                    <section className="performance-section">
+                        <div className="container" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+                            <Fade bottom duration={800}>
+                                <h2>The Ervotech Advantage</h2>
+                                <p className="subtext" style={{ color: 'var(--text-2)', fontSize: '1.2rem' }}>Why our websites outperform the local competition.</p>
+                            </Fade>
+                            
+                            <div className="comparison-grid">
+                                <Fade bottom delay={200} duration={800}>
+                                    <div className="comparison-card bad">
+                                        <h4>Standard Template Websites</h4>
+                                        <div className="score">45<span>/100</span></div>
+                                        <ul>
+                                            <li>Slow loading times on mobile</li>
+                                            <li>Looks like everyone else's site</li>
+                                            <li>Hard to update and breaks easily</li>
+                                        </ul>
+                                    </div>
+                                </Fade>
+                                
+                                <Fade bottom delay={400} duration={800}>
+                                    <div className="comparison-card good aurora-bg-subtle">
+                                        <h4>Ervotech Custom Websites</h4>
+                                        <div className="score text-gradient">99<span>/100</span></div>
+                                        <ul>
+                                            <li>Loads instantly on any device</li>
+                                            <li>Designed specifically for your brand</li>
+                                            <li>Built specifically to capture more leads</li>
+                                        </ul>
+                                    </div>
+                                </Fade>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 5. LIVE PORTFOLIO */}
+                    <section className="portfolio-section">
+                        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <div className="section-header" style={{ marginBottom: '3rem' }}>
+                                    <h2>Proudly Built for El Paso & Beyond</h2>
+                                    <p>Real results for real businesses. See how a professional online presence transforms bottom lines.</p>
+                                </div>
+                            </Fade>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+                                {portfolioClients.map((client, index) => (
+                                    <Fade bottom delay={index * 150} duration={800} key={index}>
+                                        <div className="portfolio-item" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                                            
+                                            {/* Screenshot Top Half */}
+                                            <div style={{ background: 'var(--surface-1)', height: '220px', borderRadius: '12px 12px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-2)', position: 'relative', overflow: 'hidden' }}>
+                                                {client.image ? (
+                                                    <img 
+                                                        src={client.image} 
+                                                        alt={`${client.name} Website Design`} 
+                                                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                                        loading="lazy"
+                                                    />
+                                                ) : (
+                                                    <span style={{ fontSize: '1.2rem', opacity: 0.5 }}>{client.name}</span>
+                                                )}
+                                            </div>
+                                            
+                                            {/* Info Bottom Half */}
+                                            <div style={{ flexGrow: 1, padding: '1.8rem', background: 'var(--secondary-dark)', borderRadius: '0 0 12px 12px', border: '1px solid var(--border-subtle)', borderTop: 'none', display: 'flex', flexDirection: 'column' }}>
+                                                <h3 style={{ color: client.accent, marginBottom: '0.75rem', fontSize: '1.4rem' }}>{client.name}</h3>
+                                                <p style={{ fontSize: '1rem', color: 'var(--text-2)', marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", flexGrow: 1 }}>
+                                                    {client.description}
+                                                </p>
+                                                
+                                                <a href={client.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-1)', textDecoration: 'none', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '8px', transition: 'color 0.3s ease' }} 
+                                                   onMouseOver={(e) => e.target.style.color = client.accent} 
+                                                   onMouseOut={(e) => e.target.style.color = 'var(--text-1)'}
+                                                >
+                                                    Visit Live Site 
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                                    </svg>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </Fade>
                                 ))}
                             </div>
-                        </Fade>
-                    </div>
-                </section>
+                        </div>
+                    </section>
 
-                {/* VISION SECTION: Force-Dark Authority Block */}
-                <section className="vision nominate-section" id="vision" style={{ background: 'var(--section-alt)', padding: '6rem 0' }}>
-                    <div className="container text-center">
-                        <Fade bottom>
-                            <h2 style={{ color: 'var(--accent-teal)' }}>Partner with El Paso's Technical Authority</h2>
-                            <p style={{ color: 'var(--text-light)', fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto 2.5rem' }}>
-                                We help small and medium-sized businesses establish a strong online presence through 
-                                99% performance infrastructure and results-driven SEO.
-                            </p>
-                            <div className="vision-cta">
-                                <a href="#contact" className="nav-btn quote-btn" style={{ width: '280px', margin: '0 auto' }}>Let's Build Together</a>
-                            </div>
-                        </Fade>
-                    </div>
-                </section>
+                    {/* 6. LEAD MAGNET / AUDIT CTA */}
+                    <section id="audit" className="audit-cta-section">
+                        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <div className="audit-box aurora-bg">
+                                    <h2>Find out why your website isn't getting leads.</h2>
+                                    <p style={{ color: 'var(--text-2)', marginBottom: '2rem' }}>Stop guessing. Drop your website address below, and we'll send you a free, easy-to-understand review showing exactly how to get more local customers.</p>
+                                    
+                                    <div className="form-wrapper">
+                                        <ContactForm /> 
+                                    </div>
+                                </div>
+                            </Fade>
+                        </div>
+                    </section>
 
-                {/* CONTACT FORM */}
-                <section id="contact" style={{ padding: '6rem 0', background: 'var(--surface-2)' }}>
-                    <div className="container">
-                        <Fade bottom>
-                            <h2 className="text-center font-blue" style={{ marginBottom: '1rem' }}>Start Your Project</h2>
-                            <p className="text-center" style={{ marginBottom: '3rem' }}>Ready for a sub-second website? Request your free audit today.</p>
-                            <ContactForm />
-                        </Fade>
-                    </div>
-                </section>
+                </main>
             </PublicLayout>
         </HelmetProvider>
     );

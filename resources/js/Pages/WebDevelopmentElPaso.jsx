@@ -1,8 +1,6 @@
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Head } from "@inertiajs/react";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 import ContactForm from "@/Components/ContactForm";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -47,124 +45,114 @@ export default function ElPasoWebDesign({ auth }) {
             </Helmet>
 
             <PublicLayout user={auth?.user}>
-                <div className="local-landing local-landing--elpaso">
-                    <Head title="Web Design El Paso | Ervotech" />
+                <Head title="Web Design El Paso | Ervotech" />
 
-                    {/* HERO: Fully Syncronized & Theme Stable */}
-                    <ParallaxBanner
-                        layers={[{ image: "../images/hero3.webp", speed: -30 }]}
-                        className="aspect-[2/1] hero"
-                        style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                    >
-                        {/* Dark overlay persists in Light Mode to protect white text */}
-                        <div className="hero-overlay" style={{ background: 'rgba(3, 7, 27, 0.85)', position: 'absolute', inset: 0, zIndex: 1 }}></div>
-
-                        <div className="hero-content" style={{ position: 'relative', zIndex: 10, color: '#ffffff', textAlign: 'center', width: '100%', padding: '0 2rem' }}>
-                            <Fade bottom cascade duration={1000}>
-                                <div>
-                                    <span className="font-blue" style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', color: 'var(--accent-blue)', display: 'block', marginBottom: '1rem' }}>
-                                        99% Performance Infrastructure
-                                    </span>
-                                    <h1 style={{ fontSize: '3.5rem', fontWeight: '800', color: '#ffffff', lineHeight: '1.2' }}>
-                                        Web Design in El Paso Built for Speed & Leads
-                                    </h1>
-                                </div>
+                <main className="home-main">
+                    
+                    {/* 1. HERO: Premium SEO Authority */}
+                    <section className="hero-modern aurora-bg" style={{ minHeight: '75vh', display: 'flex', alignItems: 'center', paddingTop: '6rem', paddingBottom: '4rem' }}>
+                        <div className="container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 10 }}>
+                            <Fade bottom duration={1000}>
+                                <span className="badge-premium" style={{ fontSize: 'inherit', fontWeight: '600' }}>
+                                    99% Performance Infrastructure
+                                </span>
                             </Fade>
-
-                            <Fade delay={600}>
-                                <p style={{ fontSize: '1.4rem', maxWidth: '800px', margin: '2rem auto', color: 'rgba(255, 255, 255, 0.9)', lineHeight: '1.6' }}>
-                                    Stop losing customers to slow, outdated sites. We build high-performance 
-                                    Laravel/React architecture that loads fast and ranks locally.
+                            
+                            <Fade bottom delay={200} duration={1000}>
+                                <h1 className="display-heading">
+                                    Web Design in El Paso <br />
+                                    <span className="text-gradient">Built for Speed & Leads.</span>
+                                </h1>
+                            </Fade>
+                            
+                            <Fade bottom delay={400} duration={1000}>
+                                <p className="hero-subtext">
+                                    Stop losing customers to slow, outdated sites. We build high-performance Laravel & React architecture that loads instantly and dominates local El Paso search rankings.
                                 </p>
                             </Fade>
-
-                            <Fade bottom delay={800}>
-                                <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2rem' }}>
-                                    <a href="#free-audit" className="nav-btn quote-btn" style={{ width: '320px', padding: '1rem' }}>
-                                        Get a Free Website + SEO Audit
+                            
+                            <Fade bottom delay={600} duration={1000}>
+                                <div className="hero-actions">
+                                    <a href="#audit" className="btn-primary magnetic-btn">
+                                        Get a Free Website Audit
                                     </a>
                                 </div>
                             </Fade>
 
-                            <div className="hero-trust" style={{ marginTop: '4rem' }}>
-                                <ul style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', listStyle: 'none', padding: 0, fontSize: '1.1rem' }}>
-                                    <Fade bottom delay={1000}>
-                                        <li><span style={{ color: 'var(--accent-teal)', marginRight: '8px' }}>✓</span> 943ms LCP Speed</li>
-                                    </Fade>
-                                    <Fade bottom delay={1100}>
-                                        <li><span style={{ color: 'var(--accent-teal)', marginRight: '8px' }}>✓</span> Lead & Conversion Tracking</li>
-                                    </Fade>
-                                    <Fade bottom delay={1200}>
-                                        <li><span style={{ color: 'var(--accent-teal)', marginRight: '8px' }}>✓</span> On-Page SEO Foundation</li>
-                                    </Fade>
-                                    <Fade bottom delay={1300}>
-                                        <li><span style={{ color: 'var(--accent-teal)', marginRight: '8px' }}>✓</span> Secure Laravel Architecture</li>
-                                    </Fade>
-                                </ul>
-                            </div>
+                            {/* Hero Trust Signals */}
+                            <Fade bottom delay={800} duration={1000}>
+                                <div className="logo-track" style={{ marginTop: '4rem', fontSize: '0.9rem', color: 'var(--text-2)', justifyContent: 'center' }}>
+                                    <span>✓ 943ms LCP Speed</span>
+                                    <span>✓ Conversion Tracking</span>
+                                    <span>✓ SEO Foundation</span>
+                                    <span>✓ Secure Architecture</span>
+                                </div>
+                            </Fade>
                         </div>
-                    </ParallaxBanner>
+                    </section>
 
-                    {/* QUICK ANSWER */}
-                    <section className="quick-answer" id="overview" style={{ padding: '6rem 0' }}>
-                        <div className="container">
-                            <Fade bottom>
-                                <div className="quick-answer-inner" style={{ borderLeft: '4px solid var(--accent-purple)', background: 'var(--surface-1)' }}>
-                                    <h2>The Ervotech Performance Edge</h2>
-                                    <p style={{ fontSize: '1.2rem' }}>
-                                        Most El Paso agencies use heavy templates that frustrate mobile users. 
-                                        Ervotech engineers custom websites with sub-second speeds, ensuring you 
-                                        capture every lead in the local market.
+                    {/* 2. THE QUICK ANSWER (Value Prop) */}
+                    <section style={{ padding: '6rem 1rem', background: 'var(--secondary-dark)', borderTop: '1px solid var(--border-subtle)' }}>
+                        <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <div className="comparison-card" style={{ padding: '3rem', borderRadius: '20px', borderLeft: '4px solid var(--accent-purple)' }}>
+                                    <h2 style={{ marginBottom: '1.5rem', textAlign: 'left', fontSize: '2.2rem', color: 'var(--text-1)' }}>The Ervotech Performance Edge</h2>
+                                    <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-2)' }}>
+                                        Most El Paso agencies use heavy, pre-made templates that frustrate mobile users and actively hurt your Google rankings. Ervotech engineers custom websites with sub-second speeds, ensuring you capture every single lead in the local market.
                                     </p>
                                 </div>
                             </Fade>
                         </div>
                     </section>
 
-                    {/* VALUE GRID */}
-                    <section className="value-section" style={{ background: 'var(--section-alt)', padding: '6rem 0' }}>
-                        <div className="container">
-                            <Fade bottom>
-                                <h2 className="font-blue text-center">Engineered for the El Paso Market</h2>
+                    {/* 3. VALUE GRID: Bento Box Layout */}
+                    <section className="bento-section" style={{ padding: '8rem 1rem', background: 'var(--primary-dark)' }}>
+                        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <div className="section-header" style={{ marginBottom: '4rem' }}>
+                                    <h2>Engineered for the El Paso Market</h2>
+                                </div>
                             </Fade>
-                            <div className="value-grid" style={{ marginTop: '3rem' }}>
-                                <Zoom delay={100}>
-                                    <div className="value-card results-card" style={{ textAlign: 'center' }}>
-                                        <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-teal)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🚀</div>
-                                        <h3>Performance Basics</h3>
-                                        <p>Sub-second response times that keep El Paso mobile users from bouncing.</p>
+                            
+                            <div className="bento-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+                                <Fade bottom delay={100} duration={800}>
+                                    <div className="bento-card" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
+                                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🚀</div>
+                                        <h3 className="color-pop-teal" style={{ marginBottom: '1rem' }}>Performance Basics</h3>
+                                        <p style={{ color: 'var(--text-2)' }}>Sub-second response times that keep El Paso mobile users from bouncing to competitors.</p>
                                     </div>
-                                </Zoom>
-                                <Zoom delay={300}>
-                                    <div className="value-card results-card" style={{ textAlign: 'center' }}>
-                                        <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-purple)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>📍</div>
-                                        <h3>Local SEO Focus</h3>
-                                        <p>Strategic visibility for West Side, Horizon City, and Downtown searches.</p>
+                                </Fade>
+                                <Fade bottom delay={300} duration={800}>
+                                    <div className="bento-card aurora-bg-subtle" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
+                                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📍</div>
+                                        <h3 className="color-pop-purple" style={{ marginBottom: '1rem' }}>Local SEO Focus</h3>
+                                        <p style={{ color: 'var(--text-2)' }}>Strategic visibility structured to dominate West Side, Horizon City, and Downtown searches.</p>
                                     </div>
-                                </Zoom>
-                                <Zoom delay={500}>
-                                    <div className="value-card results-card" style={{ textAlign: 'center' }}>
-                                        <div className="process-step" style={{ background: 'var(--primary-dark)', border: '1px solid var(--accent-blue)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>📊</div>
-                                        <h3>Lead Tracking</h3>
-                                        <p>Integrated call and form tracking so you know exactly which ads are working.</p>
+                                </Fade>
+                                <Fade bottom delay={500} duration={800}>
+                                    <div className="bento-card" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
+                                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📊</div>
+                                        <h3 className="color-pop-blue" style={{ marginBottom: '1rem' }}>Lead Tracking</h3>
+                                        <p style={{ color: 'var(--text-2)' }}>Integrated call and form tracking so you know exactly which marketing efforts are generating ROI.</p>
                                     </div>
-                                </Zoom>
+                                </Fade>
                             </div>
                         </div>
                     </section>
 
-                    {/* FAQ */}
-                    <section className="faq-section" id="faq" style={{ padding: '6rem 0' }}>
-                        <div className="container">
-                            <Fade bottom>
-                                <h2 className="text-center" style={{ marginBottom: '3rem' }}>El Paso Web Design FAQ</h2>
+                    {/* 4. FAQ SECTION: Modern Accordion/Card Style */}
+                    <section style={{ padding: '6rem 1rem', background: 'var(--secondary-dark)' }}>
+                        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <h2 style={{ marginBottom: '3rem' }}>El Paso Web Design FAQ</h2>
                             </Fade>
-                            <div className="faq-grid">
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                                 {faqs.map((f, index) => (
-                                    <Fade bottom delay={index * 100} key={f.q}>
-                                        <div className="faq-item" style={{ background: 'var(--surface-1)' }}>
-                                            <h3 style={{ color: 'var(--accent-teal)' }}>{f.q}</h3>
-                                            <p>{f.a}</p>
+                                    <Fade bottom delay={index * 150} duration={800} key={f.q}>
+                                        <div className="bento-card" style={{ padding: '2rem' }}>
+                                            <h3 style={{ color: 'var(--accent-teal)', fontSize: '1.4rem', marginBottom: '1rem' }}>{f.q}</h3>
+                                            <p style={{ color: 'var(--text-2)', fontSize: '1.1rem', lineHeight: '1.6' }}>{f.a}</p>
                                         </div>
                                     </Fade>
                                 ))}
@@ -172,16 +160,27 @@ export default function ElPasoWebDesign({ auth }) {
                         </div>
                     </section>
 
-                    {/* CONTACT */}
-                    <section id="contact" style={{ background: 'var(--surface-2)', padding: '6rem 0' }}>
-                        <div className="container">
-                            <Fade bottom>
-                                <h2 className="text-center font-blue">Start Your Technical Audit</h2>
-                                <ContactForm />
+                    {/* 5. FINAL CTA: Premium Audit Box */}
+                    <section id="audit" className="audit-cta-section" style={{ padding: '8rem 1rem', background: 'var(--primary-dark)' }}>
+                        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                            <Fade bottom duration={800}>
+                                <div className="audit-box aurora-bg">
+                                    <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1rem' }}>
+                                        Start Your Technical Audit
+                                    </h2>
+                                    <p style={{ color: 'var(--text-2)', marginBottom: '3rem', fontSize: '1.2rem' }}>
+                                        Ready for a website that actually generates leads? Drop your details below to get started.
+                                    </p>
+                                    
+                                    <div className="form-wrapper">
+                                        <ContactForm /> 
+                                    </div>
+                                </div>
                             </Fade>
                         </div>
                     </section>
-                </div>
+
+                </main>
             </PublicLayout>
         </HelmetProvider>
     );
