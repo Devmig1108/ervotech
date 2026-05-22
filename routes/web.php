@@ -23,6 +23,14 @@ Route::get('/sitemap', fn() => Inertia::render('Sitemap'))->name('sitemap');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/card', fn() => Inertia::render('DigitalCard'))->name('card');
 Route::get('/blog/{blogPost:slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/download-vcard', function () {
+    $vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:Miguel Flores\nTITLE:Owner\nTEL;TYPE=CELL,VOICE:9153410376\nEMAIL;TYPE=PREF,INTERNET:miguel@ervotechep.com\nURL:https://www.ervotechep.com\nEND:VCARD";
+    
+    return response($vcard, 200, [
+        'Content-Type' => 'text/vcard',
+        'Content-Disposition' => 'attachment; filename="Miguel_Flores.vcf"',
+    ]);
+});
 
 Route::get('/', function () {
     return Inertia::render('Home');

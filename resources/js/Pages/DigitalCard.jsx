@@ -28,7 +28,7 @@ const DigitalCard = () => {
 
         {/* Primary Action Module */}
         <div className="bento-module cta-module">
-          <a href="/miguel-flores.vcf" download="Miguel_Flores_Ervotech.vcf" className="download-btn">
+          <a href="/download-vcard" download="Miguel_Flores_Ervotech.vcf" className="download-btn">
             <div className="btn-content">
               <span>Save to Contacts</span>
               <span className="download-icon">↓</span>
