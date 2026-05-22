@@ -26,6 +26,7 @@
     --accent-pink: #d362a4;
     --accent-red: #c43535;
     --accent-gold: #b69c29;
+    --accent-green: #00f552;
 
     /* Interaction & Animation Geometry */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
