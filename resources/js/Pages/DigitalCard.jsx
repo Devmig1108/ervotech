@@ -1,69 +1,71 @@
 import React from 'react';
-import '../../css/styles.css'; // Make sure this path matches your file structure
+import '../../css/styles.css';
 
 const DigitalCard = () => {
   return (
-    <div className="digital-card-container">
-      
-      {/* Hero / Identity */}
-      <div className="identity-section">
-        <img 
-          src="/images/logo2.png" // Ensure this image is in your public/images folder
-          alt="Ervotech Logo" 
-          className="logo-image"
-        />
-        <h1 className="name-title">Miguel Flores</h1>
-        <p className="job-title">Owner</p>
-      </div>
+    <div className="modern-page-wrapper">
+      {/* Ambient background glow */}
+      <div className="ambient-glow cyan-glow"></div>
+      <div className="ambient-glow blue-glow"></div>
 
-      {/* Quick Action Icons */}
-      <div className="quick-actions">
-        <a href="tel:9153410376" className="action-button-group">
-          <div className="icon-circle">
-            <span className="icon">📞</span>
-          </div>
-          <span className="icon-label">Call</span>
-        </a>
+      <div className="bento-card">
         
-        <a href="mailto:miguel@ervotechep.com" className="action-button-group">
-          <div className="icon-circle">
-            <span className="icon">✉️</span>
+        {/* Header Module */}
+        <div className="bento-module header-module">
+          <img 
+            src="/images/Logo2.png" 
+            alt="Ervotech" 
+            className="brand-logo"
+          />
+          <div className="profile-text">
+            <h1 className="name">Miguel Flores</h1>
+            <p className="title">Owner Technical Director</p>
           </div>
-          <span className="icon-label">Email</span>
-        </a>
-
-        <a href="https://www.ervotechep.com" target="_blank" rel="noreferrer" className="action-button-group">
-          <div className="icon-circle">
-            <span className="icon">🌐</span>
-          </div>
-          <span className="icon-label">Website</span>
-        </a>
-      </div>
-
-      {/* Primary CTA: Save Contact */}
-      <div className="cta-section">
-        <a 
-          href="/miguel-flores.vcf" 
-          download="Miguel_Flores_Ervotech.vcf"
-          className="save-contact-btn"
-        >
-          Save Contact
-        </a>
-      </div>
-
-      {/* Services Grid */}
-      <div className="services-grid">
-        <div className="service-card">
-          <h3>Website as a Service</h3>
         </div>
-        <div className="service-card">
-          <h3>Local SEO</h3>
-        </div>
-        <div className="service-card full-width">
-          <h3>High-Performance Web Design</h3>
-        </div>
-      </div>
 
+        {/* Primary Action Module */}
+        <div className="bento-module cta-module">
+          <a href="/miguel-flores.vcf" download="Miguel_Flores_Ervotech.vcf" className="download-btn">
+            <div className="btn-content">
+              <span>Save to Contacts</span>
+              <span className="download-icon">↓</span>
+            </div>
+            {/* Animated glowing border effect */}
+            <div className="animated-border"></div>
+          </a>
+        </div>
+
+        {/* Contact Grid Modules */}
+        <div className="contact-grid">
+          
+          <a href="tel:9153410376" className="bento-module contact-item">
+            <div className="item-icon phone-icon"></div>
+            <div className="item-details">
+              <span className="item-label">Direct Line</span>
+              <span className="item-value">915.341.0376</span>
+            </div>
+          </a>
+
+          <a href="mailto:miguel@ervotechep.com" className="bento-module contact-item">
+            <div className="item-icon email-icon"></div>
+            <div className="item-details">
+              <span className="item-label">Email</span>
+              <span className="item-value truncate">miguel@ervotechep.com</span>
+            </div>
+          </a>
+
+          <a href="https://www.ervotechep.com" target="_blank" rel="noreferrer" className="bento-module contact-item full-width">
+            <div className="item-icon web-icon"></div>
+            <div className="item-details">
+              <span className="item-label">Website</span>
+              <span className="item-value">ervotechep.com</span>
+            </div>
+            <div className="location-badge">El Paso, TX</div>
+          </a>
+
+        </div>
+
+      </div>
     </div>
   );
 };
