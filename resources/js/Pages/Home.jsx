@@ -65,7 +65,7 @@ export default function Home({ auth }) {
             name: "Daniell's Tree Removal",
             url: "https://daniellstreeremoval.com/",
             image: "/images/Daniells.png", // Make sure to upload this to public/images
-            description: "Expert Tre removal with decades of experience. Serving El Paso resident and commercial clients since 1976.",
+            description: "Expert tree removal services with decades of experience. Serving El Paso resident and commercial clients since 1976.",
             accent: "var(--accent-green-glow)" // Change this to match their brand (e.g., orange, purple, teal, pink)
         },
         {
