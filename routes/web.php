@@ -21,6 +21,7 @@ Route::get('/contact', fn() => Inertia::render('Contact'))->name('contact');
 Route::get('/services', fn() => Inertia::render('Services'))->name('services');
 Route::get('/sitemap', fn() => Inertia::render('Sitemap'))->name('sitemap');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/card', fn() => Inertia::render('DigitalCard'))->name('card');
 Route::get('/blog/{blogPost:slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/', function () {
