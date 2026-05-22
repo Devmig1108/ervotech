@@ -62,18 +62,18 @@ export default function Home({ auth }) {
             accent: "var(--accent-gold)"
         },
         {
+            name: "Daniell's Tree Removal",
+            url: "https://daniellstreeremoval.com/",
+            image: "/images/Daniells.png", // Make sure to upload this to public/images
+            description: "Expert Tre removal with decades of experience. Serving El Paso resident and commercial clients since 1976.",
+            accent: "var(--accent-green-glow)" // Change this to match their brand (e.g., orange, purple, teal, pink)
+        },
+        {
             name: "Ervotech Innovation Sandbox",
             url: "https://ervotech.site/",
             image: "/images/sandbox.png",
             description: "Our dedicated development environment. This is where we stress-test experimental React components, push the limits of Laravel architectures, and pioneer new UI/UX designs before they go live.",
             accent: "var(--accent-teal)"
-        },
-        {
-            name: "YOUR NEW CLIENT NAME",
-            url: "https://daniellstreeremoval.com/",
-            image: "/images/Daniells.png", // Make sure to upload this to public/images
-            description: "Expert Tre removal with decades of experience. Serving El Paso resident and commercial clients since 1976.",
-            accent: "var(--accent-green-glow)" // Change this to match their brand (e.g., orange, purple, teal, pink)
         }
     ];
 
