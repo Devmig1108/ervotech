@@ -45,7 +45,7 @@ export default function Home({ auth }) {
             url: "https://ca-dumpsters.com/",
             image: "/images/ca-dumpsters.png", // Just add this image to your public/images folder
             description: "Local dumpster rental and junk removal services. Highly optimized for local search and lead capture in the El Paso area.",
-            accent: "var(--accent-green-glow)"
+            accent: "var(--brand-green-glow)"
         },
         {
             name: "Lawn Heros",
@@ -66,7 +66,7 @@ export default function Home({ auth }) {
             url: "https://daniellstreeremoval.com/",
             image: "/images/Daniells.png", // Make sure to upload this to public/images
             description: "Expert tree removal services with decades of experience. Serving El Paso resident and commercial clients since 1976.",
-            accent: "var(--accent-green-glow)" // Change this to match their brand (e.g., orange, purple, teal, pink)
+            accent: "var(--brand-green-glow)" // Change this to match their brand (e.g., orange, purple, teal, pink)
         },
         {
             name: "Ervotech Innovation Sandbox",
