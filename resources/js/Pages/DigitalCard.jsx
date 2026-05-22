@@ -1,12 +1,15 @@
 import React from 'react';
-import '../../css/styles.css';
+import '../../css/DigitalCard.css';
 
 const DigitalCard = () => {
   return (
     <div className="modern-page-wrapper">
-      {/* Ambient background glow */}
-      <div className="ambient-glow cyan-glow"></div>
-      <div className="ambient-glow blue-glow"></div>
+      
+      {/* NEW: Fixed Background Layer (Prevents scroll breaking) */}
+      <div className="ambient-background">
+        <div className="ambient-glow cyan-glow"></div>
+        <div className="ambient-glow blue-glow"></div>
+      </div>
 
       <div className="bento-card">
         
@@ -30,7 +33,6 @@ const DigitalCard = () => {
               <span>Save to Contacts</span>
               <span className="download-icon">↓</span>
             </div>
-            {/* Animated glowing border effect */}
             <div className="animated-border"></div>
           </a>
         </div>
