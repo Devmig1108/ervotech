@@ -38,28 +38,28 @@ export default function Home({ auth }) {
             url: "https://thehardtruthaf.com/",
             image: "/images/hard-truth.png",
             description: "Dynamic lifestyle brand and podcast platform. Built for high performance, content streaming, and brand authority.",
-            accent: "var(--accent-purple)"
+            accent: "var(--accent-red)"
         },
         {
             name: "C&A Dumpsters",
             url: "https://ca-dumpsters.com/",
             image: "/images/ca-dumpsters.png", // Just add this image to your public/images folder
             description: "Local dumpster rental and junk removal services. Highly optimized for local search and lead capture in the El Paso area.",
-            accent: "var(--accent-teal)"
+            accent: "var(--accent-green-glow)"
         },
         {
             name: "Lawn Heros",
             url: "https://lawnheros.com/",
             image: "/images/lawn-heros.png", 
             description: "Weed control and premium lawn care services. Features a clean, green-industry design built to convert local homeowners.",
-            accent: "var(--accent-blue)"
+            accent: "var(--accent-orange)"
         },
         {
             name: "Unique Roofing NM",
             url: "https://uniqueroofingnm.com/",
             image: "/images/unique-roofing.png",
             description: "Regional roofing contractor covering New Mexico. Professional, trust-building design tailored for commercial and residential clients.",
-            accent: "var(--accent-pink)"
+            accent: "var(--accent-gold)"
         },
         {
             name: "Ervotech Innovation Sandbox",
@@ -67,6 +67,13 @@ export default function Home({ auth }) {
             image: "/images/sandbox.png",
             description: "Our dedicated development environment. This is where we stress-test experimental React components, push the limits of Laravel architectures, and pioneer new UI/UX designs before they go live.",
             accent: "var(--accent-teal)"
+        },
+        {
+            name: "YOUR NEW CLIENT NAME",
+            url: "https://daniellstreeremoval.com/",
+            image: "/images/Daniells.png", // Make sure to upload this to public/images
+            description: "Expert Tre removal with decades of experience. Serving El Paso resident and commercial clients since 1976.",
+            accent: "var(--accent-green-glow)" // Change this to match their brand (e.g., orange, purple, teal, pink)
         }
     ];
 
