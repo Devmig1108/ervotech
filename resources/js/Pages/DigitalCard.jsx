@@ -2,10 +2,21 @@ import React from 'react';
 import '../../css/DigitalCard.css';
 
 const DigitalCard = () => {
+
+  // Reusable helper to send custom events to GA4
+  const trackInteraction = (eventName, label) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, {
+        'event_category': 'Digital Card Engagement',
+        'event_label': label,
+      });
+    }
+  };
+
   return (
     <div className="modern-page-wrapper">
       
-      {/* NEW: Fixed Background Layer (Prevents scroll breaking) */}
+      {/* Fixed Background Layer (Prevents scroll breaking) */}
       <div className="ambient-background">
         <div className="ambient-glow cyan-glow"></div>
         <div className="ambient-glow blue-glow"></div>
@@ -28,7 +39,13 @@ const DigitalCard = () => {
 
         {/* Primary Action Module */}
         <div className="bento-module cta-module">
-          <a href="/download-vcard" download="Miguel_Flores_Ervotech.vcf" className="download-btn">
+          {/* Reminder: The actual Miguel_Flores_Ervotech.vcf file still needs to be created and linked */}
+          <a 
+            href="/download-vcard" 
+            download="Miguel_Flores_Ervotech.vcf" 
+            className="download-btn"
+            onClick={() => trackInteraction('download_vcard', 'Save to Contacts CTA')}
+          >
             <div className="btn-content">
               <span>Save to Contacts</span>
               <span className="download-icon">↓</span>
@@ -40,7 +57,11 @@ const DigitalCard = () => {
         {/* Contact Grid Modules */}
         <div className="contact-grid">
           
-          <a href="tel:9153410376" className="bento-module contact-item">
+          <a 
+            href="tel:9153410376" 
+            className="bento-module contact-item"
+            onClick={() => trackInteraction('click_phone', 'Direct Line')}
+          >
             <div className="item-icon phone-icon"></div>
             <div className="item-details">
               <span className="item-label">Direct Line</span>
@@ -48,7 +69,11 @@ const DigitalCard = () => {
             </div>
           </a>
 
-          <a href="mailto:miguel@ervotechep.com" className="bento-module contact-item">
+          <a 
+            href="mailto:miguel@ervotechep.com" 
+            className="bento-module contact-item"
+            onClick={() => trackInteraction('click_email', 'Email Address')}
+          >
             <div className="item-icon email-icon"></div>
             <div className="item-details">
               <span className="item-label">Email</span>
@@ -56,7 +81,13 @@ const DigitalCard = () => {
             </div>
           </a>
 
-          <a href="https://www.ervotechep.com" target="_blank" rel="noreferrer" className="bento-module contact-item full-width">
+          <a 
+            href="https://www.ervotechep.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="bento-module contact-item full-width"
+            onClick={() => trackInteraction('click_website', 'Website Link')}
+          >
             <div className="item-icon web-icon"></div>
             <div className="item-details">
               <span className="item-label">Website</span>
