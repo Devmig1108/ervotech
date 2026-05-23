@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade";
 import { ParallaxBanner } from "react-scroll-parallax";
 import ContactForm from "@/Components/ContactForm";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useScrollTracking } from '../Hooks/useScrollTracking';
 
 export default function Home({ auth }) {
     const structuredData = {
@@ -77,6 +78,10 @@ export default function Home({ auth }) {
         }
     ];
 
+    const bentoRef = useScrollTracking('viewed_bento_services');
+    const performanceRef = useScrollTracking('viewed_performance_advantage');
+    const portfolioRef = useScrollTracking('viewed_live_portfolio');
+
     return (
         <HelmetProvider>
             <Helmet>
@@ -149,7 +154,7 @@ export default function Home({ auth }) {
                     </Fade>
 
                     {/* 3. BENTO BOX UI */}
-                    <section id="bento-services" className="bento-section">
+                    <section id="bento-services" className="bento-section" ref={bentoRef}>
                         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
                             <Fade bottom duration={800}>
                                 <div className="section-header">
@@ -214,7 +219,7 @@ export default function Home({ auth }) {
                     </section>
 
                     {/* 4. PERFORMANCE ADVANTAGE */}
-                    <section className="performance-section">
+                    <section className="performance-section" ref={performanceRef}>
                         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
                             <Fade bottom duration={800}>
                                 <h2>The Ervotech Advantage</h2>
@@ -250,7 +255,7 @@ export default function Home({ auth }) {
                     </section>
 
                     {/* 5. LIVE PORTFOLIO */}
-                    <section className="portfolio-section">
+                    <section className="portfolio-section" ref={portfolioRef}>
                         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
                             <Fade bottom duration={800}>
                                 <div className="section-header" style={{ marginBottom: '3rem' }}>
