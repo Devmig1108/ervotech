@@ -51,7 +51,7 @@ export default function Home({ auth }) {
         {
             name: "Lawn Heros",
             url: "https://lawnheros.com/",
-            image: "/images/lawn-heros.png", 
+            image: "/images/lawn-heros.png",
             description: "Weed control and premium lawn care services. Features a clean, green-industry design built to convert local homeowners.",
             accent: "var(--accent-orange)"
         },
@@ -81,6 +81,15 @@ export default function Home({ auth }) {
     const bentoRef = useScrollTracking('viewed_bento_services');
     const performanceRef = useScrollTracking('viewed_performance_advantage');
     const portfolioRef = useScrollTracking('viewed_live_portfolio');
+    // Reusable GA4 tracking helper
+    const trackInteraction = (eventName, label) => {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', eventName, {
+                'event_category': 'Engagement',
+                'event_label': label,
+            });
+        }
+    };
 
     return (
         <HelmetProvider>
@@ -97,7 +106,7 @@ export default function Home({ auth }) {
                 <Head title="El Paso Web Design & SEO | Ervotech" />
 
                 <main className="home-main">
-                    
+
                     {/* 1. HERO: SEO Optimized & High-Converting */}
                     <ParallaxBanner
                         layers={[{ image: "/images/Office.webp", speed: -15 }]}
@@ -105,27 +114,27 @@ export default function Home({ auth }) {
                         style={{ minHeight: '85vh', position: 'relative', display: 'flex', alignItems: 'center' }}
                     >
                         <div className="hero-overlay"></div>
-                        
+
                         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 10 }}>
                             <Fade bottom duration={1000}>
                                 <span className="badge-premium" style={{ fontSize: 'inherit', fontWeight: '600' }}>
                                     Top-Rated Technical Agency
                                 </span>
                             </Fade>
-                            
+
                             <Fade bottom delay={200} duration={1000}>
                                 <h1 className="display-heading">
                                     El Paso Web Design <br />
                                     <span className="text-gradient">& Local SEO.</span>
                                 </h1>
                             </Fade>
-                            
+
                             <Fade bottom delay={400} duration={1000}>
                                 <p className="hero-subtext">
                                     <strong>Turn your website into a lead-generating machine.</strong> We engineer fast, professional React & Laravel digital assets that outrank your competitors and convert traffic into revenue.
                                 </p>
                             </Fade>
-                            
+
                             <Fade bottom delay={600} duration={1000}>
                                 <div className="hero-actions">
                                     <a href="#audit" className="btn-primary magnetic-btn">
@@ -173,8 +182,8 @@ export default function Home({ auth }) {
                                             </div>
                                             <div className="bento-visual code-visual">
                                                 <code>
-                                                    "business_status": "Online",<br/>
-                                                    "monthly_leads": "Growing",<br/>
+                                                    "business_status": "Online",<br />
+                                                    "monthly_leads": "Growing",<br />
                                                     "website_speed": "Lightning Fast"
                                                 </code>
                                             </div>
@@ -225,7 +234,7 @@ export default function Home({ auth }) {
                                 <h2>The Ervotech Advantage</h2>
                                 <p className="subtext" style={{ color: 'var(--text-2)', fontSize: '1.2rem' }}>Why our websites outperform the local competition.</p>
                             </Fade>
-                            
+
                             <div className="comparison-grid">
                                 <Fade bottom delay={200} duration={800}>
                                     <div className="comparison-card bad">
@@ -238,7 +247,7 @@ export default function Home({ auth }) {
                                         </ul>
                                     </div>
                                 </Fade>
-                                
+
                                 <Fade bottom delay={400} duration={800}>
                                     <div className="comparison-card good aurora-bg-subtle">
                                         <h4>Ervotech Custom Websites</h4>
@@ -263,18 +272,18 @@ export default function Home({ auth }) {
                                     <p>Real results for real businesses. See how a professional online presence transforms bottom lines.</p>
                                 </div>
                             </Fade>
-                            
+
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
                                 {portfolioClients.map((client, index) => (
                                     <Fade bottom delay={index * 150} duration={800} key={index}>
                                         <div className="portfolio-item" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                                            
+
                                             {/* Screenshot Top Half */}
                                             <div style={{ background: 'var(--surface-1)', height: '220px', borderRadius: '12px 12px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-2)', position: 'relative', overflow: 'hidden' }}>
                                                 {client.image ? (
-                                                    <img 
-                                                        src={client.image} 
-                                                        alt={`${client.name} Website Design`} 
+                                                    <img
+                                                        src={client.image}
+                                                        alt={`${client.name} Website Design`}
                                                         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                                                         loading="lazy"
                                                     />
@@ -282,19 +291,22 @@ export default function Home({ auth }) {
                                                     <span style={{ fontSize: '1.2rem', opacity: 0.5 }}>{client.name}</span>
                                                 )}
                                             </div>
-                                            
+
                                             {/* Info Bottom Half */}
                                             <div style={{ flexGrow: 1, padding: '1.8rem', background: 'var(--secondary-dark)', borderRadius: '0 0 12px 12px', border: '1px solid var(--border-subtle)', borderTop: 'none', display: 'flex', flexDirection: 'column' }}>
                                                 <h3 style={{ color: client.accent, marginBottom: '0.75rem', fontSize: '1.4rem' }}>{client.name}</h3>
                                                 <p style={{ fontSize: '1rem', color: 'var(--text-2)', marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", flexGrow: 1 }}>
                                                     {client.description}
                                                 </p>
-                                                
-                                                <a href={client.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-1)', textDecoration: 'none', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '8px', transition: 'color 0.3s ease' }} 
-                                                   onMouseOver={(e) => e.target.style.color = client.accent} 
-                                                   onMouseOut={(e) => e.target.style.color = 'var(--text-1)'}
+
+                                                <a
+                                                    href={client.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="portfolio-outbound-link"
+                                                    onClick={() => trackInteraction('view_live_portfolio', client.name)}
                                                 >
-                                                    Visit Live Site 
+                                                    Visit Live Site
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                         <line x1="7" y1="17" x2="17" y2="7"></line>
                                                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -316,9 +328,9 @@ export default function Home({ auth }) {
                                 <div className="audit-box aurora-bg">
                                     <h2>Find out why your website isn't getting leads.</h2>
                                     <p style={{ color: 'var(--text-2)', marginBottom: '2rem' }}>Stop guessing. Drop your website address below, and we'll send you a free, easy-to-understand review showing exactly how to get more local customers.</p>
-                                    
+
                                     <div className="form-wrapper">
-                                        <ContactForm /> 
+                                        <ContactForm />
                                     </div>
                                 </div>
                             </Fade>

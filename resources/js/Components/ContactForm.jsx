@@ -12,28 +12,44 @@ export default function ContactForm() {
     });
 
     const [modal, setModal] = useState({ isOpen: false, type: '', message: '' });
+    
+    // NEW: Tracking state prevents firing the "start" event multiple times per session
+    const [hasStarted, setHasStarted] = useState(false);
+
+    // NEW: Reusable GA4 tracking helper
+    const trackInteraction = (eventName, label) => {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', eventName, {
+                'event_category': 'Form Funnel',
+                'event_label': label,
+            });
+        }
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+
+        // NEW: Fire "form_start" the first time a user types in a real field
+        if (!hasStarted && name !== 'zip_code') {
+            setHasStarted(true);
+            trackInteraction('form_start', 'Agency Lead Form');
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         // 1. Frontend Honeypot Check
-        // If zip_code has ANY value, it's a bot because a human can't see it.
         if (formData.zip_code.length > 0) {
             console.warn("Bot detected. Preventing submission.");
-            // We show a fake success message so the bot thinks it worked 
-            // and stops trying to spam this specific session.
             setModal({
                 isOpen: true,
                 type: 'success',
                 message: 'Message sent successfully!',
             });
             setFormData({ name: '', email: '', message: '', zip_code: '' });
-            return;
+            return; // Bot stopped, GA4 is not pinged.
         }
 
         axios.post('/contact', formData)
@@ -43,9 +59,14 @@ export default function ContactForm() {
                     type: 'success',
                     message: 'Message sent successfully!',
                 });
-                // Reset form
+                
+                // NEW: Fire the successful conversion event only on successful server response
+                trackInteraction('generate_lead', 'Agency Lead Form Submitted');
+
+                // Reset form and tracking state
                 setFormData({ name: '', email: '', message: '', zip_code: '' });
-                // Auto-close modal after 10 seconds
+                setHasStarted(false);
+                
                 setTimeout(() => setModal({ isOpen: false, type: '', message: '' }), 10000);
             })
             .catch(error => {
@@ -84,7 +105,6 @@ export default function ContactForm() {
                     />
 
                     {/* HONEYPOT - Hidden from humans using CSS */}
-                    {/* We add tabIndex="-1" so keyboard users don't accidentally tab into it */}
                     <div style={{ opacity: 0, position: 'absolute', top: 0, left: 0, height: 0, width: 0, zIndex: -1 }}>
                         <label htmlFor="zip_code">Leave this field blank</label>
                         <input
